@@ -13,7 +13,11 @@ export default function SectorsSection() {
            {SECTORS.map((sector, idx) => (
              sector.isImage 
                ? <SectorImage key={idx} url={sector.image!} />
-               : <SectorButton key={idx} text={sector.label!} />
+               :<SectorButton
+  key={idx}
+  text={sector.label!}
+  image={sector.image!}
+/>
            ))}
         </div>
       </div>

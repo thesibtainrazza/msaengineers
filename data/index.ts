@@ -48,12 +48,65 @@ export const NAV_LINKS = [
 ];
 
 export const SECTORS = [
-  { label: "Amenities", isImage: false },
-  { label: "Mixed-Use + Retail", isImage: false },
-  { image: "https://images.unsplash.com/photo-1541888081-35b8e104e761?q=80&w=2070&auto=format&fit=crop", isImage: true },
-  { label: "Industrial", isImage: false },
-  { label: "Education", isImage: false },
-  { label: "Municipality + Community", isImage: false },
-  { image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2070&auto=format&fit=crop", isImage: true },
-  { image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop", isImage: true }
+
+  // BUTTON 1
+  {
+  label: "Amenities",
+  image:
+    "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=2070&auto=format&fit=crop",
+  isImage: false,
+},
+
+  // BUTTON 2
+  {
+    label: "Mixed-Use + Retail",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+    isImage: false,
+  },
+
+  // IMAGE 1
+ {
+  image:
+    "https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=2070&auto=format&fit=crop",
+  isImage: true,
+},
+
+  // BUTTON 3
+  {
+    label: "Industrial",
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
+    isImage: false,
+  },
+
+  // BUTTON 4
+  {
+    label: "Education",
+    image:
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop",
+    isImage: false,
+  },
+
+  // BUTTON 5
+  {
+    label: "Municipality + Community",
+    image:
+      "https://images.unsplash.com/photo-1542384701-c0e46e0eda04?q=80&w=2065&auto=format&fit=crop",
+    isImage: false,
+  },
+
+  // IMAGE 2
+  {
+    image:
+      "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2070&auto=format&fit=crop",
+    isImage: true,
+  },
+
+  // IMAGE 3
+  {
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
+    isImage: true,
+  },
 ];
