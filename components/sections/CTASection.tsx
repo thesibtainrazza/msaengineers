@@ -58,10 +58,10 @@ export default function CTASection() {
             Ready to break ground?
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-12 font-light drop-shadow-xl">
-            We're ready to take your project to the next level.
+            We&apos;re ready to take your project to the next level.
           </p>
           <a href="#" className="inline-flex items-center justify-center bg-white rounded-full px-8 md:px-10 py-4 text-[#ed1c24] hover:bg-gray-100 transition-colors shadow-[0_10px_30px_rgba(237,28,36,0.3)] group cursor-pointer">
-            <span className="font-medium text-lg">Let's get started</span>
+            <span className="font-medium text-lg">Let&apos;s get started</span>
             <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" /></svg>
           </a>
         </div>

@@ -5,12 +5,13 @@ export const FEATURED_PROJECTS = [
     category: "Amenities",
     image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2070&auto=format&fit=crop"
   },
-  {
-    title: "Newberry Nursing Building",
-    location: "Newberry, SC",
-    category: "Education",
-    image: "https://images.unsplash.com/photo-1519420668700-128a38521bc1?q=80&w=2070&auto=format&fit=crop"
-  },
+ {
+  title: "Newberry Nursing Building",
+  location: "Newberry, SC",
+  category: "Education",
+  image:
+    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2070&q=80",
+},
   {
     title: "Modern Industrial Facility",
     location: "Greenville, SC",
@@ -33,7 +34,7 @@ export const FEATURED_PROJECTS = [
 
 export const SERVICES_LIST = [
   { title: "Preconstruction", isActive: false },
-  { title: "Design-Build", isActive: true },
+  { title: "Design-Build", isActive: false },
   { title: "CM at Risk", isActive: false },
   { title: "Construction", isActive: false }
 ];
@@ -51,11 +52,11 @@ export const SECTORS = [
 
   // BUTTON 1
   {
-  label: "Amenities",
-  image:
-    "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=2070&auto=format&fit=crop",
-  isImage: false,
-},
+    label: "Amenities",
+    image:
+      "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=2070&auto=format&fit=crop",
+    isImage: false,
+  },
 
   // BUTTON 2
   {
@@ -66,11 +67,11 @@ export const SECTORS = [
   },
 
   // IMAGE 1
- {
-  image:
-    "https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=2070&auto=format&fit=crop",
-  isImage: true,
-},
+  {
+    image:
+      "https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=2070&auto=format&fit=crop",
+    isImage: true,
+  },
 
   // BUTTON 3
   {
