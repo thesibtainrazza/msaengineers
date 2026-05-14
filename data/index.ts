@@ -43,7 +43,7 @@ export const WHY_CHOOSE_US: Service[] = [
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Projects", href: "/" },
-  { label: "About", href: "/" },
+  { label: "About", href: "/about" },
   { label: "Services", href: "/" },
   { label: "Blog", href: "/" },
   { label: "Careers", href: "/" },

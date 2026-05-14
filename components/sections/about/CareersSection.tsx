@@ -1,36 +1,181 @@
-import React from 'react';
+"use client";
 
-export default function CareersSection() {
+import React from "react";
+
+export default function CareersCTASection() {
   return (
-    <section className="relative w-full bg-[#f7f7f5] py-24 md:py-32" id="careers">
+    <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-32">
+
+      {/* BLUEPRINT BACKGROUND */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-0
+          top-0
+          h-[320px]
+          w-[320px]
+          opacity-[0.06]
+        "
+        style={{
+          backgroundImage:
+            "url('https://www.transparenttextures.com/patterns/graphy.png')",
+        }}
+      />
+
       <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-                <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
-                    Careers
-                </h4>
-                <h2 className="mb-10 text-[3.5rem] font-[450] leading-[1.1] tracking-[-0.04em] text-[#4b4b4b] md:text-[4.5rem]">
-                    We&apos;re always looking for new <span className="relative inline-block"><span className="relative z-10">family</span><span className="absolute bottom-1 left-0 -z-10 h-3 w-full bg-[#ed1c24]/20"></span></span> members.
-                </h2>
-                
-                <a href="#" className="inline-flex items-center justify-center bg-white border border-[#ed1c24] rounded-full px-8 md:px-10 py-4 text-[#4b4b4b] hover:bg-[#ed1c24] hover:text-white transition-colors group">
-                    <span className="font-medium text-lg">Careers + Culture</span>
-                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" /></svg>
-                </a>
+
+        {/* TOP BORDER */}
+        <div className="mb-28 h-[1px] w-full bg-[#4b4b4b]" />
+
+        <div className="grid grid-cols-1 gap-24 lg:grid-cols-2">
+
+          {/* LEFT */}
+          <div>
+
+            <h4 className="mb-8 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
+              CAREERS
+            </h4>
+
+            <h2 className="max-w-[760px] text-[4rem] md:text-[5rem] lg:text-[5.8rem] font-[420] tracking-[-0.07em] leading-[0.92] text-[#4b4b4b]">
+
+              We’re building
+              <br />
+
+              a team driven by{" "}
+
+              <span className="bg-[#ed1c24] px-3 py-[2px] text-white">
+                ownership
+              </span>
+
+              {" "}
+
+              <span className="relative inline-block">
+
+                <span className="relative z-10">
+                  not
+                </span>
+
+                {/* STRIKE LINE */}
+                <span className="absolute left-0 top-[52%] h-[10px] w-full bg-[#4b4b4b]"></span>
+
+              </span>
+
+              <br />
+
+              excuses.
+
+            </h2>
+
+            {/* BUTTON */}
+            <div className="mt-14">
+
+              <a
+                href="#"
+                className="
+                  inline-flex
+                  items-center
+                  gap-4
+                  rounded-full
+                  border
+                  border-[#ed1c24]
+                  px-10
+                  py-5
+                  text-[1.45rem]
+                  font-medium
+                  tracking-[-0.03em]
+                  text-[#4b4b4b]
+                  transition-all
+                  duration-300
+                  hover:bg-[#ed1c24]
+                  hover:text-white
+                "
+              >
+
+                Join Our Team
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+
+              </a>
+
             </div>
 
-            <div className="lg:pt-20">
-                <p className="text-[1.6rem] font-light leading-[1.7] text-[#5f5f5f] mb-6">
-                    At J Davis, we&apos;re just a bit different from other South Carolina general contractors. We foster a meaningful culture, and protect it fiercely—that means cookouts over burnout. We invest in your career at every opportunity, without asking you to travel for weeks on end. We&apos;re building a rock-solid, sustainable future as a growing company without taking big risks that jeopardize our employees&apos; safety, security or stability.
-                </p>
-                <p className="text-[1.6rem] font-light leading-[1.7] text-[#5f5f5f]">
-                    If that sounds good, let&apos;s talk. We&apos;re always looking to add <span className="relative inline-block"><span className="relative z-10">talented, passionate people</span><span className="absolute bottom-1 left-0 -z-10 h-3 w-full bg-[#ed1c24]/20"></span></span> to our growing team.
-                </p>
-            </div>
+          </div>
+
+          {/* RIGHT */}
+          <div className="max-w-[700px] lg:ml-auto">
+
+            <p
+              className="
+                text-[1.55rem]
+                font-light
+                leading-[1.75]
+                tracking-[-0.03em]
+                text-[#4f4f4f]
+              "
+            >
+              At MSA Engineers & Contractors, work is built around
+              responsibility, coordination, and execution. Every project
+              demands people who can think practically, solve problems on-site,
+              and deliver quality work even under demanding industrial
+              conditions.
+            </p>
+
+            <p
+              className="
+                mt-10
+                text-[1.55rem]
+                font-light
+                leading-[1.75]
+                tracking-[-0.03em]
+                text-[#4f4f4f]
+              "
+            >
+              Whether it’s fabrication, erection, conveyor systems, project
+              coordination, or field execution, we value people who are willing
+              to learn, take ownership, and grow with the company long-term.
+
+              {" "}
+
+              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+                Skilled people build strong industries.
+              </span>
+
+            </p>
+
+          </div>
+        </div>
+
+        {/* IMAGE */}
+        <div className="mt-32">
+
+          <div className="relative overflow-hidden bg-[#ececec]">
+
+            <img
+              src="/assets/6.jpg"
+              alt="MSA Team"
+              className="h-[420px] md:h-[520px] w-full object-cover grayscale"
+            />
+
+          </div>
+
         </div>
 
       </div>
+
     </section>
   );
 }

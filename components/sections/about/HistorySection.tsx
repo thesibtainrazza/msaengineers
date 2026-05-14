@@ -8,10 +8,10 @@ export default function HistorySection() {
           History
         </h4>
         <h2 className="mb-10 text-[3.5rem] font-[450] leading-[1.1] tracking-[-0.04em] text-[#4b4b4b] md:text-[4.5rem]">
-          A Strong Foundation
+         Forged Through Work
         </h2>
         <p className="mx-auto max-w-[800px] text-[1.6rem] font-light leading-[1.7] text-[#5f5f5f] mb-20">
-          We may be building world-class community spaces today, but many remember J Davis as a handful of good friends who built their grandfather&apos;s barn—and that&apos;s just fine with us, because we&apos;re proud of our heritage, our hard work, and how far we&apos;ve come.
+         What started as a small industrial contracting operation grew through years of on-site execution, long hours, and earned trust. Every structure, fabrication, and project completed by MSA reflects the discipline, resilience, and hands-on experience that continue to shape who we are today.
         </p>
         
         <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.1)]">
