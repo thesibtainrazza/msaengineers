@@ -64,8 +64,8 @@ export default function Header() {
               </div>
 
               {/* CONSTRUCTION */}
-              <span className="mt-[2px] text-[10px] font-medium tracking-[0.22em] leading-none">
-                ENGINEERS & CONSTRUCTION
+              <span className="mt-[2px] text-[8px] font-medium tracking-[0.22em] leading-none">
+                ENGINEERS & CONTRACTORS
               </span>
 
             </div>

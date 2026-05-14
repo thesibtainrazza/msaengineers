@@ -12,6 +12,18 @@ const instrumentSans = Instrument_Sans({
 export const metadata: Metadata = {
   title: "MSA Engineers",
   description: "Industrial Infrastructure Solutions",
+  icons: {
+    icon: [
+      { url: "/favicons/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicons/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicons/favicon-48x48.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicons/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/favicons/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/favicons/manifest.webmanifest",
 };
 
 export default function RootLayout({
