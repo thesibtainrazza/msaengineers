@@ -42,12 +42,12 @@ export const WHY_CHOOSE_US: Service[] = [
 ];
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Blog", href: "/blog" },
-  { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/contact" }
+  { label: "Projects", href: "/" },
+  { label: "About", href: "/" },
+  { label: "Services", href: "/" },
+  { label: "Blog", href: "/" },
+  { label: "Careers", href: "/" },
+  { label: "Contact", href: "/" }
 ];
 export const SERVICES_LIST: Sector[] = [
   // BUTTON 1
