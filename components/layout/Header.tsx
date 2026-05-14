@@ -38,39 +38,34 @@ export default function Header() {
       >
 
         {/* Logo */}
-        <a href="/" 
-        className="mr-16 xl:mr-20 shrink-0 cursor-pointer">
-
-          <div className="flex items-start leading-none">
-
-            {/* J */}
-            <span className="text-[86px] font-medium tracking-[-0.12em] leading-[0.78]">
-              
-            </span>
-
-            {/* DAVIS */}
-            <div className="ml-[2px] flex flex-col">
-
-              <div className="flex items-start">
-
-                <span className="text-[58px] font-medium tracking-[-0.08em] leading-[0.82]">
-                  MSA
-                </span>
-
-                <sup className="ml-[2px] mt-[6px] text-[10px] font-normal">
-                  CO.
-                </sup>
-
-              </div>
-
-              {/* CONSTRUCTION */}
-              <span className="mt-[2px] text-[8px] font-medium tracking-[0.22em] leading-none">
-                ENGINEERS & CONTRACTORS
-              </span>
-
-            </div>
+        <Link href="/" className="mr-16 xl:mr-20 shrink-0 cursor-pointer flex items-center gap-3 md:gap-4 group">
+          
+          {/* Badge Logo */}
+          <div className="relative h-12 w-12 md:h-14 md:w-14 overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-105">
+            <img 
+              src="/favicons/android-chrome-192x192.png" 
+              alt="MSA Engineers Logo" 
+              className="h-full w-full object-contain"
+            />
           </div>
-        </a>
+
+          {/* Typography */}
+          <div className="flex flex-col justify-center mt-1">
+            <div className="flex items-start">
+              <span className="text-[28px] md:text-[34px] font-bold tracking-tight leading-[0.85]">
+                MSA
+              </span>
+              <sup className="ml-[2px] mt-[3px] text-[10px] md:text-[11px] font-semibold">
+                CO.
+              </sup>
+            </div>
+            
+            <span className="mt-[5px] text-[8px] md:text-[9px] font-bold tracking-[0.24em] leading-none opacity-80">
+              ENGINEERS & CONTRACTORS
+            </span>
+          </div>
+
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-x-8 xl:gap-x-10">
