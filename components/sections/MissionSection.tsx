@@ -34,7 +34,7 @@ export default function MissionSection() {
   return (
     <section
       id="mission-section"
-      className="relative mt-16 w-full overflow-hidden bg-[#f7f7f5] py-28"
+      className="relative w-full overflow-hidden bg-white py-28"
     >
 
       <div className="mx-auto grid max-w-[1450px] grid-cols-1 gap-24 px-8 md:px-12 lg:grid-cols-2 lg:px-16 xl:px-20">
@@ -52,7 +52,7 @@ export default function MissionSection() {
               className="absolute inset-0 bg-cover bg-center"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1974&auto=format&fit=crop')",
+                  "url('https://images.unsplash.com/photo-1718287322962-7dff57bcda26?q=80&w=986&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=1974&auto=format&fit=crop')",
               }}
             />
 
@@ -65,7 +65,7 @@ export default function MissionSection() {
               className="absolute inset-0 bg-cover bg-center"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop')",
+                  "url('https://images.unsplash.com/photo-1730127557915-704ac78b1736?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2797&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2070&auto=format&fit=crop')",
               }}
             />
 
@@ -84,13 +84,13 @@ export default function MissionSection() {
           {/* MAIN HEADING */}
           <h2 className="text-[3.7rem] font-[350] leading-[1.08] tracking-[-0.055em] text-[#4b4b4b] md:text-[4.8rem] lg:text-[5.4rem]">
 
-            We are providers of
+            To deliver industrial
             <br />
 
-            superior, passionate
+            engineering solutions that
             <br />
 
-            service leaving a
+              stand strong,
             <br />
 
             {/* HIGHLIGHT */}
@@ -107,18 +107,14 @@ export default function MissionSection() {
 
               {/* TEXT */}
               <span className="relative z-10">
-                positive impact
+                perform
               </span>
 
             </span>
-
-            {" "}on
+            reliably,
             <br />
 
-            everyone we involve, while
-            <br />
-
-            bringing honor to God.
+            and endure for generations.
 
           </h2>
 

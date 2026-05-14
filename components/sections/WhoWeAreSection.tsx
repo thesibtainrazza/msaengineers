@@ -32,7 +32,7 @@ export default function WhoWeAreSection() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-28 md:py-36">
+    <section className="relative w-full overflow-hidden bg-white py-28 md:py-36">
 
       {/* Background Watermark */}
       <Marquee />
@@ -51,7 +51,7 @@ export default function WhoWeAreSection() {
           <h2 className="text-[4.2rem] font-[450] leading-[0.98] tracking-[-0.06em] text-[#4b4b4b] md:text-[5.4rem] lg:text-[5.8rem]">
 
             <span className="block">
-              General Contracting
+              Industrial Engineering
             </span>
 
             <span className="mt-1 block">
@@ -84,12 +84,7 @@ export default function WhoWeAreSection() {
 
           {/* Paragraph */}
           <p className="mt-10 max-w-[720px] text-[1.7rem] font-light leading-[1.7] tracking-[-0.02em] text-[#5f5f5f]">
-
-            At JDavis Construction, our clients are true partners,
-            and we earn your trust through transparency,
-            excellence, and integrity. With every business we build,
-            we invest in the community it calls home.
-
+          At MSA Engineers & Contractors, we deliver dependable industrial engineering and contracting solutions with a strong focus on quality, precision, and execution excellence. Since 2000, we have been serving cement plants and industrial projects across India through reliable structural, fabrication, and engineering services.
           </p>
 
           {/* Button */}
@@ -128,7 +123,7 @@ export default function WhoWeAreSection() {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 group-hover:scale-[1.03]"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1542384701-c0e46e0eda04?q=80&w=2065&auto=format&fit=crop')",
+                  "url('https://images.unsplash.com/photo-1573215030128-5c0991e9e81d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2065&auto=format&fit=crop')",
               }}
             />
 

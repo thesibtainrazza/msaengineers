@@ -14,26 +14,31 @@ export default function Footer() {
 
             {/* Image */}
             <div
-              className="mb-6 h-[180px] w-full max-w-[300px] bg-contain bg-left bg-no-repeat"
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop')",
-              }}
-            />
+              className="mb-6 h-[180px] w-full max-w-[300px] rounded-xl overflow-hidden"
+            >
+              <iframe
+                src="https://www.google.com/maps?q=Rajgangpur,Odisha&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
 
             {/* Contact */}
             <div className="space-y-1 text-[1.1rem] leading-[1.55] tracking-[-0.02em] text-[#4a4a4a]">
 
               <p>
-                Upstate Region: (864) 972-4720
+                Phone: (+91) 94394 29092
               </p>
 
               <p>
-                Coastal Region: (854) 800-3222
+                Support:(+91) 70082 75002
               </p>
 
               <p className="pt-1 font-medium text-[#ed1c24]">
-                info@jdavisgc.com
+                msaengineer.contractor@gmail.com
               </p>
 
             </div>
@@ -43,32 +48,32 @@ export default function Footer() {
           <div className="flex flex-col space-y-4 pt-2 text-[1.15rem] font-normal tracking-[-0.02em] text-[#4a4a4a] lg:col-span-3 lg:pt-10">
 
             <a href="#" className="group relative w-fit transition-colors duration-200 hover:text-[#ed1c24]">
-              Portfolio
+              Projects
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#ed1c24] transition-all duration-200 group-hover:w-full"></span>
             </a>
 
             <a href="#" className="group relative w-fit transition-colors duration-200 hover:text-[#ed1c24]">
-              Amenities
+              Shed Structures
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#ed1c24] transition-all duration-200 group-hover:w-full"></span>
             </a>
 
             <a href="#" className="group relative w-fit transition-colors duration-200 hover:text-[#ed1c24]">
-              Industrial
+              Fabrication Works
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#ed1c24] transition-all duration-200 group-hover:w-full"></span>
             </a>
 
             <a href="#" className="group relative w-fit transition-colors duration-200 hover:text-[#ed1c24]">
-              Education
+              Industrial Erection
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#ed1c24] transition-all duration-200 group-hover:w-full"></span>
             </a>
 
             <a href="#" className="group relative w-fit transition-colors duration-200 hover:text-[#ed1c24]">
-              Mixed-Use/Multi Family
+              Conveyor Systems
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#ed1c24] transition-all duration-200 group-hover:w-full"></span>
             </a>
 
             <a href="#" className="group relative w-fit transition-colors duration-200 hover:text-[#ed1c24]">
-              Municipality + Community
+              Equipment Rental
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#ed1c24] transition-all duration-200 group-hover:w-full"></span>
             </a>
 
@@ -132,14 +137,16 @@ export default function Footer() {
           <div>
 
             <h4 className="mb-2 text-[1.05rem] font-medium tracking-[-0.02em] text-[#ed1c24]">
-              Anderson, SC
+              Head Office
             </h4>
 
             <p className="text-[0.95rem] leading-[1.7] text-[#6d6d6d]">
 
-              109 Nunnally Rd.
+              Near Daily Market
               <br />
-              Anderson, SC 29625
+              Rajgangpur - 770017
+              <br />
+              Dist. Sundargarh, Odisha
 
             </p>
 
@@ -149,16 +156,16 @@ export default function Footer() {
           <div>
 
             <h4 className="mb-2 text-[1.05rem] font-medium tracking-[-0.02em] text-[#ed1c24]">
-              Charleston, SC
+              Registered Office
             </h4>
 
             <p className="text-[0.95rem] leading-[1.7] text-[#6d6d6d]">
 
-              4465 Tile Dr.
+              Ward No. 19
               <br />
-              Suite 105
+              Rajgangpur - 770017
               <br />
-              North Charleston, SC 29405
+              Odisha, India
 
             </p>
 
@@ -168,16 +175,16 @@ export default function Footer() {
           <div>
 
             <h4 className="mb-2 text-[1.05rem] font-medium tracking-[-0.02em] text-[#ed1c24]">
-              Spartanburg, SC
+              Operations
             </h4>
 
             <p className="text-[0.95rem] leading-[1.7] text-[#6d6d6d]">
 
-              104 N. Daniel Morgan Ave.
+              Industrial Projects
               <br />
-              #220
+              Across India
               <br />
-              Spartanburg, SC 29306
+              Cement & Industrial Plants
 
             </p>
 
@@ -187,14 +194,14 @@ export default function Footer() {
           <div>
 
             <h4 className="mb-2 text-[1.05rem] font-medium tracking-[-0.02em] text-[#ed1c24]">
-              Westminster, SC
+              Contact Office
             </h4>
 
             <p className="text-[0.95rem] leading-[1.7] text-[#6d6d6d]">
 
-              12245 SC-11,
+              MSA Engineers & Contractors.Co
               <br />
-              Westminster, SC 29693
+              support@msaengineers.in
 
             </p>
 
@@ -208,7 +215,7 @@ export default function Footer() {
           <div className="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-8">
 
             <p>
-              Copyright © 2026 JDavis, Inc. All rights reserved.
+              Copyright © 2026 MSA Engineer & Contractors. All rights reserved.
             </p>
 
             <a
@@ -220,22 +227,6 @@ export default function Footer() {
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#ed1c24] transition-all duration-200 group-hover:w-full"></span>
 
             </a>
-
-          </div>
-
-          {/* Right */}
-          <div className="flex items-center">
-
-            <span>
-              Powered by FUEL
-            </span>
-
-            <svg
-              className="ml-2 h-4 w-4 fill-current opacity-80"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2C12 2 7 7 7 11.5C7 14 9 16 12 16S17 14 17 11.5C17 7 12 2 12 2Z" />
-            </svg>
 
           </div>
         </div>

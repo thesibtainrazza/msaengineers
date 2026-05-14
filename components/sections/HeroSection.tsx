@@ -27,15 +27,17 @@ export default function HeroSection() {
 
       {/* Background */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 scale-[1.02] bg-cover bg-center bg-no-repeat opacity-55"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop')",
-          }}
-        />
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 scale-[1.02] h-full w-full object-cover opacity-55"
+        >
+          <source src="/msa.mp4" type="video/mp4" />
+        </video>
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/45" />
@@ -56,10 +58,10 @@ export default function HeroSection() {
           <div className="max-w-[980px]">
 
             {/* Heading */}
-            <h1 className="text-[4.6rem] font-[520] leading-[0.9] tracking-[-0.07em] text-white md:text-[7rem] lg:text-[6.5rem]">
+            <h1 className="text-[4.6rem] whitespace-nowrap font-[520] leading-[0.9] tracking-[-0.07em] text-white md:text-[7rem] lg:text-[6.5rem]">
 
               <span className="block">
-                We build around{" "}
+                Engineered For{" "}
               </span>
 
               <span
@@ -68,14 +70,14 @@ export default function HeroSection() {
                   fontFamily: '"Times New Roman", serif',
                 }}
               >
-                you
+                Performance
               </span>
 
             </h1>
 
             {/* Subtext */}
             <p className="mt-6 text-[1.8rem] font-light tracking-[-0.03em] text-white/95 md:text-[2.4rem]">
-              Client Focused. Community First.
+              Precision. Reliability. Strength.
             </p>
 
             {/* CTA */}

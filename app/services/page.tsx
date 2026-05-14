@@ -1,15 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 
 // Modular Components
-import ServicesHeroSection from '@/components/services/ServicesHeroSection';
-import ServiceDetailSection from '@/components/services/ServiceDetailSection';
-import ValueEngineeringSection from '@/components/services/ValueEngineeringSection';
+import ServicesHeroSection from '@/components/sections/services/ServicesHeroSection';
+import ServiceDetailSection from '@/components/sections/services/ServiceDetailSection';
+import ValueEngineeringSection from '@/components/sections/services/ValueEngineeringSection';
 
 export const metadata = {
-  title: 'Services | JDavis Construction',
+  title: 'Services | MSA Engineer & Contractors',
 };
 
 const servicesData = [
@@ -81,16 +79,12 @@ const servicesData = [
 
 export default function ServicesPage() {
   return (
-    <div className="flex flex-col bg-white">
-      <Header />
-      <main className="flex-1">
-        <ServicesHeroSection />
-        {servicesData.map((service, index) => (
-            <ServiceDetailSection key={service.id} service={service} index={index} />
-        ))}
-        <ValueEngineeringSection />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <ServicesHeroSection />
+      {servicesData.map((service, index) => (
+          <ServiceDetailSection key={service.id} service={service} index={index} />
+      ))}
+      <ValueEngineeringSection />
+    </>
   );
 }

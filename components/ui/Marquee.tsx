@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Marquee() {
 
   const text =
-    "· Foundation · Safety · Ethics · Respect · Innovation · Quality · Progress ";
+    "· Industrial Structures · Fabrication · Erection · Engineering · Reliability · Precision · Execution ·";
 
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -22,7 +22,7 @@ export default function Marquee() {
           }}
         >
 
-          <span className="pr-16 text-[8rem] md:text-[12rem] lg:text-[15rem] font-[550] tracking-[-0.07em] text-black/[0.045]">
+          <span className="pr-16 text-[8rem] md:text-[12rem] lg:text-[13rem] font-[550] tracking-[-0.07em] text-black/[0.045]">
 
             {text}
 

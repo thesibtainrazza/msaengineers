@@ -20,7 +20,7 @@ export const ProjectCard = ({
       className="
         sticky
         w-full
-        bg-[#f5f5f3]
+        bg-white
         transition-all
         duration-300
         group
@@ -43,7 +43,7 @@ export const ProjectCard = ({
           lg:items-center
           lg:justify-between
           pb-10
-          bg-[#f5f5f3]
+          bg-white
           relative
           z-10
         "
@@ -98,7 +98,7 @@ export const ProjectCard = ({
             className="
               rounded-full
               border
-              border-[#d5d5d5]
+              border-white
               px-5
               py-[0.45rem]
               text-[0.92rem]

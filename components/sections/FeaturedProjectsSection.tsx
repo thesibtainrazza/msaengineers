@@ -3,7 +3,7 @@ import { FEATURED_PROJECTS } from '@/data';
 import ProjectCard from '@/components/ui/ProjectCard';
 
 export default function FeaturedProjectsSection() {
-  return (<section className="relative w-full bg-[#f5f5f3] px-8 md:px-12 lg:px-16 pt-24 pb-48">
+  return (<section className="relative w-full bg-white px-8 md:px-12 lg:px-16 pt-24 pb-48">
 
     <div className="max-w-[1450px] mx-auto">
 
@@ -37,12 +37,8 @@ export default function FeaturedProjectsSection() {
             max-w-[980px]
           "
           >
-            Every distinct building in our diverse portfolio
-            represents one uncommon commitment:
-            Our determination to make your vision,
-            experience and satisfaction the top priority.
-            When you put people first, results follow—and
-            these projects speak for themselves.
+            MSA Engineers & Contractors has delivered industrial structures, fabrication, and engineering execution projects for cement plants and industrial facilities across India. Our projects reflect precision, reliability, and over 25 years of trusted industrial expertise.
+
           </p>
 
         </div>
@@ -73,7 +69,7 @@ export default function FeaturedProjectsSection() {
         "
         >
 
-          <span>View Portfolio</span>
+          <span>View Projects</span>
 
           <svg
             className="

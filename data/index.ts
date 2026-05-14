@@ -1,113 +1,113 @@
-export const FEATURED_PROJECTS = [
+import { Project, NavLink, Sector, Service } from "@/types";
+
+export const FEATURED_PROJECTS: Project[] = [
   {
     title: "Lake Toxaway Country Club",
     location: "Toxaway, NC",
     category: "Amenities",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2070&auto=format&fit=crop"
+    image: "/assets/1.jpg"
   },
  {
   title: "Newberry Nursing Building",
   location: "Newberry, SC",
   category: "Education",
   image:
-    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2070&q=80",
+    "/assets/2.jpg?auto=format&fit=crop&w=2070&q=80",
 },
   {
     title: "Modern Industrial Facility",
     location: "Greenville, SC",
     category: "Industrial",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1756705406506-50500a12463c?q=80&w=2054&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2070&auto=format&fit=crop"
   },
   {
     title: "Downtown Mixed-Use Complex",
     location: "Asheville, NC",
     category: "Mixed-Use + Retail",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+    image: "/assets/4.jpg?q=80&w=2070&auto=format&fit=crop"
   },
   {
     title: "Community Recreation Center",
     location: "Spartanburg, SC",
     category: "Municipality + Community",
-    image: "https://images.unsplash.com/photo-1542384701-c0e46e0eda04?q=80&w=2065&auto=format&fit=crop"
+    image: "/assets/5.jpg?q=80&w=2065&auto=format&fit=crop"
   }
 ];
 
-export const SERVICES_LIST = [
-  { title: "Preconstruction", isActive: false },
-  { title: "Design-Build", isActive: false },
-  { title: "CM at Risk", isActive: false },
-  { title: "Construction", isActive: false }
+export const WHY_CHOOSE_US: Service[] = [
+  { title: "Industrial Expertise", isActive: false },
+  { title: "Structural Precision", isActive: false },
+  { title: "Trusted Execution", isActive: false },
+  { title: "Nationwide Operations", isActive: false }
 ];
 
-export const NAV_LINKS = [
-  { label: "Portfolio", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Services", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Careers", href: "#" },
-  { label: "Contact", href: "#" }
+export const NAV_LINKS: NavLink[] = [
+  { label: "Projects", href: "/projects" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Blog", href: "/blog" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" }
 ];
-
-export const SECTORS = [
-
+export const SERVICES_LIST: Sector[] = [
   // BUTTON 1
   {
-    label: "Amenities",
+    label: "Shed Structures",
     image:
-      "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1662120399978-738d233edbec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop",
     isImage: false,
   },
 
   // BUTTON 2
   {
-    label: "Mixed-Use + Retail",
+    label: "Fabrication Works",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
     isImage: false,
   },
 
   // IMAGE 1
   {
     image:
-      "https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1582489853490-cd3a53eb4530?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop",
     isImage: true,
   },
 
   // BUTTON 3
   {
-    label: "Industrial",
+    label: "Industrial Erection",
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1746003870946-c29679f31d3e?q=80&w=2831&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop",
     isImage: false,
   },
 
   // BUTTON 4
   {
-    label: "Education",
+    label: "Conveyor Systems",
     image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1651672397008-01d088f4a9f6?q=80&w=2140&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop",
     isImage: false,
   },
 
   // BUTTON 5
   {
-    label: "Municipality + Community",
+    label: "Equipment Rental",
     image:
-      "https://images.unsplash.com/photo-1542384701-c0e46e0eda04?q=80&w=2065&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1566624490237-b0314cb4a73f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop",
     isImage: false,
   },
 
   // IMAGE 2
   {
     image:
-      "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070&auto=format&fit=crop",
     isImage: true,
   },
 
   // IMAGE 3
   {
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop",
     isImage: true,
   },
 ];

@@ -1,10 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "@/data";
+import Link from "next/link";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,20 +33,19 @@ export default function Header() {
       
       <nav
         className={`mx-auto flex max-w-[1450px] items-center px-8 md:px-12 lg:px-16 xl:px-20 transition-all duration-500 ${
-          scrolled
-            ? "py-4 md:py-5 text-black"
-            : "py-6 md:py-8 text-white"
-        }`}
+          scrolled ? "py-4 md:py-5" : "py-6 md:py-8"
+        } ${!isHome || scrolled ? "text-[#4b4b4b]" : "text-white"}`}
       >
 
         {/* Logo */}
-        <div className="mr-16 xl:mr-20 shrink-0 cursor-pointer">
+        <a href="/" 
+        className="mr-16 xl:mr-20 shrink-0 cursor-pointer">
 
           <div className="flex items-start leading-none">
 
             {/* J */}
             <span className="text-[86px] font-medium tracking-[-0.12em] leading-[0.78]">
-              J
+              
             </span>
 
             {/* DAVIS */}
@@ -51,50 +54,27 @@ export default function Header() {
               <div className="flex items-start">
 
                 <span className="text-[58px] font-medium tracking-[-0.08em] leading-[0.82]">
-                  DAVIS
+                  MSA
                 </span>
 
                 <sup className="ml-[2px] mt-[6px] text-[10px] font-normal">
-                  ™
+                  CO.
                 </sup>
 
               </div>
 
               {/* CONSTRUCTION */}
               <span className="mt-[2px] text-[10px] font-medium tracking-[0.22em] leading-none">
-                CONSTRUCTION
+                ENGINEERS & CONSTRUCTION
               </span>
 
             </div>
           </div>
-        </div>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-x-8 xl:gap-x-10">
 
-          {/* Sectors */}
-          <div className="group relative flex cursor-pointer items-center text-[20px] font-semibold transition-colors duration-300 hover:text-[#ed1c24]">
-
-            <span>Sectors</span>
-
-            <svg
-              className="ml-1 mt-[1px] h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-
-            {/* Underline */}
-            <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#ed1c24] transition-all duration-300 group-hover:w-full"></span>
-
-          </div>
 
           {/* Links */}
           {NAV_LINKS.map((link) => (
@@ -113,7 +93,9 @@ export default function Header() {
         </div>
 
         {/* CTA Button */}
-        <button className="ml-auto hidden lg:flex items-center rounded-full bg-[#ed1c24] px-10 py-5 text-[18px] font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:bg-[#c9161d]">
+        <Link
+        href="/contact"
+          className="ml-auto hidden lg:flex items-center rounded-full bg-[#ed1c24] px-10 py-5 text-[18px] font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:bg-[#c9161d]">
 
           <span>Build with Us</span>
 
@@ -131,7 +113,7 @@ export default function Header() {
             />
           </svg>
 
-        </button>
+        </Link>
 
         {/* Mobile Menu */}
         <button className="ml-auto lg:hidden">
