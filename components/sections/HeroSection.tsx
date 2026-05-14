@@ -36,7 +36,7 @@ export default function HeroSection() {
           preload="auto"
           className="absolute inset-0 scale-[1.02] h-full w-full object-cover opacity-55"
         >
-          <source src="/msa.mp4" type="video/mp4" />
+          <source src="/msa.MP4" type="video/mp4" />
         </video>
 
         {/* Dark Overlay */}
