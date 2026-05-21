@@ -11,7 +11,7 @@ export default function EmployeeBenefitsSection() {
 ];
   return (
     <section className="relative w-full bg-[#f8f8f8] py-24 md:py-32">
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
         <h4 className="text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24] mb-4">
             Big(ger) Perks
         </h4>

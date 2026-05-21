@@ -35,3 +35,9 @@ body {
   background: #ed1c24;
   color: white;
 }
+
+@layer components {
+  .container-primary {
+    @apply mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20;
+  }
+}

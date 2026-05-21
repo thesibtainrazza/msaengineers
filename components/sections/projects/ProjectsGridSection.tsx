@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 import { FEATURED_PROJECTS } from "@/data";
 
@@ -31,8 +32,7 @@ export default function FeaturedProjectsSlider() {
                         {/* IMAGE */}
                         <div className="relative h-[620px] w-full overflow-hidden">
 
-                            <img
-                                src={activeProject.image}
+                            <Image width={1000} height={1000}                                 src={activeProject.image}
                                 alt={activeProject.title}
                                 className="
                 h-full
@@ -247,8 +247,7 @@ export default function FeaturedProjectsSlider() {
                             {/* IMAGE */}
                             <div className="group relative overflow-hidden bg-[#ececec]">
 
-                                <img
-                                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop"
+                                <Image width={1000} height={1000}                                     src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop"
                                     alt="Industrial Project"
                                     className="
               h-[680px]
@@ -399,7 +398,7 @@ export default function FeaturedProjectsSlider() {
                     }}
                 />
 
-                <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+                <div className="container-primary">
 
                     <div className="grid grid-cols-12 gap-14">
 
@@ -410,8 +409,7 @@ export default function FeaturedProjectsSlider() {
 
                                 <div className="overflow-hidden bg-[#ececec]">
 
-                                    <img
-                                        src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop"
+                                    <Image width={1000} height={1000}                                         src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop"
                                         alt="Interior Project"
                                         className="
                 h-[680px]
@@ -461,8 +459,7 @@ export default function FeaturedProjectsSlider() {
 
                                 <div className="overflow-hidden bg-[#ececec]">
 
-                                    <img
-                                        src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1800&auto=format&fit=crop"
+                                    <Image width={1000} height={1000}                                         src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1800&auto=format&fit=crop"
                                         alt="Country Club Project"
                                         className="
                 h-[760px]
@@ -543,15 +540,14 @@ export default function FeaturedProjectsSlider() {
             {/* FULL WIDTH PROJECT SECTION */}
             <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-24">
 
-                <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+                <div className="container-primary">
 
                     <div className="relative">
 
                         {/* IMAGE */}
                         <div className="group relative overflow-hidden bg-[#ececec]">
 
-                            <img
-                                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2200&auto=format&fit=crop"
+                            <Image width={1000} height={1000}                                 src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2200&auto=format&fit=crop"
                                 alt="Educational Facility"
                                 className="
             h-[760px]
@@ -656,15 +652,14 @@ export default function FeaturedProjectsSlider() {
             {/* RED FEATURED PROJECT BANNER */}
             <section className="relative w-full overflow-hidden bg-[#f7f7f5] pb-28">
 
-                <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+                <div className="container-primary">
 
                     <div className="relative">
 
                         {/* IMAGE */}
                         <div className="overflow-hidden">
 
-                            <img
-                                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2200&auto=format&fit=crop"
+                            <Image width={1000} height={1000}                                 src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2200&auto=format&fit=crop"
                                 alt="Fire Station Project"
                                 className="
             h-[760px]
@@ -792,7 +787,7 @@ export default function FeaturedProjectsSlider() {
                     }}
                 />
 
-                <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+                <div className="container-primary">
 
                     <div className="grid grid-cols-12 gap-14 items-start">
 
@@ -837,8 +832,7 @@ export default function FeaturedProjectsSlider() {
                                 {/* IMAGE */}
                                 <div className="group overflow-hidden bg-[#ececec]">
 
-                                    <img
-                                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1800&auto=format&fit=crop"
+                                    <Image width={1000} height={1000}                                         src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1800&auto=format&fit=crop"
                                         alt="Mixed Use Project"
                                         className="
                 h-[820px]
@@ -960,7 +954,7 @@ export default function FeaturedProjectsSlider() {
                     }}
                 />
 
-                <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+                <div className="container-primary">
 
                     <div className="grid grid-cols-12 gap-16">
 
@@ -998,8 +992,7 @@ export default function FeaturedProjectsSlider() {
                             {/* MAIN IMAGE */}
                             <div className="relative overflow-hidden group">
 
-                                <img
-                                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop"
+                                <Image width={1000} height={1000}                                     src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop"
                                     alt="Country Club"
                                     className="
               h-[760px]
@@ -1080,8 +1073,7 @@ export default function FeaturedProjectsSlider() {
 
                                 <div className="overflow-hidden">
 
-                                    <img
-                                        src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop"
+                                    <Image width={1000} height={1000}                                         src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop"
                                         alt="Country Club Interior"
                                         className="
                 h-[520px]

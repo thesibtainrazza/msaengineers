@@ -1,5 +1,6 @@
 // FeaturedPostSection.tsx
 
+import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
@@ -18,7 +19,7 @@ export default function FeaturedPostSection() {
       "
     >
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         <div
           className="
@@ -146,8 +147,7 @@ export default function FeaturedPostSection() {
             "
           >
 
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+            <Image width={1000} height={1000}               src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
               alt="Industrial Conveyor System"
               className="
                 h-full

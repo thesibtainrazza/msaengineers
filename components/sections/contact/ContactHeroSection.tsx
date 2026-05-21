@@ -17,7 +17,7 @@ export default function ContactHeroSection() {
       "
     >
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         {/* TOP */}
         <div

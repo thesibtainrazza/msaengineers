@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { MISSION_SECTION } from "@/data/home";
 
 export default function MissionSection() {
   const [highlightWidth, setHighlightWidth] = useState(0);
@@ -37,7 +38,7 @@ export default function MissionSection() {
       className="relative w-full overflow-hidden bg-white py-28"
     >
 
-      <div className="mx-auto grid max-w-[1450px] grid-cols-1 gap-24 px-8 md:px-12 lg:grid-cols-2 lg:px-16 xl:px-20">
+      <div className="container-primary grid grid-cols-1 gap-24 lg:grid-cols-2">
 
         {/* LEFT SIDE */}
         <div className="relative min-h-[900px]">
@@ -78,19 +79,19 @@ export default function MissionSection() {
 
           {/* SMALL LABEL */}
           <h4 className="mb-10 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
-            OUR MISSION
+            {MISSION_SECTION.label}
           </h4>
 
           {/* MAIN HEADING */}
           <h2 className="text-[3.7rem] font-[350] leading-[1.08] tracking-[-0.055em] text-[#4b4b4b] md:text-[4.8rem] lg:text-[5.4rem]">
 
-            To deliver industrial
+            {MISSION_SECTION.headingPart1}
             <br />
 
-            engineering solutions that
+            {MISSION_SECTION.headingPart2}
             <br />
 
-              stand strong,
+            {MISSION_SECTION.headingPart3}
             <br />
 
             {/* HIGHLIGHT */}
@@ -107,14 +108,14 @@ export default function MissionSection() {
 
               {/* TEXT */}
               <span className="relative z-10">
-                perform
+                {MISSION_SECTION.highlightText}
               </span>
 
             </span>
-            reliably,
+            {MISSION_SECTION.headingPart4}
             <br />
 
-            and endure for generations.
+            {MISSION_SECTION.headingPart5}
 
           </h2>
 
@@ -160,7 +161,7 @@ export default function MissionSection() {
       </div>
 
       {/* BOTTOM DIVIDER */}
-      <div className="mx-auto mt-44 max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary mt-44">
 
         <div className="h-[1px] w-full bg-[#d7d7d7]"></div>
 

@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+ 
 import React from 'react';
 import CareersHeroSection from '@/components/sections/careers/CareersHeroSection';
 import CommunityInvolvementSection from '@/components/sections/careers/CommunityInvolvementSection';

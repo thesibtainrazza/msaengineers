@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import React, { useRef } from "react";
 import {
   motion,
   useScroll,
   useTransform,
 } from "framer-motion";
+import { CAREERS_HERO } from "@/data/careers";
 
 export default function CareersHeroSection() {
 
@@ -44,7 +46,7 @@ export default function CareersHeroSection() {
         "
     >
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         {/* TOP GRID */}
         <div
@@ -71,7 +73,7 @@ export default function CareersHeroSection() {
                   text-[#ed1c24]
                 "
             >
-              LIFE AT MSA ENGINEERS
+              {CAREERS_HERO.label}
             </h4>
 
             <h1
@@ -85,7 +87,7 @@ export default function CareersHeroSection() {
                   text-[#4b4b4b]
                 "
             >
-              Careers
+              {CAREERS_HERO.heading}
             </h1>
 
           </div>
@@ -103,15 +105,10 @@ export default function CareersHeroSection() {
                 "
             >
 
-              When we say that our team operates like a unified
-              industrial workforce, we mean it. Every project
-              depends on coordination, accountability, and trust
-              between engineers, supervisors, fabricators, and
-              site teams. At MSA, people grow through real
-              execution, practical responsibility, and{" "}
+              {CAREERS_HERO.description}
 
               <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
-                field experience.
+                {CAREERS_HERO.highlightText}
               </span>
             </p>
 
@@ -136,20 +133,18 @@ export default function CareersHeroSection() {
                   mb-16
                 "
             >
-              We are proud to have some of the{" "}
+              {CAREERS_HERO.secondaryTextPart1}
 
               <span className="bg-[#ed1c24] px-3 py-[2px] text-white">
-                most dedicated
+                {CAREERS_HERO.secondaryHighlight}
               </span>
 
-              {" "}industrial professionals on our team—people
-              who value discipline, ownership, precision, and
-              long-term commitment to quality execution.
+              {CAREERS_HERO.secondaryTextPart2}
               </p>
 
               {/* BUTTON */}
               <a
-                href="#positions"
+                href={CAREERS_HERO.ctaLink}
                 className="
                   inline-flex
                   items-center
@@ -170,7 +165,7 @@ export default function CareersHeroSection() {
                 "
               >
 
-                See open positions
+                {CAREERS_HERO.ctaText}
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -247,8 +242,7 @@ export default function CareersHeroSection() {
             "
         >
 
-          <img
-            src="https://images.unsplash.com/photo-1668243304566-2e78ebd48960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          <Image width={1000} height={1000}             src={CAREERS_HERO.heroImage}
             alt="MSA Team"
             className="
                 h-full

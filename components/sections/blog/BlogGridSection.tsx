@@ -1,5 +1,6 @@
 // BlogGridSection.tsx
 
+import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
@@ -79,7 +80,7 @@ const posts = [
         }}
       />
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         <div
           className="
@@ -108,8 +109,7 @@ const posts = [
                 "
               >
 
-                <img
-                  src={post.image}
+                <Image width={1000} height={1000}                   src={post.image}
                   alt={post.title}
                   className="
                     h-[420px]

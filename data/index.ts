@@ -11,7 +11,7 @@ export const FEATURED_PROJECTS: Project[] = [
     title: "DIA Limestone Stockpile Shed",
     location: "Dala, RJ",
     category: "Shed Structures",
-    image: "/assets/2.jpg?auto=format&fit=crop&w=2070&q=80",
+    image: "/assets/2.jpg",
   },
 
   {
@@ -26,14 +26,14 @@ export const FEATURED_PROJECTS: Project[] = [
     title: "Clinker Conveyor Support System",
     location: "JSG, OD",
     category: "Conveyor Systems",
-    image: "/assets/4.jpg?q=80&w=2070&auto=format&fit=crop",
+    image: "/assets/4.jpg",
   },
 
   {
     title: "Kiln Section Structural Erection",
     location: "Satna, MP",
     category: "Industrial Erection",
-    image: "/assets/5.jpg?q=80&w=2065&auto=format&fit=crop",
+    image: "/assets/5.jpg",
   }
 ];
 export const WHY_CHOOSE_US: Service[] = [

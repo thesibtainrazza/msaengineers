@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -18,7 +19,7 @@ export default function EducationInternshipsSection() {
       "
     >
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         <div
           className="
@@ -185,8 +186,7 @@ export default function EducationInternshipsSection() {
                 "
               />
 
-              <img
-                src="https://images.unsplash.com/photo-1622612063021-116cc3407145?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              <Image width={1000} height={1000}                 src="https://images.unsplash.com/photo-1622612063021-116cc3407145?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Internship"
                 className="
                   h-[980px]

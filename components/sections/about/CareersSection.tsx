@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 export default function CareersCTASection() {
@@ -23,7 +24,7 @@ export default function CareersCTASection() {
         }}
       />
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         {/* TOP BORDER */}
         <div className="mb-28 h-[1px] w-full bg-[#4b4b4b]" />
@@ -164,8 +165,7 @@ export default function CareersCTASection() {
 
           <div className="relative overflow-hidden bg-[#ececec]">
 
-            <img
-              src="/assets/6.jpg"
+            <Image width={1000} height={1000}               src="/assets/6.jpg"
               alt="MSA Team"
               className="h-[420px] md:h-[520px] w-full object-cover grayscale"
             />

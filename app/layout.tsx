@@ -10,8 +10,26 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "MSA Engineers",
-  description: "Industrial Infrastructure Solutions",
+  metadataBase: new URL('https://msaengineers.com'),
+  title: {
+    default: "MSA Engineers & Contractors | Industrial Infrastructure Solutions",
+    template: "%s | MSA Engineers & Contractors"
+  },
+  description: "MSA Engineers & Contractors delivers dependable industrial engineering and contracting solutions across India. Specializing in structural, fabrication, and execution excellence.",
+  keywords: ["Industrial Engineering", "Fabrication", "Structural Steel", "Cement Plants", "Contractors", "India"],
+  openGraph: {
+    title: "MSA Engineers & Contractors",
+    description: "Delivering dependable industrial engineering and contracting solutions.",
+    url: "https://msaengineers.com",
+    siteName: "MSA Engineers",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MSA Engineers & Contractors",
+    description: "Industrial Infrastructure Solutions that endure for generations.",
+  },
   icons: {
     icon: [
       { url: "/favicons/favicon-32x32.png", type: "image/png", sizes: "32x32" },

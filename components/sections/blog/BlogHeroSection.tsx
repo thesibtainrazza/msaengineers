@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function BlogHeroSection() {
@@ -15,7 +16,7 @@ export default function BlogHeroSection() {
       "
     >
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         {/* TOP CONTENT */}
         <div
@@ -109,8 +110,7 @@ export default function BlogHeroSection() {
           "
         >
 
-          <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+          <Image width={1000} height={1000}             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
             alt="Industrial Insights"
             className="
               h-full

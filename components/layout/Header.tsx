@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "@/data";
@@ -32,7 +33,7 @@ export default function Header() {
     >
       
       <nav
-        className={`mx-auto flex max-w-[1450px] items-center px-8 md:px-12 lg:px-16 xl:px-20 transition-all duration-500 ${
+        className={`container-primary flex items-center transition-all duration-500 ${
           scrolled ? "py-4 md:py-5" : "py-6 md:py-8"
         } ${!isHome || scrolled ? "text-[#4b4b4b]" : "text-white"}`}
       >
@@ -42,7 +43,7 @@ export default function Header() {
           
           {/* Badge Logo */}
           <div className="relative h-12 w-12 md:h-14 md:w-14 overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-105">
-            <img 
+            <Image width={1000} height={1000} 
               src="/favicons/android-chrome-192x192.png" 
               alt="MSA Engineers Logo" 
               className="h-full w-full object-contain"

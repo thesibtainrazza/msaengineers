@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { HERO_SECTION } from "@/data/home";
 
 export default function HeroSection() {
   const [progress, setProgress] = useState(0);
@@ -53,7 +54,7 @@ export default function HeroSection() {
       {/* Hero Content */}
       <main className="relative z-10 flex flex-1 items-center">
 
-        <div className="mx-auto w-full max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+        <div className="container-primary w-full">
 
           <div className="max-w-[980px]">
 
@@ -61,7 +62,7 @@ export default function HeroSection() {
             <h1 className="text-[4.6rem] whitespace-nowrap font-[520] leading-[0.9] tracking-[-0.07em] text-white md:text-[7rem] lg:text-[6.5rem]">
 
               <span className="block">
-                Engineered For{" "}
+                {HERO_SECTION.headingPart1}
               </span>
 
               <span
@@ -70,14 +71,14 @@ export default function HeroSection() {
                   fontFamily: '"Times New Roman", serif',
                 }}
               >
-                Performance
+                {HERO_SECTION.headingPart2}
               </span>
 
             </h1>
 
             {/* Subtext */}
             <p className="mt-6 text-[1.8rem] font-light tracking-[-0.03em] text-white/95 md:text-[2.4rem]">
-              Precision. Reliability. Strength.
+              {HERO_SECTION.subtext}
             </p>
 
             {/* CTA */}
@@ -85,7 +86,7 @@ export default function HeroSection() {
 
               <button className="group flex items-center rounded-full border-2 border-transparent bg-white px-10 py-5 text-[1.2rem] font-semibold text-[#ed1c24] transition-all duration-300 hover:border-white hover:bg-[#ed1c24] hover:text-white">
 
-                <span>See Our Work</span>
+                <span>{HERO_SECTION.ctaText}</span>
 
                 <svg
                   className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -111,7 +112,7 @@ export default function HeroSection() {
       {/* Bottom Timeline */}
       <div className="relative z-10 w-full pb-8 md:pb-10">
 
-        <div className="mx-auto flex max-w-[1450px] items-center px-8 md:px-12 lg:px-16 xl:px-20 text-white">
+        <div className="container-primary flex items-center text-white">
 
           {/* PEOPLE */}
           <span
@@ -120,7 +121,7 @@ export default function HeroSection() {
               fontFamily: "'Marker Felt', 'Comic Sans MS', fantasy",
             }}
           >
-            PEOPLE
+            {HERO_SECTION.timelineLabels[0]}
           </span>
 
           {/* Animated Line 1 */}
@@ -142,7 +143,7 @@ export default function HeroSection() {
               fontFamily: "'Marker Felt', 'Comic Sans MS', fantasy",
             }}
           >
-            PRINCIPLES
+            {HERO_SECTION.timelineLabels[1]}
           </span>
 
           {/* Animated Line 2 */}
@@ -167,7 +168,7 @@ export default function HeroSection() {
               fontFamily: "'Marker Felt', 'Comic Sans MS', fantasy",
             }}
           >
-            PROGRESS
+            {HERO_SECTION.timelineLabels[2]}
           </span>
 
         </div>

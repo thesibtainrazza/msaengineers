@@ -38,7 +38,7 @@ export default function WhyChooseUsSection() {
 
           {/* Bottom Image Component */}
           <div className="w-full mt-16 shadow-2xl">
-            <div className="w-full aspect-[3/4] bg-cover bg-center" style={{backgroundImage:"url('/assets/7.jpg?auto=format&fit=crop&w=1200&q=80')" }}></div>
+            <div className="w-full aspect-[3/4] bg-cover bg-center" style={{backgroundImage:"url('/assets/7.jpg')" }}></div>
           </div>
         </div>
       </div>

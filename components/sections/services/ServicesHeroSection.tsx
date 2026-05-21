@@ -2,18 +2,13 @@
 
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { SERVICES_HERO } from "@/data/services";
 
 export default function ServicesHeroSection() {
 
   const [activeTab, setActiveTab] = useState("Shed Structures");
 
-  const navItems = [
-    { label: "Shed Structures", href: "#shed-structures" },
-    { label: "Fabrication Works", href: "#fabrication-works" },
-    { label: "Industrial Erection", href: "#industrial-erection" },
-    { label: "Conveyor Systems", href: "#conveyor-systems" },
-     { label: "Equipment Rentals", href: "#equipment-rentals" },
-  ];
+  const navItems = SERVICES_HERO.navItems;
 
   /* IMAGE ZOOM SCROLL EFFECT */
   const imageRef = useRef(null);
@@ -28,7 +23,7 @@ export default function ServicesHeroSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#f7f7f5] pt-40 pb-0">
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         {/* TOP GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-x-32 items-start">
@@ -37,15 +32,15 @@ export default function ServicesHeroSection() {
           <div>
 
             <h4 className="mb-8 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
-              SERVICES
+              {SERVICES_HERO.label}
             </h4>
 
             <h1 className="text-[5rem] md:text-[6rem] lg:text-[7rem] font-[420] tracking-[-0.07em] leading-[0.9] text-[#4b4b4b]">
 
-              From fabrication
+              {SERVICES_HERO.headingPart1}
               <br />
 
-              to field execution
+              {SERVICES_HERO.headingPart2}
 
             </h1>
 
@@ -89,15 +84,13 @@ export default function ServicesHeroSection() {
 
             <p className="text-[1.55rem] font-light leading-[1.7] tracking-[-0.03em] text-[#4f4f4f]">
 
-              When industries partner with MSA, they work with a team focused on practical execution, structural precision, and dependable delivery. From industrial shed structures and heavy fabrication works to conveyor systems and on-site erection, we handle projects with {" "}
+              {SERVICES_HERO.descriptionPart1}
 
               <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
-                disciplined coordination
+                {SERVICES_HERO.highlightText}
               </span>
 
-              {" "} and hands-on industry experience.
-
-Whether supporting plant expansions, shutdown activities, or new industrial developments, our approach stays rooted in safety, durability, and efficient execution — delivering solutions that perform reliably in real working environments.
+              {SERVICES_HERO.descriptionPart2}
 
             </p>
 
@@ -110,13 +103,13 @@ Whether supporting plant expansions, shutdown activities, or new industrial deve
 
           <p className="text-[1.55rem] md:text-[1.8rem] lg:text-[2.2rem] font-light tracking-[-0.05em] leading-[1.06] text-[#4b4b4b]">
 
-            We build industrial systems that demand precision, durability, and real-world execution. We earn{" "}
+            {SERVICES_HERO.secondaryTextPart1}
 
             <span className="bg-[#ed1c24] px-3 py-[2px] text-white">
-               long-term trust
+               {SERVICES_HERO.secondaryHighlight}
             </span>
 
-            {" "}through accountability on-site and consistency in delivery. And we specialize in structural solutions engineered for demanding industrial environments.
+            {SERVICES_HERO.secondaryTextPart2}
 
           </p>
 

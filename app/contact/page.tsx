@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+ 
 import React from 'react';
 import ContactHeroSection from '@/components/sections/contact/ContactHeroSection';
 import ContactDetailsSection from '@/components/sections/contact/ContactDetailsSection';

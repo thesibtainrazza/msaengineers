@@ -15,12 +15,12 @@ interface Props {
   index: number;
 }
 
-export default function ServiceDetailSection({ service, index }: Props) {
+export default function ServiceDetailSection({ service }: Props) {
   return (
     <section className="relative w-full bg-white py-24 md:py-32" id={service.id}>
       {/* Optional decorative background lines could go here based on the design system */}
       
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center ${service.reverse ? 'lg:flex-row-reverse' : ''}`}>
           
           {/* Text Content */}

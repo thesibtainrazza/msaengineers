@@ -9,7 +9,7 @@ export default function AboutHeroSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#f7f7f5] pt-40 pb-32">
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         {/* TOP ROW */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-32 items-start">

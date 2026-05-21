@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -27,7 +28,7 @@ export default function ValueEngineeringSection() {
 
       <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-36">
 
-        <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+        <div className="container-primary">
 
           <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-x-28 gap-y-24">
 
@@ -128,8 +129,7 @@ That is why our approach focuses on disciplined planning, fabrication accuracy, 
                 "
               >
 
-                <img
-                  src="https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=1200&auto=format&fit=crop"
+                <Image width={1000} height={1000}                   src="https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=1200&auto=format&fit=crop"
                   alt="Workers"
                   className="
                     h-[640px]
@@ -154,8 +154,7 @@ That is why our approach focuses on disciplined planning, fabrication accuracy, 
                 "
               >
 
-                <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop"
+                <Image width={1000} height={1000}                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop"
                   alt="Team"
                   className="
                     h-[420px]

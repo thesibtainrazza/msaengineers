@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Marquee from "@/components/ui/Marquee";
+import { WHO_WE_ARE_SECTION } from "@/data/home";
 
 export default function WhoWeAreSection() {
   const [highlightWidth, setHighlightWidth] = useState(0);
@@ -37,25 +38,25 @@ export default function WhoWeAreSection() {
       {/* Background Watermark */}
       <Marquee />
 
-      <div className="relative z-10 mx-auto grid max-w-[1450px] grid-cols-1 items-center gap-20 px-8 md:px-12 lg:grid-cols-2 lg:gap-28 lg:px-16 xl:px-20">
+      <div className="relative z-10 container-primary grid grid-cols-1 items-center gap-20 lg:grid-cols-2 lg:gap-28">
 
         {/* Left Content */}
         <div className="flex flex-col items-start">
 
           {/* Small Label */}
           <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
-            Who We Are
+            {WHO_WE_ARE_SECTION.label}
           </h4>
 
           {/* Main Heading */}
           <h2 className="text-[4.2rem] font-[450] leading-[0.98] tracking-[-0.06em] text-[#4b4b4b] md:text-[5.4rem] lg:text-[5.8rem]">
 
             <span className="block">
-              Industrial Engineering
+              {WHO_WE_ARE_SECTION.headingPart1}
             </span>
 
             <span className="mt-1 block">
-              the{" "}
+              {WHO_WE_ARE_SECTION.headingPart2}
 
               {/* Animated Highlight */}
               <span
@@ -73,7 +74,7 @@ export default function WhoWeAreSection() {
 
                 {/* Text */}
                 <span className="relative z-10 font-medium">
-                  Right Way
+                  {WHO_WE_ARE_SECTION.headingHighlight}
                 </span>
 
               </span>
@@ -84,13 +85,13 @@ export default function WhoWeAreSection() {
 
           {/* Paragraph */}
           <p className="mt-10 max-w-[720px] text-[1.7rem] font-light leading-[1.7] tracking-[-0.02em] text-[#5f5f5f]">
-          At MSA Engineers & Contractors, we deliver dependable industrial engineering and contracting solutions with a strong focus on quality, precision, and execution excellence. Since 2000, we have been serving cement plants and industrial projects across India through reliable structural, fabrication, and engineering services.
+            {WHO_WE_ARE_SECTION.description}
           </p>
 
           {/* Button */}
           <button className="group mt-14 flex items-center rounded-full border-2 border-[#ed1c24] bg-transparent px-10 py-5 text-[1.2rem] font-medium text-[#4b4b4b] transition-all duration-300 hover:bg-[#ed1c24] hover:text-white">
 
-            <span>About Us</span>
+            <span>{WHO_WE_ARE_SECTION.ctaText}</span>
 
             <svg
               className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"

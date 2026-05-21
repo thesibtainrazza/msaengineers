@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export default function CommunitySection() {
   return (
@@ -128,15 +129,14 @@ export default function CommunitySection() {
         }}
       />
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         {/* TOP IMAGE */}
         <div className="relative mb-44">
 
           <div className="overflow-hidden">
 
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2200&auto=format&fit=crop"
+            <Image width={1000} height={1000}               src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2200&auto=format&fit=crop"
               alt="Construction Recovery"
               className="
                 h-[820px]
@@ -191,8 +191,7 @@ export default function CommunitySection() {
 
             <div className="relative">
 
-              <img
-                src="/assets/lab1.jpg?q=80&w=1600&auto=format&fit=crop"
+              <Image width={1000} height={1000}                 src="/assets/lab1.jpg"
                 alt="Community Build"
                 className="
                   h-[540px]
@@ -244,8 +243,7 @@ export default function CommunitySection() {
 
             <div className="relative w-[70%]">
 
-              <img
-                src="/assets/lab2.jpg?auto=format&fit=crop"
+              <Image width={1000} height={1000}                 src="/assets/lab2.jpg"
                 alt="Construction Team"
                 className="
                   h-[520px]

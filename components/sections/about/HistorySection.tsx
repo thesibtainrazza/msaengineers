@@ -3,7 +3,7 @@ import React from 'react';
 export default function HistorySection() {
   return (
     <section className="relative w-full bg-[#f7f7f5] py-24 md:py-32" id="history">
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20 text-center">
+      <div className="container-primary text-center">
         <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
           History
         </h4>

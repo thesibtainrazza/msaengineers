@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -131,7 +132,7 @@ export default function AchievementsSection() {
         >
 
             {/* TOP */}
-            <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+            <div className="container-primary">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
@@ -170,8 +171,7 @@ export default function AchievementsSection() {
                 {/* LEFT IMAGE */}
                 <div className="pointer-events-none absolute left-20 top-0 h-full w-[38%] overflow-hidden">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=1400&auto=format&fit=crop"
+                    <Image width={1000} height={1000}                         src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=1400&auto=format&fit=crop"
                         alt="Construction"
                         className="h-full w-full object-cover grayscale"
                     />

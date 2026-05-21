@@ -1,56 +1,14 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from 'react';
 
-const leaders = [
-  {
-    name: 'Mohammad Shahanawaz Attari',
-    title: 'Owner/President',
-    bio: "Many clients know him as the person who still prefers walking the site floor over sitting inside an office. Years of handling fabrication, erection, and industrial execution projects taught him that real engineering is not only about drawings — it is about solving problems under pressure without compromising quality. From coordinating manpower at difficult industrial sites to ensuring work moves even during tight shutdown deadlines, his leadership style is practical, disciplined, and deeply execution-focused. He believes trust is earned when commitments made during meetings are fulfilled on-site without excuses. Even as MSA continues to grow, he remains closely involved in project discussions, planning, and field execution — because for him, every completed structure carries the reputation of the company behind it.",
-    image: '/assets/msa.jpg?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-  name: 'Mohammad Tousif Raza',
-  title: 'Foundational Member & Early Operations Pillar',
-  bio: "Some people build structures, while others help build the foundation of the people behind them. During the early years of MSA Engineers, Mohammad Tousif Raza played a deeply respected role in shaping the company’s discipline, work ethic, and commitment toward industrial execution. At a time when every project carried uncertainty and every opportunity demanded sacrifice, his guidance, resilience, and belief in the team helped MSA move forward with confidence. He was known for standing beside workers during difficult site conditions, solving problems calmly, and reminding everyone that reputation is earned through honest work and consistency. Though we unfortunately lost him, his values, lessons, and presence continue to remain a part of MSA Engineers’ identity even today.",
-  image: '/assets/tousif-raza.jpg'
-  },
-  {
-    name: 'Nahid Akhtar',
-    title: 'Chief Operations Officer',
-    bio: "Known for maintaining calm during demanding project conditions, Nahid plays a key role in keeping operations organized across fabrication, erection, and industrial execution works. Whether it is coordinating teams, handling site challenges, or managing execution timelines, his focus remains on keeping work moving efficiently and safely. Years of industrial exposure have given him a strong understanding of how projects succeed on the ground — not just on paper. Team members value his practical mindset, problem-solving approach, and ability to keep coordination strong even in high-pressure environments. For him, consistency matters more than noise — delivering dependable execution project after project is what truly builds long-term trust.",
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    name: 'Pradhan Kumar',
-    title: 'Director Client Services',
-    bio: "On industrial sites, where timelines are tight and coordination between teams matters every hour, Pradhan is known for keeping execution disciplined and structured. From fabrication yard planning to final erection activities, he ensures that every stage moves with clarity and accountability. His strength lies in handling real on-ground challenges without slowing project momentum. Workers respect his hands-on approach, while clients value the confidence that comes from knowing execution is being monitored closely and responsibly. For him, the best projects are the ones completed safely, efficiently, and without unnecessary complications.",
-    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    name: 'Faisal Raza',
-    title: 'Head of Fabrication',
-    bio: "Precision in fabrication is not achieved by chance — it comes from experience, supervision, and attention to detail. Faisal oversees fabrication activities with a strong focus on workmanship, structural accuracy, and production efficiency. Having spent years around industrial fabrication works, he understands the importance of maintaining quality before materials even reach the site. From raw steel handling to final assembly preparation, his approach ensures every component leaving the workshop reflects reliability and engineering discipline.",
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    name: 'Aman Verma',
-    title: 'Site Coordination Lead',
-    bio: "Industrial projects often involve multiple teams, shifting schedules, and fast-moving execution environments. Aman specializes in keeping communication and coordination aligned between site teams, supervisors, and project management. Known for staying solution-oriented during demanding conditions, he plays an important role in reducing delays and ensuring smooth workflow across operations. His ability to manage responsibilities calmly under pressure has made him a dependable part of MSA’s execution process.",
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    name: 'Vikash Singh',
-    title: 'Safety & Quality Supervisor',
-    bio: "For Vikash, quality and safety are not separate checkpoints — they are part of every stage of execution. From monitoring site practices to ensuring structural and fabrication standards are maintained, his role focuses on building reliability into daily operations. He works closely with teams on-site to maintain organized work environments, safe practices, and consistent quality checks throughout project execution. His mindset is simple: strong industrial work should never compromise on responsibility, precision, or worker safety.",
-    image: 'https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=800&auto=format&fit=crop'
-  }
-];
+import { LEADERS, LEADERSHIP_SECTION } from '@/data/about';
 
 export default function LeadershipSection() {
   const [current, setCurrent] = useState(0);
   return (
     <section className="relative w-full bg-white py-24 md:py-32" id="leadership">
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
           
           {/* Left Column: Title & Intro */}
@@ -62,7 +20,7 @@ export default function LeadershipSection() {
               </span>
             </h2>
             <p className="mt-8 text-[1.6rem] font-light leading-[1.7] text-[#5f5f5f]">
-              The strength of MSA Engineers & Contractors is not built only through machinery, fabrication, or execution — it is built through people who understand responsibility on the ground. Our leadership stays closely connected to every project, ensuring decisions are practical, transparent, and execution-focused from planning to completion.
+              {LEADERSHIP_SECTION.description}
             </p>
           </div>
 
@@ -75,20 +33,19 @@ export default function LeadershipSection() {
 
       <div className="aspect-[3/4] w-full overflow-hidden mb-6 bg-gray-100">
 
-        <img
-          src={leaders[current].image}
-          alt={leaders[current].name}
+        <Image width={1000} height={1000}           src={LEADERS[current].image}
+          alt={LEADERS[current].name}
           className="w-full h-full object-cover grayscale transition-all duration-500 hover:grayscale-0"
         />
 
       </div>
 
       <h3 className="text-[2.4rem] font-[450] text-[#ed1c24]">
-        {leaders[current].name}
+        {LEADERS[current].name}
       </h3>
 
       <p className="font-serif italic text-[#4b4b4b] text-[1.4rem] mt-1">
-        {leaders[current].title}
+        {LEADERS[current].title}
       </p>
 
     </div>
@@ -96,7 +53,7 @@ export default function LeadershipSection() {
     <div className="md:pt-4 flex flex-col justify-between h-full">
 
       <p className="text-[1rem] font-light leading-[1.7] text-[#5f5f5f]">
-        {leaders[current].bio}
+        {LEADERS[current].bio}
       </p>
 
       <div className="mt-16 flex items-center gap-8">
@@ -104,7 +61,7 @@ export default function LeadershipSection() {
         <button
           onClick={() =>
             setCurrent((prev) =>
-              prev === 0 ? leaders.length - 1 : prev - 1
+              prev === 0 ? LEADERS.length - 1 : prev - 1
             )
           }
           className="group"
@@ -131,7 +88,7 @@ export default function LeadershipSection() {
         <button
           onClick={() =>
             setCurrent((prev) =>
-              prev === leaders.length - 1 ? 0 : prev + 1
+              prev === LEADERS.length - 1 ? 0 : prev + 1
             )
           }
           className="group"
@@ -167,13 +124,13 @@ export default function LeadershipSection() {
 
           <h2 className="text-[1.8rem] md:text-[2.6rem] font-[450] leading-[1.2] tracking-[-0.04em] text-[#4b4b4b] max-w-[82%]">
 
-            Every decision at MSA Engineers & Contractors is driven by practical execution, long-term trust, and the responsibility that comes with industrial work. Our leadership keeps teams aligned, projects moving efficiently, and every structure built with the same{" "}
+            {LEADERSHIP_SECTION.conclusionText}
 
             <span className="bg-[#ed1c24] text-white px-2">
-              discipline, precision,and commitment
+              {LEADERSHIP_SECTION.conclusionHighlight}
             </span>
 
-             that shaped the company from the beginning.
+             {LEADERSHIP_SECTION.conclusionEnd}
 
           </h2>
 

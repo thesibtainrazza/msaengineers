@@ -3,7 +3,7 @@ import React from 'react';
 export default function TestimonialSection() {
   return (
     <section className="bg-[#f8f8f8] py-20 md:py-32">
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
         <div className="grid md:grid-cols-3 gap-16 md:gap-24 items-center">
           <div className="order-2 md:order-1 md:text-right border-t md:border-t-0 md:border-r border-[#e5e5e5] pt-8 md:pt-0 md:pr-12">
             <p className="text-[1.3rem] font-semibold text-[#4b4b4b] leading-[1.4]">

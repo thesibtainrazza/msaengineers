@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import {
   motion,
@@ -52,14 +53,13 @@ export default function WhyJDavisSection() {
 
       {/* BLUEPRINT BACKGROUND */}
       <div className="pointer-events-none absolute right-0 bottom-0 opacity-[0.08]">
-        <img
-          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop"
+        <Image width={1000} height={1000}           src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop"
           alt="Blueprint"
           className="w-[420px] object-cover mix-blend-multiply"
         />
       </div>
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="container-primary">
 
         {/* TOP */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-24">
@@ -104,20 +104,17 @@ export default function WhyJDavisSection() {
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
                 
-                <img
-                  src="/logos/make-in-india.png"
+                <Image width={1000} height={1000}                   src="/logos/make-in-india.png"
                   alt="Make In India"
                   className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
                 />
 
-                <img
-                  src="/logos/bis.svg"
+                <Image width={1000} height={1000}                   src="/logos/bis.svg"
                   alt="BIS"
                   className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
                 />
 
-                <img
-                  src="/logos/iso-9001.svg"
+                <Image width={1000} height={1000}                   src="/logos/iso-9001.svg"
                   alt="ISO 9001"
                   className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
                 />
@@ -128,14 +125,12 @@ export default function WhyJDavisSection() {
                   <span className="text-[0.6rem] font-bold tracking-widest text-[#4b4b4b]">SAFETY</span>
                 </div>
 
-                <img
-                  src="/logos/asme.svg"
+                <Image width={1000} height={1000}                   src="/logos/asme.svg"
                   alt="ASME"
                   className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
                 />
 
-                <img
-                  src="/logos/ibr.png"
+                <Image width={1000} height={1000}                   src="/logos/ibr.png"
                   alt="IBR"
                   className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
                 />

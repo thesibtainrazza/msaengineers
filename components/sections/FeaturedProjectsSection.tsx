@@ -5,7 +5,7 @@ import ProjectCard from '@/components/ui/ProjectCard';
 export default function FeaturedProjectsSection() {
   return (<section className="relative w-full bg-white px-8 md:px-12 lg:px-16 pt-24 pb-48">
 
-    <div className="max-w-[1450px] mx-auto">
+    <div className="container-primary px-0 md:px-0 lg:px-0 xl:px-0">
 
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-14 mb-24">
 

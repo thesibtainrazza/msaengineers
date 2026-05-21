@@ -18,7 +18,7 @@ export default function BuildingForBestSection() {
           
           {/* Black and White Image */}
           <div className="w-full md:w-[130%] aspect-[4/3] lg:aspect-[16/10] bg-gray-200 grayscale mt-8 shadow-2xl overflow-hidden relative z-0">
-             <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage:"url('/assets/6.jpg?auto=format&fit=crop&w=1200&q=80')" }}></div>
+             <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage:"url('/assets/6.jpg')" }}></div>
           </div>
         </div>
       </div>
