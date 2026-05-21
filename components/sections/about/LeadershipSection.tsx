@@ -9,6 +9,12 @@ const leaders = [
     image: '/assets/msa.jpg?q=80&w=800&auto=format&fit=crop'
   },
   {
+  name: 'Mohammad Tousif Raza',
+  title: 'Foundational Member & Early Operations Pillar',
+  bio: "Some people build structures, while others help build the foundation of the people behind them. During the early years of MSA Engineers, Mohammad Tousif Raza played a deeply respected role in shaping the company’s discipline, work ethic, and commitment toward industrial execution. At a time when every project carried uncertainty and every opportunity demanded sacrifice, his guidance, resilience, and belief in the team helped MSA move forward with confidence. He was known for standing beside workers during difficult site conditions, solving problems calmly, and reminding everyone that reputation is earned through honest work and consistency. Though we unfortunately lost him, his values, lessons, and presence continue to remain a part of MSA Engineers’ identity even today.",
+  image: '/assets/tousif-raza.jpg'
+  },
+  {
     name: 'Nahid Akhtar',
     title: 'Chief Operations Officer',
     bio: "Known for maintaining calm during demanding project conditions, Alley plays a key role in keeping operations organized across fabrication, erection, and industrial execution works. Whether it is coordinating teams, handling site challenges, or managing execution timelines, his focus remains on keeping work moving efficiently and safely. Years of industrial exposure have given him a strong understanding of how projects succeed on the ground — not just on paper. Team members value his practical mindset, problem-solving approach, and ability to keep coordination strong even in high-pressure environments. For him, consistency matters more than noise — delivering dependable execution project after project is what truly builds long-term trust.",
