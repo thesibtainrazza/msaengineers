@@ -3,6 +3,7 @@ import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument",
@@ -56,6 +57,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-white" suppressHydrationWarning>
+        <GoogleAnalytics />
         <Header />
         <main className="flex-1">
           {children}

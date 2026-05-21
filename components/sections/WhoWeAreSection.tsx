@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Marquee from "@/components/ui/Marquee";
-import { WHO_WE_ARE_SECTION } from "@/data/home";
+import { WHO_WE_ARE_SECTION } from "@/content/home";
 
 export default function WhoWeAreSection() {
   const [highlightWidth, setHighlightWidth] = useState(0);
@@ -44,12 +44,12 @@ export default function WhoWeAreSection() {
         <div className="flex flex-col items-start">
 
           {/* Small Label */}
-          <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
+          <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-primary">
             {WHO_WE_ARE_SECTION.label}
           </h4>
 
           {/* Main Heading */}
-          <h2 className="text-[4.2rem] font-[450] leading-[0.98] tracking-[-0.06em] text-[#4b4b4b] md:text-[5.4rem] lg:text-[5.8rem]">
+          <h2 className="text-[4.2rem] font-[450] leading-[0.98] tracking-[-0.06em] text-text-dark md:text-[5.4rem] lg:text-[5.8rem]">
 
             <span className="block">
               {WHO_WE_ARE_SECTION.headingPart1}
@@ -66,7 +66,7 @@ export default function WhoWeAreSection() {
 
                 {/* Animated Red Fill */}
                 <span
-                  className="absolute left-0 top-0 z-0 h-full bg-[#ed1c24] transition-all duration-200 ease-out"
+                  className="absolute left-0 top-0 z-0 h-full bg-primary transition-all duration-200 ease-out"
                   style={{
                     width: `${highlightWidth}%`,
                   }}
@@ -84,12 +84,12 @@ export default function WhoWeAreSection() {
           </h2>
 
           {/* Paragraph */}
-          <p className="mt-10 max-w-[720px] text-[1.7rem] font-light leading-[1.7] tracking-[-0.02em] text-[#5f5f5f]">
+          <p className="mt-10 max-w-[720px] text-[1.7rem] font-light leading-[1.7] tracking-[-0.02em] text-text-muted">
             {WHO_WE_ARE_SECTION.description}
           </p>
 
           {/* Button */}
-          <button className="group mt-14 flex items-center rounded-full border-2 border-[#ed1c24] bg-transparent px-10 py-5 text-[1.2rem] font-medium text-[#4b4b4b] transition-all duration-300 hover:bg-[#ed1c24] hover:text-white">
+          <button className="group mt-14 flex items-center rounded-full border-2 border-primary bg-transparent px-10 py-5 text-[1.2rem] font-medium text-text-dark transition-all duration-300 hover:bg-primary hover:text-white">
 
             <span>{WHO_WE_ARE_SECTION.ctaText}</span>
 
@@ -114,7 +114,7 @@ export default function WhoWeAreSection() {
         <div className="relative">
 
           {/* Red Accent Line */}
-          <div className="absolute left-[-12%] top-[16%] z-20 hidden h-[2px] w-[24%] bg-[#ed1c24] lg:block"></div>
+          <div className="absolute left-[-12%] top-[16%] z-20 hidden h-[2px] w-[24%] bg-primary lg:block"></div>
 
           {/* Image Container */}
           <div className="group relative aspect-[1.28/1] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.08)]">

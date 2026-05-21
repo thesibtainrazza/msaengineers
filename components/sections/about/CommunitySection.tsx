@@ -11,13 +11,13 @@ export default function CommunitySection() {
 
           {/* LEFT SIDE */}
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-[#ed1c24] mb-6">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary mb-6">
               COMMUNITY
             </p>
 
             <h2 className="text-5xl md:text-7xl leading-[0.95] tracking-tight text-[#3f3f46] max-w-[700px] mb-10">
               Building industries while staying connected to the
-              <span className="bg-[#ed1c24] text-white px-3 ml-2">
+              <span className="bg-primary text-white px-3 ml-2">
                 people around us.
               </span>
             </h2>
@@ -41,7 +41,7 @@ export default function CommunitySection() {
           <div className="max-w-[700px]">
             <h3 className="text-5xl md:text-6xl leading-[1.05] tracking-tight text-[#3f3f46] mb-8">
               We don’t believe in working
-              <span className="bg-[#ed1c24] text-white px-3 mx-2">
+              <span className="bg-primary text-white px-3 mx-2">
                 around communities
               </span>
               — we believe in growing with them.
@@ -68,7 +68,7 @@ export default function CommunitySection() {
             {/* Facebook */}
             <a
               href="#"
-              className="border border-[#ed1c24] rounded-full px-10 py-5 flex items-center gap-4 hover:bg-[#ed1c24] hover:text-white transition-all duration-300"
+              className="border border-primary rounded-full px-10 py-5 flex items-center gap-4 hover:bg-primary hover:text-white transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-full border border-current flex items-center justify-center text-xl">
                 f
@@ -82,7 +82,7 @@ export default function CommunitySection() {
             {/* LinkedIn */}
             <a
               href="#"
-              className="border border-[#ed1c24] rounded-full px-10 py-5 flex items-center gap-4 hover:bg-[#ed1c24] hover:text-white transition-all duration-300"
+              className="border border-primary rounded-full px-10 py-5 flex items-center gap-4 hover:bg-primary hover:text-white transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-full border border-current flex items-center justify-center text-xl">
                 in
@@ -96,7 +96,7 @@ export default function CommunitySection() {
             {/* Instagram */}
             <a
               href="#"
-              className="border border-[#ed1c24] rounded-full px-10 py-5 flex items-center gap-4 hover:bg-[#ed1c24] hover:text-white transition-all duration-300"
+              className="border border-primary rounded-full px-10 py-5 flex items-center gap-4 hover:bg-primary hover:text-white transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-full border border-current flex items-center justify-center text-xl">
                 ◎
@@ -110,7 +110,7 @@ export default function CommunitySection() {
           </div>
         </div>
        {/* IMAGE GRID */}
-      <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-32">
+      <section className="relative w-full overflow-hidden bg-bg-light py-32">
 
       {/* BLUEPRINT BG */}
       <div
@@ -159,7 +159,7 @@ export default function CommunitySection() {
             "
           >
 
-            <div className="h-[180px] w-[1px] bg-[#ed1c24]" />
+            <div className="h-[180px] w-[1px] bg-primary" />
 
             <p
               className="
@@ -212,7 +212,7 @@ export default function CommunitySection() {
                 "
               >
 
-                <div className="h-[170px] w-[1px] bg-[#ed1c24]" />
+                <div className="h-[170px] w-[1px] bg-primary" />
 
                 <p
                   className="
@@ -283,7 +283,7 @@ export default function CommunitySection() {
                   “Industrial progress is not created in meetings alone — it is built every day on fabrication floors, project sites and execution teams.”
                 </p>
 
-                <div className="h-[1px] w-[180px] bg-[#ed1c24]" />
+                <div className="h-[1px] w-[180px] bg-primary" />
 
               </div>
 

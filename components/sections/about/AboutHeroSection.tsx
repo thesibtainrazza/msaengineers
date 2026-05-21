@@ -7,7 +7,7 @@ export default function AboutHeroSection() {
   const arrowProgress = 1;
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f7f7f5] pt-40 pb-32">
+    <section className="relative w-full overflow-hidden bg-bg-light pt-40 pb-32">
 
       <div className="container-primary">
 
@@ -17,11 +17,11 @@ export default function AboutHeroSection() {
           {/* LEFT */}
           <div>
 
-            <h4 className="mb-8 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
+            <h4 className="mb-8 text-[13px] font-semibold uppercase tracking-[0.28em] text-primary">
               WHO WE ARE
             </h4>
 
-            <h1 className="text-[5rem] md:text-[6rem] lg:text-[7rem] font-[420] tracking-[-0.07em] leading-[0.9] text-[#4b4b4b]">
+            <h1 className="text-[5rem] md:text-[6rem] lg:text-[7rem] font-[420] tracking-[-0.07em] leading-[0.9] text-text-dark">
               About Us
             </h1>
 
@@ -34,7 +34,7 @@ export default function AboutHeroSection() {
 
              Headquartered in Rajgangpur, Odisha, MSA Engineers & Contractors delivers industrial structures, fabrication, and{" "}
 
-              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+              <span className="bg-primary px-2 py-[2px] text-white">
                 engineering execution solutions
               </span>
 
@@ -49,11 +49,11 @@ export default function AboutHeroSection() {
         {/* SECOND ROW */}
         <div className="mt-40 max-w-[1150px]">
 
-          <p className="text-[1.7rem] md:text-[1.9rem] lg:text-[2.5rem] font-light tracking-[-0.05em] leading-[1.06] text-[#4b4b4b]">
+          <p className="text-[1.7rem] md:text-[1.9rem] lg:text-[2.5rem] font-light tracking-[-0.05em] leading-[1.06] text-text-dark">
 
           Since 2000, we have delivered industrial engineering and execution solutions backed by decades of hands-on experience, trusted workmanship, and a{" "}
 
-            <span className="bg-[#ed1c24] px-3 py-[2px] text-white">
+            <span className="bg-primary px-3 py-[2px] text-white">
               commitment to quality.
             </span>
 

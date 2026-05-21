@@ -23,14 +23,14 @@ export default function AboutNav() {
                 href={item.href}
                 className={`relative inline-block py-6 text-[1.1rem] font-semibold uppercase tracking-widest transition-colors duration-300 ${
                   activeTab === item.label
-                    ? 'text-[#ed1c24]'
-                    : 'text-[#4b4b4b] hover:text-[#ed1c24]'
+                    ? 'text-primary'
+                    : 'text-text-dark hover:text-primary'
                 }`}
                 onClick={() => setActiveTab(item.label)}
               >
                 {item.label}
                 {activeTab === item.label && (
-                  <span className="absolute bottom-0 left-0 h-[2px] w-full bg-[#ed1c24]" />
+                  <span className="absolute bottom-0 left-0 h-[2px] w-full bg-primary" />
                 )}
               </a>
             </li>

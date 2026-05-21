@@ -2,15 +2,15 @@ import React from 'react';
 
 export default function HistorySection() {
   return (
-    <section className="relative w-full bg-[#f7f7f5] py-24 md:py-32" id="history">
+    <section className="relative w-full bg-bg-light py-24 md:py-32" id="history">
       <div className="container-primary text-center">
-        <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
+        <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-primary">
           History
         </h4>
-        <h2 className="mb-10 text-[3.5rem] font-[450] leading-[1.1] tracking-[-0.04em] text-[#4b4b4b] md:text-[4.5rem]">
+        <h2 className="mb-10 text-[3.5rem] font-[450] leading-[1.1] tracking-[-0.04em] text-text-dark md:text-[4.5rem]">
          Forged Through Work
         </h2>
-        <p className="mx-auto max-w-[800px] text-[1.6rem] font-light leading-[1.7] text-[#5f5f5f] mb-20">
+        <p className="mx-auto max-w-[800px] text-[1.6rem] font-light leading-[1.7] text-text-muted mb-20">
          What started as a small industrial contracting operation grew through years of on-site execution, long hours, and earned trust. Every structure, fabrication, and project completed by MSA reflects the discipline, resilience, and hands-on experience that continue to shape who we are today.
         </p>
         
@@ -25,7 +25,7 @@ export default function HistorySection() {
             >
             </video>
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#ed1c24] text-white transition-transform hover:scale-110 shadow-lg pointer-events-auto cursor-pointer">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary text-white transition-transform hover:scale-110 shadow-lg pointer-events-auto cursor-pointer">
                     <svg className="ml-2 h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                 </div>
             </div>

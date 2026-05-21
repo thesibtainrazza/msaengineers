@@ -49,7 +49,7 @@ export default function WhyJDavisSection() {
   const statsOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-28 md:py-36">
+    <section className="relative w-full overflow-hidden bg-bg-light py-28 md:py-36">
 
       {/* BLUEPRINT BACKGROUND */}
       <div className="pointer-events-none absolute right-0 bottom-0 opacity-[0.08]">
@@ -67,13 +67,13 @@ export default function WhyJDavisSection() {
           {/* LEFT */}
           <div>
 
-            <h2 className="text-[4.5rem] md:text-[5.5rem] font-[420] tracking-[-0.06em] leading-[0.95] text-[#4b4b4b]">
+            <h2 className="text-[4.5rem] md:text-[5.5rem] font-[420] tracking-[-0.06em] leading-[0.95] text-text-dark">
               Why MSA?
             </h2>
 
-            <div className="mt-10 flex items-center gap-4 text-[#4b4b4b]">
+            <div className="mt-10 flex items-center gap-4 text-text-dark">
 
-              <div className="flex h-8 w-8 items-center justify-center rounded-full border border-[#ed1c24]">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border border-primary">
                 <svg
                   width="12"
                   height="12"
@@ -98,7 +98,7 @@ export default function WhyJDavisSection() {
 
             {/* AWARDS */}
             <div className="mt-24">
-              <h4 className="text-[2rem] font-light text-[#4b4b4b] mb-14">
+              <h4 className="text-[2rem] font-light text-text-dark mb-14">
                 Industry Recognition & Certifications
               </h4>
 
@@ -119,10 +119,10 @@ export default function WhyJDavisSection() {
                   className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
                 />
 
-                <div className="flex h-[80px] w-full flex-col items-center justify-center rounded-md border-2 border-gray-200 bg-white grayscale transition-all duration-500 hover:grayscale-0 hover:border-[#ed1c24] cursor-default">
-                  <span className="text-[1.1rem] font-bold leading-tight text-[#4b4b4b]">ISO</span>
-                  <span className="text-[1.2rem] font-black leading-tight text-[#ed1c24]">45001</span>
-                  <span className="text-[0.6rem] font-bold tracking-widest text-[#4b4b4b]">SAFETY</span>
+                <div className="flex h-[80px] w-full flex-col items-center justify-center rounded-md border-2 border-gray-200 bg-white grayscale transition-all duration-500 hover:grayscale-0 hover:border-primary cursor-default">
+                  <span className="text-[1.1rem] font-bold leading-tight text-text-dark">ISO</span>
+                  <span className="text-[1.2rem] font-black leading-tight text-primary">45001</span>
+                  <span className="text-[0.6rem] font-bold tracking-widest text-text-dark">SAFETY</span>
                 </div>
 
                 <Image width={1000} height={1000}                   src="/logos/asme.svg"
@@ -143,7 +143,7 @@ export default function WhyJDavisSection() {
               {/* COLUMN 1 */}
               <div>
 
-                <h3 className="text-[2rem] font-light text-[#4b4b4b] mb-8">
+                <h3 className="text-[2rem] font-light text-text-dark mb-8">
                   Industrial-Focused Work
                 </h3>
 
@@ -157,9 +157,9 @@ export default function WhyJDavisSection() {
                   ].map((item, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-4 text-[1.22rem] leading-[1.6] text-[#4b4b4b]"
+                      className="flex items-start gap-4 text-[1.22rem] leading-[1.6] text-text-dark"
                     >
-                      <span className="mt-[11px] h-[6px] w-[6px] rounded-full bg-[#ed1c24]" />
+                      <span className="mt-[11px] h-[6px] w-[6px] rounded-full bg-primary" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -171,7 +171,7 @@ export default function WhyJDavisSection() {
               {/* COLUMN 2 */}
               <div>
 
-                <h3 className="text-[2rem] font-light text-[#4b4b4b] mb-8">
+                <h3 className="text-[2rem] font-light text-text-dark mb-8">
                   Career Growth
                 </h3>
 
@@ -185,9 +185,9 @@ export default function WhyJDavisSection() {
                   ].map((item, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-4 text-[1.22rem] leading-[1.6] text-[#4b4b4b]"
+                      className="flex items-start gap-4 text-[1.22rem] leading-[1.6] text-text-dark"
                     >
-                      <span className="mt-[11px] h-[6px] w-[6px] rounded-full bg-[#ed1c24]" />
+                      <span className="mt-[11px] h-[6px] w-[6px] rounded-full bg-primary" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -213,11 +213,11 @@ export default function WhyJDavisSection() {
               {/* ITEM */}
               <div>
 
-                <div className="text-[7rem] leading-[0.9] tracking-[-0.08em] text-[#ed1c24] font-light">
+                <div className="text-[7rem] leading-[0.9] tracking-[-0.08em] text-primary font-light">
                   <Counter to={99} suffix="%" />
                 </div>
 
-                <h3 className="mt-3 text-[2.2rem] font-light tracking-[-0.04em] text-[#4b4b4b]">
+                <h3 className="mt-3 text-[2.2rem] font-light tracking-[-0.04em] text-text-dark">
                   Long-Term Workforce Retention
                 </h3>
 
@@ -232,11 +232,11 @@ export default function WhyJDavisSection() {
               {/* ITEM */}
               <div>
 
-                <div className="text-[7rem] leading-[0.9] tracking-[-0.08em] text-[#ed1c24] font-light">
+                <div className="text-[7rem] leading-[0.9] tracking-[-0.08em] text-primary font-light">
                   <Counter to={100} />+
                 </div>
 
-                <h3 className="mt-3 text-[2.2rem] font-light tracking-[-0.04em] text-[#4b4b4b]">
+                <h3 className="mt-3 text-[2.2rem] font-light tracking-[-0.04em] text-text-dark">
                   Skilled Workforce & Site Personnel
                 </h3>
                 <p className="mt-5 text-[0.95rem] uppercase tracking-[0.16em] leading-[1.5] text-[#666] font-semibold">
@@ -251,11 +251,11 @@ export default function WhyJDavisSection() {
               {/* ITEM */}
               <div>
 
-                <div className="text-[7rem] leading-[0.9] tracking-[-0.08em] text-[#ed1c24] font-light">
+                <div className="text-[7rem] leading-[0.9] tracking-[-0.08em] text-primary font-light">
                   <Counter to={26} />+
                 </div>
 
-                <h3 className="mt-3 text-[2.2rem] font-light tracking-[-0.04em] text-[#4b4b4b]">
+                <h3 className="mt-3 text-[2.2rem] font-light tracking-[-0.04em] text-text-dark">
                   Years Experience
                 </h3>
                 <p className="mt-5 text-[0.95rem] uppercase tracking-[0.16em] leading-[1.5] text-[#666] font-semibold">

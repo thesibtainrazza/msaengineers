@@ -5,7 +5,7 @@ import React from "react";
 
 export default function CareersCTASection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-32">
+    <section className="relative w-full overflow-hidden bg-bg-light py-32">
 
       {/* BLUEPRINT BACKGROUND */}
       <div
@@ -27,25 +27,25 @@ export default function CareersCTASection() {
       <div className="container-primary">
 
         {/* TOP BORDER */}
-        <div className="mb-28 h-[1px] w-full bg-[#4b4b4b]" />
+        <div className="mb-28 h-[1px] w-full bg-text-dark" />
 
         <div className="grid grid-cols-1 gap-24 lg:grid-cols-2">
 
           {/* LEFT */}
           <div>
 
-            <h4 className="mb-8 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
+            <h4 className="mb-8 text-[13px] font-semibold uppercase tracking-[0.28em] text-primary">
               CAREERS
             </h4>
 
-            <h2 className="max-w-[760px] text-[4rem] md:text-[5rem] lg:text-[5.8rem] font-[420] tracking-[-0.07em] leading-[0.92] text-[#4b4b4b]">
+            <h2 className="max-w-[760px] text-[4rem] md:text-[5rem] lg:text-[5.8rem] font-[420] tracking-[-0.07em] leading-[0.92] text-text-dark">
 
               We’re building
               <br />
 
               a team driven by{" "}
 
-              <span className="bg-[#ed1c24] px-3 py-[2px] text-white">
+              <span className="bg-primary px-3 py-[2px] text-white">
                 ownership
               </span>
 
@@ -58,7 +58,7 @@ export default function CareersCTASection() {
                 </span>
 
                 {/* STRIKE LINE */}
-                <span className="absolute left-0 top-[52%] h-[10px] w-full bg-[#4b4b4b]"></span>
+                <span className="absolute left-0 top-[52%] h-[10px] w-full bg-text-dark"></span>
 
               </span>
 
@@ -79,16 +79,16 @@ export default function CareersCTASection() {
                   gap-4
                   rounded-full
                   border
-                  border-[#ed1c24]
+                  border-primary
                   px-10
                   py-5
                   text-[1.45rem]
                   font-medium
                   tracking-[-0.03em]
-                  text-[#4b4b4b]
+                  text-text-dark
                   transition-all
                   duration-300
-                  hover:bg-[#ed1c24]
+                  hover:bg-primary
                   hover:text-white
                 "
               >
@@ -151,7 +151,7 @@ export default function CareersCTASection() {
 
               {" "}
 
-              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+              <span className="bg-primary px-2 py-[2px] text-white">
                 Skilled people build strong industries.
               </span>
 

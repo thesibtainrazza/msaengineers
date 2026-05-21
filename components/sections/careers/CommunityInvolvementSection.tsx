@@ -13,7 +13,7 @@ export default function CommunityInvolvementSection() {
         relative
         w-full
         overflow-hidden
-        bg-[#f7f7f5]
+        bg-bg-light
         py-28
         md:py-36
       "
@@ -56,7 +56,7 @@ export default function CommunityInvolvementSection() {
                   right-[-140px]
                   h-[1.5px]
                   w-[220px]
-                  bg-[#ed1c24]
+                  bg-primary
                   z-20
                   hidden
                   lg:block
@@ -95,7 +95,7 @@ export default function CommunityInvolvementSection() {
                 w-[72%]
                 overflow-hidden
                 border-[10px]
-                border-[#f7f7f5]
+                border-bg-light
                 shadow-[0_25px_70px_rgba(0,0,0,0.12)]
               "
             >
@@ -126,7 +126,7 @@ export default function CommunityInvolvementSection() {
                 font-semibold
                 uppercase
                 tracking-[0.28em]
-                text-[#ed1c24]
+                text-primary
               "
             >
               INDUSTRY & COMMUNITY
@@ -140,7 +140,7 @@ export default function CommunityInvolvementSection() {
                 font-[420]
                 tracking-[-0.06em]
                 leading-[0.92]
-                text-[#4b4b4b]
+                text-text-dark
                 mb-12
               "
             >
@@ -163,7 +163,7 @@ export default function CommunityInvolvementSection() {
 
               At MSA Engineers,{" "}
 
-              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+              <span className="bg-primary px-2 py-[2px] text-white">
                 creating value beyond construction
               </span>
 
@@ -187,13 +187,13 @@ export default function CommunityInvolvementSection() {
     font-[420]
     tracking-[-0.065em]
     leading-[0.97]
-    text-[#4b4b4b]
+    text-text-dark
   "
               >
 
                 Just as we focus on building reliable{" "}
 
-                <span className="bg-[#ed1c24] px-3 text-white">
+                <span className="bg-primary px-3 text-white">
                   industrial infrastructure
                 </span>
 

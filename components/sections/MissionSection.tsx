@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { MISSION_SECTION } from "@/data/home";
+import { MISSION_SECTION } from "@/content/home";
 
 export default function MissionSection() {
   const [highlightWidth, setHighlightWidth] = useState(0);
@@ -44,7 +44,7 @@ export default function MissionSection() {
         <div className="relative min-h-[900px]">
 
           {/* TOP RED LINE */}
-          <div className="absolute left-[22%] top-[-70px] hidden h-[170px] w-[2px] bg-[#ed1c24] lg:block"></div>
+          <div className="absolute left-[22%] top-[-70px] hidden h-[170px] w-[2px] bg-primary lg:block"></div>
 
           {/* MAIN IMAGE */}
           <div className="relative z-10 aspect-[0.8/1] w-[72%] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.14)]">
@@ -60,7 +60,7 @@ export default function MissionSection() {
           </div>
 
           {/* FLOATING SECOND IMAGE */}
-          <div className="absolute bottom-0 right-0 z-20 aspect-[1.32/0.78] w-[78%] overflow-hidden border-[10px] border-[#f7f7f5] shadow-[0_25px_60px_rgba(0,0,0,0.16)]">
+          <div className="absolute bottom-0 right-0 z-20 aspect-[1.32/0.78] w-[78%] overflow-hidden border-[10px] border-bg-light shadow-[0_25px_60px_rgba(0,0,0,0.16)]">
 
             <div
               className="absolute inset-0 bg-cover bg-center"
@@ -78,12 +78,12 @@ export default function MissionSection() {
         <div className="relative flex flex-col items-start pt-8 lg:pt-10">
 
           {/* SMALL LABEL */}
-          <h4 className="mb-10 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
+          <h4 className="mb-10 text-[13px] font-semibold uppercase tracking-[0.28em] text-primary">
             {MISSION_SECTION.label}
           </h4>
 
           {/* MAIN HEADING */}
-          <h2 className="text-[3.7rem] font-[350] leading-[1.08] tracking-[-0.055em] text-[#4b4b4b] md:text-[4.8rem] lg:text-[5.4rem]">
+          <h2 className="text-[3.7rem] font-[350] leading-[1.08] tracking-[-0.055em] text-text-dark md:text-[4.8rem] lg:text-[5.4rem]">
 
             {MISSION_SECTION.headingPart1}
             <br />
@@ -99,7 +99,7 @@ export default function MissionSection() {
 
               {/* RED FILL */}
               <span
-                className="absolute left-0 top-0 z-0 h-full bg-[#ed1c24]"
+                className="absolute left-0 top-0 z-0 h-full bg-primary"
                 style={{
                   width: `${highlightWidth}%`,
                   transition: "width 0.08s linear",

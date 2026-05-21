@@ -26,7 +26,7 @@ export default function ValueEngineeringSection() {
       {/* VALUE ENGINEERING SECTION */}
       {/* ========================================= */}
 
-      <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-36">
+      <section className="relative w-full overflow-hidden bg-bg-light py-36">
 
         <div className="container-primary">
 
@@ -42,7 +42,7 @@ export default function ValueEngineeringSection() {
                   font-semibold
                   uppercase
                   tracking-[0.28em]
-                  text-[#ed1c24]
+                  text-primary
                 "
               >
                 EXECUTION PHILOSOPHY
@@ -56,14 +56,14 @@ export default function ValueEngineeringSection() {
                   font-[420]
                   tracking-[-0.07em]
                   leading-[0.9]
-                  text-[#4b4b4b]
+                  text-text-dark
                 "
               >
                 Industrial
                 <br />
                 Execution{" "}
 
-                <span className="text-[#ed1c24]">≠</span>
+                <span className="text-primary">≠</span>
 
                 <br />
 
@@ -100,12 +100,12 @@ That is why our approach focuses on disciplined planning, fabrication accuracy, 
                     font-light
                     tracking-[-0.06em]
                     leading-[1.04]
-                    text-[#4b4b4b]
+                    text-text-dark
                   "
                 >
                   We work alongside industrial teams, understand operational challenges on-site, and execute solutions that prioritize safety, structural reliability, and{" "}
 
-                  <span className="bg-[#ed1c24] px-3 py-[2px] text-white">
+                  <span className="bg-primary px-3 py-[2px] text-white">
                     long-term performance
                   </span>
                   {" "} in demanding environments.
@@ -150,7 +150,7 @@ That is why our approach focuses on disciplined planning, fabrication accuracy, 
                   w-[82%]
                   overflow-hidden
                   border-[18px]
-                  border-[#f7f7f5]
+                  border-bg-light
                 "
               >
 
@@ -183,7 +183,7 @@ That is why our approach focuses on disciplined planning, fabrication accuracy, 
           relative
           w-full
           overflow-hidden
-          bg-[#f7f7f5]
+          bg-bg-light
           py-44
           md:py-56
         "
@@ -216,7 +216,7 @@ That is why our approach focuses on disciplined planning, fabrication accuracy, 
               inset-0
               rounded-full
               border
-              border-[#ed1c24]/10
+              border-primary/10
             "
           />
 
@@ -260,7 +260,7 @@ That is why our approach focuses on disciplined planning, fabrication accuracy, 
                 font-light
                 leading-[1.5]
                 tracking-[-0.03em]
-                text-[#4b4b4b]
+                text-text-dark
               "
             >
              Operations & Project Team
@@ -273,7 +273,7 @@ That is why our approach focuses on disciplined planning, fabrication accuracy, 
                 font-light
                 leading-[1.5]
                 tracking-[-0.03em]
-                text-[#4b4b4b]
+                text-text-dark
               "
             >
               Industrial Infrastructure Division
@@ -286,7 +286,7 @@ That is why our approach focuses on disciplined planning, fabrication accuracy, 
 
             <h2
               className="
-                text-[#ed1c24]
+                text-primary
                 text-[3rem]
                 md:text-[4rem]
                 lg:text-[4.3rem]

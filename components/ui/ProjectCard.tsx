@@ -1,12 +1,15 @@
 import React from 'react';
+import Link from 'next/link';
 
 export const ProjectCard = ({
+  slug,
   title,
   location,
   category,
   image,
   index
 }: {
+  slug: string,
   title: string,
   location: string,
   category: string,
@@ -16,7 +19,8 @@ export const ProjectCard = ({
 
   return (
 
-    <div
+    <Link
+      href={`/projects/${slug}`}
       className="
         sticky
         w-full
@@ -27,6 +31,7 @@ export const ProjectCard = ({
         cursor-pointer
         pt-10
         pb-14
+        block
       "
       style={{
         top: '20px',
@@ -57,10 +62,10 @@ export const ProjectCard = ({
             leading-[0.95]
             tracking-[-0.06em]
             font-[350]
-            text-[#4b4b4b]
+            text-text-dark
             transition-colors
             duration-300
-            group-hover:text-[#ed1c24]
+            group-hover:text-primary
           "
         >
           {title}
@@ -124,8 +129,8 @@ export const ProjectCard = ({
               text-[#4d4d4d]
               transition-all
               duration-300
-              group-hover:border-[#ed1c24]
-              group-hover:text-[#ed1c24]
+              group-hover:border-primary
+              group-hover:text-primary
             "
           >
 
@@ -180,7 +185,7 @@ export const ProjectCard = ({
 
       </div>
 
-    </div>
+    </Link>
 
   );
 

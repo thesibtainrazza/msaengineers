@@ -9,7 +9,7 @@ import ValueEngineeringSection from '@/components/sections/services/ValueEnginee
 export const metadata = {
   title: 'Services | MSA Engineer & Contractors',
 };
-import { SERVICES_PAGE_DATA } from '@/data/services';
+import { SERVICES_PAGE_DATA } from '@/content/services';
 
 export default function ServicesPage() {
   return (

@@ -1,8 +1,11 @@
 import React from 'react';
-import { FEATURED_PROJECTS } from '@/data';
+import { PROJECTS } from '@/content/projects';
 import ProjectCard from '@/components/ui/ProjectCard';
+import Link from 'next/link';
 
 export default function FeaturedProjectsSection() {
+  const featuredProjects = PROJECTS.filter(p => p.featured);
+
   return (<section className="relative w-full bg-white px-8 md:px-12 lg:px-16 pt-24 pb-48">
 
     <div className="container-primary px-0 md:px-0 lg:px-0 xl:px-0">
@@ -19,7 +22,7 @@ export default function FeaturedProjectsSection() {
             leading-[0.92]
             tracking-[-0.06em]
             font-[350]
-            text-[#ed1c24]
+            text-primary
             mb-10
           "
           >
@@ -44,8 +47,8 @@ export default function FeaturedProjectsSection() {
         </div>
 
         {/* BUTTON */}
-        <a
-          href="#"
+        <Link
+          href="/projects"
           className="
           group
           flex
@@ -54,16 +57,16 @@ export default function FeaturedProjectsSection() {
           justify-center
           rounded-full
           border-[1.5px]
-          border-[#ed1c24]
+          border-primary
           px-10
           py-5
           text-[1.2rem]
           font-[420]
           tracking-[-0.02em]
-          text-[#4b4b4b]
+          text-text-dark
           transition-all
           duration-300
-          hover:bg-[#ed1c24]
+          hover:bg-primary
           hover:text-white
           lg:mb-30
         "
@@ -94,7 +97,7 @@ export default function FeaturedProjectsSection() {
 
           </svg>
 
-        </a>
+        </Link>
 
       </div>
 
@@ -103,9 +106,10 @@ export default function FeaturedProjectsSection() {
 
       {/* Sticky Project Cards Container */}
       <div className="relative w-full">
-        {FEATURED_PROJECTS.map((project, index) => (
+        {featuredProjects.map((project, index) => (
           <ProjectCard
-            key={index}
+            key={project.slug}
+            slug={project.slug}
             title={project.title}
             location={project.location}
             category={project.category}

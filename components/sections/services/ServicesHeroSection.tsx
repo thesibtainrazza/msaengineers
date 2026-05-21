@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { SERVICES_HERO } from "@/data/services";
+import { SERVICES_HERO } from "@/content/services";
 
 export default function ServicesHeroSection() {
 
@@ -21,7 +21,7 @@ export default function ServicesHeroSection() {
   const scale = useTransform(scrollYProgress, [0, 1], [1.15, 1]);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f7f7f5] pt-40 pb-0">
+    <section className="relative w-full overflow-hidden bg-bg-light pt-40 pb-0">
 
       <div className="container-primary">
 
@@ -31,11 +31,11 @@ export default function ServicesHeroSection() {
           {/* LEFT */}
           <div>
 
-            <h4 className="mb-8 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
+            <h4 className="mb-8 text-[13px] font-semibold uppercase tracking-[0.28em] text-primary">
               {SERVICES_HERO.label}
             </h4>
 
-            <h1 className="text-[5rem] md:text-[6rem] lg:text-[7rem] font-[420] tracking-[-0.07em] leading-[0.9] text-[#4b4b4b]">
+            <h1 className="text-[5rem] md:text-[6rem] lg:text-[7rem] font-[420] tracking-[-0.07em] leading-[0.9] text-text-dark">
 
               {SERVICES_HERO.headingPart1}
               <br />
@@ -65,8 +65,8 @@ export default function ServicesHeroSection() {
                     duration-300
                     ${
                       activeTab === item.label
-                        ? "border-[#4b4b4b] text-[#4b4b4b]"
-                        : "border-[#4b4b4b] text-[#4b4b4b] hover:text-[#ed1c24]"
+                        ? "border-text-dark text-text-dark"
+                        : "border-text-dark text-text-dark hover:text-primary"
                     }
                   `}
                 >
@@ -86,7 +86,7 @@ export default function ServicesHeroSection() {
 
               {SERVICES_HERO.descriptionPart1}
 
-              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+              <span className="bg-primary px-2 py-[2px] text-white">
                 {SERVICES_HERO.highlightText}
               </span>
 
@@ -101,11 +101,11 @@ export default function ServicesHeroSection() {
         {/* SECOND TEXT */}
         <div className="mt-40 max-w-[1250px]">
 
-          <p className="text-[1.55rem] md:text-[1.8rem] lg:text-[2.2rem] font-light tracking-[-0.05em] leading-[1.06] text-[#4b4b4b]">
+          <p className="text-[1.55rem] md:text-[1.8rem] lg:text-[2.2rem] font-light tracking-[-0.05em] leading-[1.06] text-text-dark">
 
             {SERVICES_HERO.secondaryTextPart1}
 
-            <span className="bg-[#ed1c24] px-3 py-[2px] text-white">
+            <span className="bg-primary px-3 py-[2px] text-white">
                {SERVICES_HERO.secondaryHighlight}
             </span>
 

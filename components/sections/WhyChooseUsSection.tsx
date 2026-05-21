@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHY_CHOOSE_US } from '@/data';
+import { WHY_CHOOSE_US } from '@/content';
 import ServiceAccordionItem from '@/components/ui/ServiceAccordionItem';
 
 export default function WhyChooseUsSection() {
@@ -22,16 +22,16 @@ export default function WhyChooseUsSection() {
 
         {/* Right Column (Text Content & Image) */}
         <div className="flex flex-col items-start lg:pl-10 relative order-1 lg:order-2">
-          <h4 className="text-[#ed1c24] font-bold tracking-[0.2em] text-xs md:text-sm mb-8 uppercase">WHY CHOOSE US</h4>
+          <h4 className="text-primary font-bold tracking-[0.2em] text-xs md:text-sm mb-8 uppercase">WHY CHOOSE US</h4>
           
           <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-light text-[#4a4a4a] leading-[1.1] tracking-tight mb-10">
             Trusted industrial expertise
             backed by<br className="hidden lg:block"/>
             proven<br className="hidden lg:block"/>
-            <span className="bg-[#ed1c24] text-white px-3 py-1 inline-block font-normal my-2">execution.</span>
+            <span className="bg-primary text-white px-3 py-1 inline-block font-normal my-2">execution.</span>
           </h2>
 
-          <a href="#" className="flex items-center justify-center border-[1.5px] border-[#ed1c24] rounded-full px-8 py-3 text-[#4a4a4a] hover:bg-[#ed1c24] hover:text-white transition-colors shrink-0 group">
+          <a href="#" className="flex items-center justify-center border-[1.5px] border-primary rounded-full px-8 py-3 text-[#4a4a4a] hover:bg-primary hover:text-white transition-colors shrink-0 group">
             <span>Get In Touch</span>
             <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 12h14M12 5l7 7-7 7" /></svg>
           </a>

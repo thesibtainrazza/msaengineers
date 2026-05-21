@@ -20,7 +20,7 @@ export default function AchievementsSection() {
             font-[350]
             leading-none
             tracking-[-0.09em]
-            text-[#ed1c24]
+            text-primary
           "
                 >
                     1500MT+
@@ -35,7 +35,7 @@ export default function AchievementsSection() {
             font-medium
             leading-[1.35]
             tracking-[-0.02em]
-            text-[#ed1c24]
+            text-primary
           "
                 >
                     Steel Structures Fabricated & Installed
@@ -44,7 +44,7 @@ export default function AchievementsSection() {
             </div>
 
             {/* DIVIDER */}
-            <div className="w-[1.5px] h-[180px] md:h-[260px] bg-[#ed1c24] shrink-0 opacity-80"></div>
+            <div className="w-[1.5px] h-[180px] md:h-[260px] bg-primary shrink-0 opacity-80"></div>
 
             {/* ITEM 2 */}
             <div className="flex items-center shrink-0 px-20 md:px-28">
@@ -57,7 +57,7 @@ export default function AchievementsSection() {
             font-[350]
             leading-none
             tracking-[-0.09em]
-            text-[#ed1c24]
+            text-primary
           "
                 >
                     10KM+
@@ -72,7 +72,7 @@ export default function AchievementsSection() {
             font-medium
             leading-[1.35]
             tracking-[-0.02em]
-            text-[#ed1c24]
+            text-primary
           "
                 >
                    Industrial Conveyor Execution
@@ -81,7 +81,7 @@ export default function AchievementsSection() {
             </div>
 
             {/* DIVIDER */}
-            <div className="w-[1.5px] h-[180px] md:h-[260px] bg-[#ed1c24] shrink-0 opacity-80"></div>
+            <div className="w-[1.5px] h-[180px] md:h-[260px] bg-primary shrink-0 opacity-80"></div>
 
             {/* ITEM 3 */}
             <div className="flex items-center shrink-0 px-20 md:px-28">
@@ -94,7 +94,7 @@ export default function AchievementsSection() {
             font-[350]
             leading-none
             tracking-[-0.09em]
-            text-[#ed1c24]
+            text-primary
           "
                 >
                     120+
@@ -110,7 +110,7 @@ export default function AchievementsSection() {
     font-medium
     leading-[1.35]
     tracking-[-0.02em]
-    text-[#ed1c24]
+    text-primary
     whitespace-normal
     break-words
   "
@@ -120,14 +120,14 @@ export default function AchievementsSection() {
             </div>
 
             {/* DIVIDER */}
-            <div className="w-[1.5px] h-[180px] md:h-[260px] bg-[#ed1c24] shrink-0 opacity-80"></div>
+            <div className="w-[1.5px] h-[180px] md:h-[260px] bg-primary shrink-0 opacity-80"></div>
 
         </>
     );
 
     return (
         <section
-            className="relative w-full overflow-hidden bg-[#f7f7f5] py-28 md:py-36"
+            className="relative w-full overflow-hidden bg-bg-light py-28 md:py-36"
             id="awards"
         >
 
@@ -140,7 +140,7 @@ export default function AchievementsSection() {
 
                     <div>
 
-                        <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
+                        <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-primary">
                             ACHIEVEMENTS
                         </h4>
 
@@ -153,7 +153,7 @@ export default function AchievementsSection() {
                 font-[420]
                 leading-[0.98]
                 tracking-[-0.07em]
-                text-[#4b4b4b]
+                text-text-dark
               "
                         >
                             Industrial work earns its reputation in fabrication yards, shutdown deadlines, and structures that continue standing years after completion.

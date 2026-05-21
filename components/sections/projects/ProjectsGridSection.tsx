@@ -2,48 +2,63 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import { FEATURED_PROJECTS } from "@/data";
+import { PROJECTS } from "@/content/projects";
+import FadeIn from "@/components/ui/FadeIn";
+import Link from "next/link";
 
 export default function FeaturedProjectsSlider() {
 
     const [current, setCurrent] = useState(0);
 
+    const sliderProjects = PROJECTS.filter(p => p.featured);
+    const gridProjects = PROJECTS.filter(p => p.featured);
+
     const nextSlide = () => {
         setCurrent((prev) =>
-            prev === FEATURED_PROJECTS.length - 1 ? 0 : prev + 1
+            prev === sliderProjects.length - 1 ? 0 : prev + 1
         );
     };
 
     const prevSlide = () => {
         setCurrent((prev) =>
-            prev === 0 ? FEATURED_PROJECTS.length - 1 : prev - 1
+            prev === 0 ? sliderProjects.length - 1 : prev - 1
         );
     };
 
-    const activeProject = FEATURED_PROJECTS[current];
+    const activeProject = sliderProjects[current];
+    
+    // Assign variables for grid projects
+    const p1 = gridProjects[0];
+    const p2 = gridProjects[1];
+    const p3 = gridProjects[2];
+    const p4 = gridProjects[3];
+    const p5 = gridProjects[4];
+    const p6 = gridProjects[5];
 
     return (
         <>
-            <section className="relative w-full overflow-hidden bg-[#f7f7f5] pb-28">
+            <section className="relative w-full overflow-hidden bg-bg-light pb-28">
                 <div className="mx-auto max-w-[1550px] px-0 md:px-0">
 
                     <div className="relative overflow-hidden">
 
                         {/* IMAGE */}
-                        <div className="relative h-[620px] w-full overflow-hidden">
+                        <FadeIn fullWidth>
+                          <div className="relative h-[620px] w-full overflow-hidden">
 
-                            <Image width={1000} height={1000}                                 src={activeProject.image}
-                                alt={activeProject.title}
-                                className="
-                h-full
-                w-full
-                object-cover
-                transition-all
-                duration-700
-              "
-                            />
+                              <Image width={1000} height={1000}                                 src={activeProject.image}
+                                  alt={activeProject.title}
+                                  className="
+                  h-full
+                  w-full
+                  object-cover
+                  transition-all
+                  duration-700
+                "
+                              />
 
-                        </div>
+                          </div>
+                        </FadeIn>
 
                         {/* BOTTOM RED INFO BAR */}
                         <div
@@ -56,7 +71,7 @@ export default function FeaturedProjectsSlider() {
               -translate-x-1/2
               items-center
               justify-between
-              bg-[#ed1c24]
+              bg-primary
               px-10
               py-8
             "
@@ -101,7 +116,7 @@ export default function FeaturedProjectsSlider() {
                   transition-all
                   duration-300
                   hover:bg-white
-                  hover:text-[#ed1c24]
+                  hover:text-primary
                 "
                                 >
 
@@ -154,7 +169,7 @@ export default function FeaturedProjectsSlider() {
                 transition-all
                 duration-300
                 hover:bg-white
-                hover:text-[#ed1c24]
+                hover:text-primary
               "
                             >
 
@@ -191,7 +206,7 @@ export default function FeaturedProjectsSlider() {
                 transition-all
                 duration-300
                 hover:bg-white
-                hover:text-[#ed1c24]
+                hover:text-primary
               "
                             >
 
@@ -218,7 +233,7 @@ export default function FeaturedProjectsSlider() {
 
                 </div>
             </section>
-            <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-28">
+            <section className="relative w-full overflow-hidden bg-bg-light py-28">
 
                 {/* RIGHT BLUEPRINT EFFECT */}
                 <div
@@ -247,8 +262,8 @@ export default function FeaturedProjectsSlider() {
                             {/* IMAGE */}
                             <div className="group relative overflow-hidden bg-[#ececec]">
 
-                                <Image width={1000} height={1000}                                     src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop"
-                                    alt="Industrial Project"
+                                <Image width={1000} height={1000}                                     src={p1.image}
+                                    alt={p1.title}
                                     className="
               h-[680px]
               w-full
@@ -260,7 +275,8 @@ export default function FeaturedProjectsSlider() {
                                 />
 
                                 {/* RED ARROW BOX */}
-                                <button
+                                <Link
+                                    href={`/projects/${p1.slug}`}
                                     className="
               absolute
               bottom-0
@@ -270,7 +286,7 @@ export default function FeaturedProjectsSlider() {
               w-[100px]
               items-center
               justify-center
-              bg-[#ed1c24]
+              bg-primary
               text-white
               transition-all
               duration-300
@@ -293,7 +309,7 @@ export default function FeaturedProjectsSlider() {
                                         <path d="m12 5 7 7-7 7" />
                                     </svg>
 
-                                </button>
+                                </Link>
 
                             </div>
 
@@ -304,21 +320,21 @@ export default function FeaturedProjectsSlider() {
                                     className="
               inline-block
               border-b
-              border-[#ed1c24]
+              border-primary
               pb-2
               text-[3.4rem]
               md:text-[4rem]
               font-[420]
               leading-[1]
               tracking-[-0.06em]
-              text-[#ed1c24]
+              text-primary
             "
                                 >
-                                    Anderson County Fleet Services
+                                    {p1.title}
                                 </h2>
 
                                 <p className="mt-4 text-[1.8rem] font-light text-[#4f4f4f]">
-                                    Anderson, SC
+                                    {p1.location}
                                 </p>
 
                                 <div className="mt-6">
@@ -336,7 +352,7 @@ export default function FeaturedProjectsSlider() {
                 text-[#555]
               "
                                     >
-                                        Municipality + Community
+                                        {p1.category}
                                     </span>
 
                                 </div>
@@ -349,7 +365,7 @@ export default function FeaturedProjectsSlider() {
                         <div className="relative pt-40 lg:col-span-4">
 
                             {/* HORIZONTAL RED LINE */}
-                            <div className="mb-10 h-[2px] w-[180px] bg-[#ed1c24]" />
+                            <div className="mb-10 h-[2px] w-[180px] bg-primary" />
 
                             {/* HANDWRITTEN STYLE TEXT */}
                             <p
@@ -365,10 +381,7 @@ export default function FeaturedProjectsSlider() {
                                     fontFamily: 'cursive',
                                 }}
                             >
-                                Anderson Co. required a facility capable of supporting daily fleet
-                                operations efficiently while maintaining durability, accessibility,
-                                and long-term operational reliability for emergency and municipal
-                                service vehicles.
+                                {p1.shortDescription}
                             </p>
 
                         </div>
@@ -379,7 +392,7 @@ export default function FeaturedProjectsSlider() {
 
             </section>
             {/* SPLIT PROJECT SHOWCASE */}
-            <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-32">
+            <section className="relative w-full overflow-hidden bg-bg-light py-32">
 
                 {/* BLUEPRINT BG */}
                 <div
@@ -409,8 +422,8 @@ export default function FeaturedProjectsSlider() {
 
                                 <div className="overflow-hidden bg-[#ececec]">
 
-                                    <Image width={1000} height={1000}                                         src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop"
-                                        alt="Interior Project"
+                                    <Image width={1000} height={1000}                                         src={p2.gallery?.[0] || p2.image}
+                                        alt={`${p2.title} Interior`}
                                         className="
                 h-[680px]
                 w-full
@@ -430,7 +443,7 @@ export default function FeaturedProjectsSlider() {
                             {/* TOP CAPTION */}
                             <div className="mb-10 flex items-start gap-8">
 
-                                <div className="h-[170px] w-[1px] bg-[#ed1c24]" />
+                                <div className="h-[170px] w-[1px] bg-primary" />
 
                                 <p
                                     className="
@@ -447,9 +460,7 @@ export default function FeaturedProjectsSlider() {
                                         fontFamily: "cursive",
                                     }}
                                 >
-                                    DESIGNED TO BLEND MODERN HOSPITALITY WITH FUNCTIONAL SPATIAL
-                                    EXECUTION, THE PROJECT CREATES A REFINED EXPERIENCE WITHOUT
-                                    LOSING ITS COMMUNITY CHARACTER.
+                                    {p2.shortDescription}
                                 </p>
 
                             </div>
@@ -459,8 +470,8 @@ export default function FeaturedProjectsSlider() {
 
                                 <div className="overflow-hidden bg-[#ececec]">
 
-                                    <Image width={1000} height={1000}                                         src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1800&auto=format&fit=crop"
-                                        alt="Country Club Project"
+                                    <Image width={1000} height={1000}                                         src={p2.image}
+                                        alt={p2.title}
                                         className="
                 h-[760px]
                 w-full
@@ -470,8 +481,9 @@ export default function FeaturedProjectsSlider() {
 
                                 </div>
 
-                                {/* RED BUTTON */}
-                                <button
+                                {/* RED ARROW BOX */}
+                                <Link
+                                    href={`/projects/${p2.slug}`}
                                     className="
               absolute
               bottom-0
@@ -481,7 +493,7 @@ export default function FeaturedProjectsSlider() {
               w-[100px]
               items-center
               justify-center
-              bg-[#ed1c24]
+              bg-primary
               text-white
               transition-all
               duration-300
@@ -504,7 +516,7 @@ export default function FeaturedProjectsSlider() {
                                         <path d="m12 5 7 7-7 7" />
                                     </svg>
 
-                                </button>
+                                </Link>
 
                             </div>
 
@@ -518,14 +530,14 @@ export default function FeaturedProjectsSlider() {
               font-[420]
               leading-[1]
               tracking-[-0.06em]
-              text-[#4b4b4b]
+              text-text-dark
             "
                                 >
-                                    Crowfield Country Club
+                                    {p2.title}
                                 </h2>
 
                                 <p className="mt-4 text-[1.8rem] font-light text-[#4f4f4f]">
-                                    Goose Creek, SC
+                                    {p2.location}
                                 </p>
 
                             </div>
@@ -538,7 +550,7 @@ export default function FeaturedProjectsSlider() {
 
             </section>
             {/* FULL WIDTH PROJECT SECTION */}
-            <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-24">
+            <section className="relative w-full overflow-hidden bg-bg-light py-24">
 
                 <div className="container-primary">
 
@@ -547,8 +559,8 @@ export default function FeaturedProjectsSlider() {
                         {/* IMAGE */}
                         <div className="group relative overflow-hidden bg-[#ececec]">
 
-                            <Image width={1000} height={1000}                                 src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2200&auto=format&fit=crop"
-                                alt="Educational Facility"
+                            <Image width={1000} height={1000}                                 src={p3.image}
+                                alt={p3.title}
                                 className="
             h-[760px]
             w-full
@@ -559,8 +571,9 @@ export default function FeaturedProjectsSlider() {
           "
                             />
 
-                            {/* RED BUTTON */}
-                            <button
+                            {/* RED ARROW BOX */}
+                            <Link
+                                href={`/projects/${p3.slug}`}
                                 className="
             absolute
             bottom-0
@@ -570,7 +583,7 @@ export default function FeaturedProjectsSlider() {
             w-[100px]
             items-center
             justify-center
-            bg-[#ed1c24]
+            bg-primary
             text-white
             transition-all
             duration-300
@@ -593,7 +606,7 @@ export default function FeaturedProjectsSlider() {
                                     <path d="m12 5 7 7-7 7" />
                                 </svg>
 
-                            </button>
+                            </Link>
 
                         </div>
 
@@ -604,21 +617,21 @@ export default function FeaturedProjectsSlider() {
                                 className="
             inline-block
             border-b
-            border-[#ed1c24]
+            border-primary
             pb-2
             text-[3.8rem]
             md:text-[4.4rem]
             font-[420]
             leading-[1]
             tracking-[-0.06em]
-            text-[#ed1c24]
+            text-primary
           "
                             >
-                                Newberry Nursing Building
+                                {p3.title}
                             </h2>
 
                             <p className="mt-4 text-[1.8rem] font-light text-[#4f4f4f]">
-                                Newberry, SC
+                                {p3.location}
                             </p>
 
                             {/* TAG */}
@@ -637,7 +650,7 @@ export default function FeaturedProjectsSlider() {
               text-[#555]
             "
                                 >
-                                    Education
+                                    {p3.category}
                                 </span>
 
                             </div>
@@ -650,7 +663,7 @@ export default function FeaturedProjectsSlider() {
 
             </section>
             {/* RED FEATURED PROJECT BANNER */}
-            <section className="relative w-full overflow-hidden bg-[#f7f7f5] pb-28">
+            <section className="relative w-full overflow-hidden bg-bg-light pb-28">
 
                 <div className="container-primary">
 
@@ -659,8 +672,8 @@ export default function FeaturedProjectsSlider() {
                         {/* IMAGE */}
                         <div className="overflow-hidden">
 
-                            <Image width={1000} height={1000}                                 src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2200&auto=format&fit=crop"
-                                alt="Fire Station Project"
+                            <Image width={1000} height={1000}                                 src={p4.image}
+                                alt={p4.title}
                                 className="
             h-[760px]
             w-full
@@ -681,7 +694,7 @@ export default function FeaturedProjectsSlider() {
           min-h-[135px]
           items-center
           justify-between
-          bg-[#ed1c24]
+          bg-primary
           px-12
           md:px-16
         "
@@ -704,7 +717,7 @@ export default function FeaturedProjectsSlider() {
               text-white
             "
                                 >
-                                    City of Easley Fire Station No. 1
+                                    {p4.title}
                                 </h2>
 
                             </div>
@@ -719,11 +732,12 @@ export default function FeaturedProjectsSlider() {
               text-white
             "
                                 >
-                                    Easley, SC
+                                    {p4.location}
                                 </p>
 
                                 {/* BUTTON */}
-                                <button
+                                <Link
+                                    href={`/projects/${p4.slug}`}
                                     className="
               flex
               h-[74px]
@@ -737,7 +751,7 @@ export default function FeaturedProjectsSlider() {
               transition-all
               duration-300
               hover:bg-white
-              hover:text-[#ed1c24]
+              hover:text-primary
             "
                                 >
 
@@ -756,7 +770,7 @@ export default function FeaturedProjectsSlider() {
                                         <path d="m12 5 7 7-7 7" />
                                     </svg>
 
-                                </button>
+                                </Link>
 
                             </div>
 
@@ -768,7 +782,7 @@ export default function FeaturedProjectsSlider() {
 
             </section>
             {/* MIXED USE FEATURE SECTION */}
-            <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-24">
+            <section className="relative w-full overflow-hidden bg-bg-light py-24">
 
                 {/* LEFT BLUEPRINT BG */}
                 <div
@@ -797,7 +811,7 @@ export default function FeaturedProjectsSlider() {
                             <div className="flex items-start gap-8">
 
                                 {/* RED LINE */}
-                                <div className="mt-4 h-[1px] w-[180px] bg-[#ed1c24]" />
+                                <div className="mt-4 h-[1px] w-[180px] bg-primary" />
 
                                 {/* TEXT */}
                                 <p
@@ -815,9 +829,7 @@ export default function FeaturedProjectsSlider() {
                                         fontFamily: "cursive",
                                     }}
                                 >
-                                    A COMPLEX MIXED-USE DEVELOPMENT COMBINING MODERN RETAIL
-                                    SPACES WITH HIGH-DENSITY URBAN FUNCTIONALITY, BUILT TO
-                                    SUPPORT FAST-MOVING COMMERCIAL OPERATIONS.
+                                    {p5.shortDescription}
                                 </p>
 
                             </div>
@@ -832,8 +844,8 @@ export default function FeaturedProjectsSlider() {
                                 {/* IMAGE */}
                                 <div className="group overflow-hidden bg-[#ececec]">
 
-                                    <Image width={1000} height={1000}                                         src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1800&auto=format&fit=crop"
-                                        alt="Mixed Use Project"
+                                    <Image width={1000} height={1000}                                         src={p5.image}
+                                        alt={p5.title}
                                         className="
                 h-[820px]
                 w-full
@@ -846,8 +858,9 @@ export default function FeaturedProjectsSlider() {
 
                                 </div>
 
-                                {/* RED BUTTON */}
-                                <button
+                                {/* RED ARROW BOX */}
+                                <Link
+                                    href={`/projects/${p5.slug}`}
                                     className="
               absolute
               bottom-0
@@ -857,7 +870,7 @@ export default function FeaturedProjectsSlider() {
               w-[100px]
               items-center
               justify-center
-              bg-[#ed1c24]
+              bg-primary
               text-white
               transition-all
               duration-300
@@ -880,7 +893,7 @@ export default function FeaturedProjectsSlider() {
                                         <path d="m12 5 7 7-7 7" />
                                     </svg>
 
-                                </button>
+                                </Link>
 
                             </div>
 
@@ -894,14 +907,14 @@ export default function FeaturedProjectsSlider() {
               font-[420]
               leading-[1]
               tracking-[-0.06em]
-              text-[#4b4b4b]
+              text-text-dark
             "
                                 >
-                                    Metro Target
+                                    {p5.title}
                                 </h2>
 
                                 <p className="mt-4 text-[1.8rem] font-light text-[#4f4f4f]">
-                                    Athens, GA
+                                    {p5.location}
                                 </p>
 
                                 {/* CATEGORY */}
@@ -920,7 +933,7 @@ export default function FeaturedProjectsSlider() {
                 text-[#555]
               "
                                     >
-                                        Mixed-Use + Retail
+                                        {p5.category}
                                     </span>
 
                                 </div>
@@ -935,152 +948,153 @@ export default function FeaturedProjectsSlider() {
 
             </section>
             {/* COUNTRY CLUB FEATURE */}
-            <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-28">
+            {p6 && (
+                <section className="relative w-full overflow-hidden bg-bg-light py-28">
 
-                {/* RIGHT BLUEPRINT */}
-                <div
-                    className="
-      pointer-events-none
-      absolute
-      right-[-60px]
-      top-[140px]
-      h-[900px]
-      w-[340px]
-      opacity-[0.05]
-    "
-                    style={{
-                        backgroundImage:
-                            "url('https://www.transparenttextures.com/patterns/graphy.png')",
-                    }}
-                />
+                    {/* RIGHT BLUEPRINT */}
+                    <div
+                        className="
+          pointer-events-none
+          absolute
+          right-[-60px]
+          top-[140px]
+          h-[900px]
+          w-[340px]
+          opacity-[0.05]
+        "
+                        style={{
+                            backgroundImage:
+                                "url('https://www.transparenttextures.com/patterns/graphy.png')",
+                        }}
+                    />
 
-                <div className="container-primary">
+                    <div className="container-primary">
 
-                    <div className="grid grid-cols-12 gap-16">
+                        <div className="grid grid-cols-12 gap-16">
 
-                        {/* LEFT SIDE */}
-                        <div className="col-span-12 lg:col-span-8">
+                            {/* LEFT SIDE */}
+                            <div className="col-span-12 lg:col-span-8">
 
-                            {/* TOP NOTE */}
-                            <div className="mb-10 flex items-start gap-8 pl-12">
+                                {/* TOP NOTE */}
+                                <div className="mb-10 flex items-start gap-8 pl-12">
 
-                                <div className="mt-1 h-[150px] w-[1px] bg-[#ed1c24]" />
+                                    <div className="mt-1 h-[150px] w-[1px] bg-primary" />
 
-                                <p
-                                    className="
-              max-w-[420px]
-              font-serif
-              text-[1rem]
-              font-bold
-              uppercase
-              leading-[1.5]
-              tracking-[0.08em]
-              text-[#1f1f1f]
-            "
-                                    style={{
-                                        fontFamily: "cursive",
-                                    }}
-                                >
-                                    THE PROJECT THAT ESTABLISHED OUR REPUTATION IN
-                                    HIGH-END HOSPITALITY AND LEISURE SPACES —
-                                    DELIVERING DETAIL-DRIVEN EXECUTION WITH
-                                    NATURAL MATERIALS AND ELEVATED FINISHES.
-                                </p>
-
-                            </div>
-
-                            {/* MAIN IMAGE */}
-                            <div className="relative overflow-hidden group">
-
-                                <Image width={1000} height={1000}                                     src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop"
-                                    alt="Country Club"
-                                    className="
-              h-[760px]
-              w-full
-              object-cover
-              transition-transform
-              duration-700
-              group-hover:scale-[1.03]
-            "
-                                />
-
-                                {/* RED BUTTON */}
-                                <button
-                                    className="
-              absolute
-              bottom-0
-              right-0
-              flex
-              h-[95px]
-              w-[95px]
-              items-center
-              justify-center
-              bg-[#ed1c24]
-              text-white
-              transition-all
-              duration-300
-              hover:w-[115px]
-            "
-                                >
-
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="46"
-                                        height="46"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="1.8"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    >
-                                        <path d="M5 12h14" />
-                                        <path d="m12 5 7 7-7 7" />
-                                    </svg>
-
-                                </button>
-
-                            </div>
-
-                            {/* CONTENT */}
-                            <div className="pt-8">
-
-                                <h2
-                                    className="
-              text-[3.6rem]
-              md:text-[4.2rem]
-              font-[420]
-              leading-[1]
-              tracking-[-0.06em]
-              text-[#4b4b4b]
-            "
-                                >
-                                    Lake View Country Club
-                                </h2>
-
-                                <p className="mt-4 text-[1.8rem] font-light text-[#4f4f4f]">
-                                    Asheville, NC
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                        {/* RIGHT FLOATING IMAGE */}
-                        <div className="col-span-12 flex justify-end lg:col-span-4">
-
-                            <div className="relative mt-10 w-full max-w-[340px]">
-
-                                <div className="overflow-hidden">
-
-                                    <Image width={1000} height={1000}                                         src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop"
-                                        alt="Country Club Interior"
+                                    <p
                                         className="
-                h-[520px]
-                w-full
-                object-cover
-              "
+                  max-w-[420px]
+                  font-serif
+                  text-[1rem]
+                  font-bold
+                  uppercase
+                  leading-[1.5]
+                  tracking-[0.08em]
+                  text-[#1f1f1f]
+                "
+                                        style={{
+                                            fontFamily: "cursive",
+                                        }}
+                                    >
+                                        {p6.shortDescription}
+                                    </p>
+
+                                </div>
+
+                                {/* MAIN IMAGE */}
+                                <div className="relative overflow-hidden group">
+
+                                    <Image width={1000} height={1000}                                     src={p6.image}
+                                        alt={p6.title}
+                                        className="
+                  h-[760px]
+                  w-full
+                  object-cover
+                  transition-transform
+                  duration-700
+                  group-hover:scale-[1.03]
+                "
                                     />
+
+                                    {/* RED ARROW BOX */}
+                                    <Link
+                                        href={`/projects/${p6.slug}`}
+                                        className="
+                  absolute
+                  bottom-0
+                  right-0
+                  flex
+                  h-[95px]
+                  w-[95px]
+                  items-center
+                  justify-center
+                  bg-primary
+                  text-white
+                  transition-all
+                  duration-300
+                  hover:w-[115px]
+                "
+                                    >
+
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="46"
+                                            height="46"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="1.8"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <path d="M5 12h14" />
+                                            <path d="m12 5 7 7-7 7" />
+                                        </svg>
+
+                                    </Link>
+
+                                </div>
+
+                                {/* CONTENT */}
+                                <div className="pt-8">
+
+                                    <h2
+                                        className="
+                  text-[3.6rem]
+                  md:text-[4.2rem]
+                  font-[420]
+                  leading-[1]
+                  tracking-[-0.06em]
+                  text-text-dark
+                "
+                                    >
+                                        {p6.title}
+                                    </h2>
+
+                                    <p className="mt-4 text-[1.8rem] font-light text-[#4f4f4f]">
+                                        {p6.location}
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            {/* RIGHT FLOATING IMAGE */}
+                            <div className="col-span-12 flex justify-end lg:col-span-4">
+
+                                <div className="relative mt-10 w-full max-w-[340px]">
+
+                                    <div className="overflow-hidden">
+
+                                        <Image width={1000} height={1000}                                         src={p6.gallery?.[0] || p6.image}
+                                            alt={`${p6.title} Secondary`}
+                                            className="
+                    h-[520px]
+                    w-full
+                    object-cover
+                  "
+                                        />
+
+                                    </div>
 
                                 </div>
 
@@ -1090,9 +1104,8 @@ export default function FeaturedProjectsSlider() {
 
                     </div>
 
-                </div>
-
-            </section>
+                </section>
+            )}
         </>
     );
 }

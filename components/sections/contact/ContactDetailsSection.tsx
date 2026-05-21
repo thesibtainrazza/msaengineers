@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { siteConfig } from "@/config/siteConfig";
 
 export default function ContactDetailsSection() {
   const [formData, setFormData] = useState({
@@ -54,7 +55,7 @@ export default function ContactDetailsSection() {
           <div>
             {/* TITLE */}
             <div className="mb-14">
-              <h3 className="text-[2.1rem] md:text-[2.4rem] font-[420] tracking-[-0.05em] leading-[1] text-[#ed1c24]">
+              <h3 className="text-[2.1rem] md:text-[2.4rem] font-[420] tracking-[-0.05em] leading-[1] text-primary">
                 Start a project with us
               </h3>
             </div>
@@ -71,7 +72,7 @@ export default function ContactDetailsSection() {
                     required
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="h-[58px] w-full border border-[#9f9f9f] bg-transparent px-5 text-[1rem] text-[#4b4b4b] outline-none transition-all duration-300 focus:border-[#ed1c24]"
+                    className="h-[58px] w-full border border-border-dark bg-transparent px-5 text-[1rem] text-text-dark outline-none transition-all duration-300 focus:border-primary"
                   />
                 </div>
                 <div>
@@ -81,7 +82,7 @@ export default function ContactDetailsSection() {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="h-[58px] w-full border border-[#9f9f9f] bg-transparent px-5 text-[1rem] text-[#4b4b4b] outline-none transition-all duration-300 focus:border-[#ed1c24]"
+                    className="h-[58px] w-full border border-border-dark bg-transparent px-5 text-[1rem] text-text-dark outline-none transition-all duration-300 focus:border-primary"
                   />
                 </div>
               </div>
@@ -95,7 +96,7 @@ export default function ContactDetailsSection() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="h-[58px] w-full border border-[#9f9f9f] bg-transparent px-5 text-[1rem] text-[#4b4b4b] outline-none transition-all duration-300 focus:border-[#ed1c24]"
+                    className="h-[58px] w-full border border-border-dark bg-transparent px-5 text-[1rem] text-text-dark outline-none transition-all duration-300 focus:border-primary"
                   />
                 </div>
                 <div>
@@ -106,7 +107,7 @@ export default function ContactDetailsSection() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="h-[58px] w-full border border-[#9f9f9f] bg-transparent px-5 text-[1rem] text-[#4b4b4b] outline-none transition-all duration-300 focus:border-[#ed1c24]"
+                    className="h-[58px] w-full border border-border-dark bg-transparent px-5 text-[1rem] text-text-dark outline-none transition-all duration-300 focus:border-primary"
                   />
                 </div>
               </div>
@@ -119,7 +120,7 @@ export default function ContactDetailsSection() {
                   rows={7}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full resize-none border border-[#9f9f9f] bg-transparent px-5 py-5 text-[1rem] text-[#4b4b4b] outline-none transition-all duration-300 focus:border-[#ed1c24]"
+                  className="w-full resize-none border border-border-dark bg-transparent px-5 py-5 text-[1rem] text-text-dark outline-none transition-all duration-300 focus:border-primary"
                 />
               </div>
 
@@ -130,7 +131,7 @@ export default function ContactDetailsSection() {
                 </div>
               )}
               {status === "error" && (
-                <div className="text-[#ed1c24] bg-red-50 p-4 rounded-md">
+                <div className="text-primary bg-red-50 p-4 rounded-md">
                   {errorMessage}
                 </div>
               )}
@@ -139,7 +140,7 @@ export default function ContactDetailsSection() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="group mt-4 inline-flex items-center gap-3 rounded-full border border-[#ed1c24] px-9 py-[18px] text-[1.05rem] font-medium tracking-[-0.02em] text-[#4b4b4b] transition-all duration-300 hover:bg-[#ed1c24] hover:text-white disabled:opacity-50"
+                className="group mt-4 inline-flex items-center gap-3 rounded-full border border-primary px-9 py-[18px] text-[1.05rem] font-medium tracking-[-0.02em] text-text-dark transition-all duration-300 hover:bg-primary hover:text-white disabled:opacity-50"
               >
                 {status === "submitting" ? "Sending..." : "Send"}
                 <svg
@@ -181,14 +182,14 @@ export default function ContactDetailsSection() {
                       font-[420]
                       tracking-[-0.06em]
                       leading-none
-                      text-[#4b4b4b]
+                      text-text-dark
                     "
                   >
                     Contact
                   </h3>
 
                   <a
-                    href="mailto:[msaengineer.contractors@gmail.com]"
+                    href={`mailto:${siteConfig.emails.support}`}
                     className="
                       group
                       inline-flex
@@ -196,16 +197,16 @@ export default function ContactDetailsSection() {
                       gap-3
                       rounded-full
                       border
-                      border-[#ed1c24]
+                      border-primary
                       px-9
                       py-[18px]
                       text-[1.05rem]
                       font-medium
                       tracking-[-0.02em]
-                      text-[#4b4b4b]
+                      text-text-dark
                       transition-all
                       duration-300
-                      hover:bg-[#ed1c24]
+                      hover:bg-primary
                       hover:text-white
                     "
                   >
@@ -240,7 +241,7 @@ export default function ContactDetailsSection() {
                       font-[420]
                       tracking-[-0.06em]
                       leading-none
-                      text-[#4b4b4b]
+                      text-text-dark
                     "
                   >
                     Careers
@@ -255,16 +256,16 @@ export default function ContactDetailsSection() {
                       gap-3
                       rounded-full
                       border
-                      border-[#ed1c24]
+                      border-primary
                       px-9
                       py-[18px]
                       text-[1.05rem]
                       font-medium
                       tracking-[-0.02em]
-                      text-[#4b4b4b]
+                      text-text-dark
                       transition-all
                       duration-300
-                      hover:bg-[#ed1c24]
+                      hover:bg-primary
                       hover:text-white
                     "
                   >
@@ -301,7 +302,7 @@ export default function ContactDetailsSection() {
                     font-[420]
                     tracking-[-0.06em]
                     leading-none
-                    text-[#4b4b4b]
+                    text-text-dark
                   "
                 >
                   Services
@@ -316,16 +317,16 @@ export default function ContactDetailsSection() {
                     gap-3
                     rounded-full
                     border
-                    border-[#ed1c24]
+                    border-primary
                     px-9
                     py-[18px]
                     text-[1.05rem]
                     font-medium
                     tracking-[-0.02em]
-                    text-[#4b4b4b]
+                    text-text-dark
                     transition-all
                     duration-300
-                    hover:bg-[#ed1c24]
+                    hover:bg-primary
                     hover:text-white
                   "
                 >
@@ -360,7 +361,7 @@ export default function ContactDetailsSection() {
                     font-[420]
                     tracking-[-0.06em]
                     leading-none
-                    text-[#4b4b4b]
+                    text-text-dark
                   "
                 >
                   Call Us
@@ -370,7 +371,7 @@ export default function ContactDetailsSection() {
 
                   <div>
 
-                    <h4 className="mb-2 text-[1.7rem] text-[#ed1c24]">
+                    <h4 className="mb-2 text-[1.7rem] text-primary">
                       Odisha Region
                     </h4>
 
@@ -380,10 +381,10 @@ export default function ContactDetailsSection() {
                         text-[1.9rem]
                         font-light
                         tracking-[-0.04em]
-                        text-[#4b4b4b]
+                        text-text-dark
                         transition-colors
                         duration-300
-                        hover:text-[#ed1c24]
+                        hover:text-primary
                       "
                     >
                       +91 70082 75002
@@ -393,7 +394,7 @@ export default function ContactDetailsSection() {
 
                   <div>
 
-                    <h4 className="mb-2 text-[1.7rem] text-[#ed1c24]">
+                    <h4 className="mb-2 text-[1.7rem] text-primary">
                       Project Office
                     </h4>
 
@@ -403,10 +404,10 @@ export default function ContactDetailsSection() {
                         text-[1.9rem]
                         font-light
                         tracking-[-0.04em]
-                        text-[#4b4b4b]
+                        text-text-dark
                         transition-colors
                         duration-300
-                        hover:text-[#ed1c24]
+                        hover:text-primary
                       "
                     >
                       +91 94394 29092
@@ -428,7 +429,7 @@ export default function ContactDetailsSection() {
                     font-[420]
                     tracking-[-0.06em]
                     leading-none
-                    text-[#4b4b4b]
+                    text-text-dark
                   "
                 >
                   Find Us
@@ -438,7 +439,7 @@ export default function ContactDetailsSection() {
 
                   <div>
 
-                    <h4 className="mb-2 text-[1.7rem] text-[#ed1c24]">
+                    <h4 className="mb-2 text-[1.7rem] text-primary">
                       Rajgangpur, Odisha
                     </h4>
 
@@ -447,7 +448,7 @@ export default function ContactDetailsSection() {
                         text-[1.45rem]
                         leading-[1.6]
                         tracking-[-0.03em]
-                        text-[#4b4b4b]
+                        text-text-dark
                       "
                     >
                       Main Industrial Office
@@ -459,7 +460,7 @@ export default function ContactDetailsSection() {
 
                   <div>
 
-                    <h4 className="mb-2 text-[1.7rem] text-[#ed1c24]">
+                    <h4 className="mb-2 text-[1.7rem] text-primary">
                       Project Sites
                     </h4>
 
@@ -468,7 +469,7 @@ export default function ContactDetailsSection() {
                         text-[1.45rem]
                         leading-[1.6]
                         tracking-[-0.03em]
-                        text-[#4b4b4b]
+                        text-text-dark
                       "
                     >
                       Cement Plants & Industrial

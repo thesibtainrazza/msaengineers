@@ -6,22 +6,22 @@ export default function StatsMarquee() {
   const stats = (
     <>
       <div className="flex items-center mx-12 md:mx-20 shrink-0">
-        <span className="text-[10rem] md:text-[10rem] font-medium text-[#ed1c24] leading-none tracking-tighter">99%</span>
-        <span className="text-[#ed1c24] text-lg md:text-2xl font-semibold ml-6 md:ml-12 leading-tight">Customer<br/>Satisfaction</span>
+        <span className="text-[10rem] md:text-[10rem] font-medium text-primary leading-none tracking-tighter">99%</span>
+        <span className="text-primary text-lg md:text-2xl font-semibold ml-6 md:ml-12 leading-tight">Customer<br/>Satisfaction</span>
       </div>
-      <div className="w-[1.5px] h-[120px] md:h-[200px] bg-[#ed1c24] mx-4 md:mx-8 shrink-0 opacity-80"></div>
+      <div className="w-[1.5px] h-[120px] md:h-[200px] bg-primary mx-4 md:mx-8 shrink-0 opacity-80"></div>
       
       <div className="flex items-center mx-12 md:mx-20 shrink-0">
-        <span className="text-[10rem] md:text-[10rem] font-medium text-[#ed1c24] leading-none tracking-tighter">120+</span>
-        <span className="text-[#ed1c24] text-lg md:text-2xl font-semibold ml-6 md:ml-12 leading-tight">Completed<br/>Projects</span>
+        <span className="text-[10rem] md:text-[10rem] font-medium text-primary leading-none tracking-tighter">120+</span>
+        <span className="text-primary text-lg md:text-2xl font-semibold ml-6 md:ml-12 leading-tight">Completed<br/>Projects</span>
       </div>
-      <div className="w-[1.5px] h-[120px] md:h-[200px] bg-[#ed1c24] mx-4 md:mx-8 shrink-0 opacity-80"></div>
+      <div className="w-[1.5px] h-[120px] md:h-[200px] bg-primary mx-4 md:mx-8 shrink-0 opacity-80"></div>
       
       <div className="flex items-center mx-12 md:mx-20 shrink-0">
-        <span className="text-[10rem] md:text-[10rem] font-medium text-[#ed1c24] leading-none tracking-tighter">25+</span>
-        <span className="text-[#ed1c24] text-lg md:text-2xl font-semibold ml-6 md:ml-12 leading-tight">Years of<br/>Excellence</span>
+        <span className="text-[10rem] md:text-[10rem] font-medium text-primary leading-none tracking-tighter">25+</span>
+        <span className="text-primary text-lg md:text-2xl font-semibold ml-6 md:ml-12 leading-tight">Years of<br/>Excellence</span>
       </div>
-      <div className="w-[1.5px] h-[120px] md:h-[200px] bg-[#ed1c24] mx-4 md:mx-8 shrink-0 opacity-80"></div>
+      <div className="w-[1.5px] h-[120px] md:h-[200px] bg-primary mx-4 md:mx-8 shrink-0 opacity-80"></div>
     </>
   );
 

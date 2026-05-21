@@ -10,7 +10,7 @@ export default function BlogHeroSection() {
         relative
         w-full
         overflow-hidden
-        bg-[#f7f7f5]
+        bg-bg-light
         pt-40
         pb-0
       "
@@ -40,7 +40,7 @@ export default function BlogHeroSection() {
                 font-semibold
                 uppercase
                 tracking-[0.28em]
-                text-[#ed1c24]
+                text-primary
               "
             >
               INDUSTRY UPDATES
@@ -54,7 +54,7 @@ export default function BlogHeroSection() {
                 font-[420]
                 tracking-[-0.07em]
                 leading-[0.9]
-                text-[#4b4b4b]
+                text-text-dark
               "
             >
               Insights &
@@ -81,7 +81,7 @@ export default function BlogHeroSection() {
               sites, shutdown operations, and real field
               coordination. Here, we share the{" "}
 
-              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+              <span className="bg-primary px-2 py-[2px] text-white">
                 engineering insights,
               </span>
 
@@ -144,7 +144,7 @@ export default function BlogHeroSection() {
                 items-center
                 justify-center
                 rounded-sm
-                bg-[#ed1c24]
+                bg-primary
               "
             >
 

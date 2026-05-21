@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import Image from "next/image";
 
 export default function LogoMarquee() {
 
@@ -97,11 +96,10 @@ export default function LogoMarquee() {
   "
     >
 
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src="https://www.shreecement.com/public/front_assets/images/logo.jpg"
         alt="Shree Cement"
-        width={56}
-        height={56}
         className="w-14 h-14 object-contain mr-4"
       />
 
@@ -154,11 +152,10 @@ export default function LogoMarquee() {
     "
       >
 
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src="https://www.wondercement.com/images/header/new_logo.png"
           alt="Wonder Cement"
-          width={90}
-          height={90}
           className="w-[90px] h-auto object-contain brightness-0 invert"
         />
 
@@ -185,11 +182,10 @@ export default function LogoMarquee() {
   "
 >
 
-  <Image
+  {/* eslint-disable-next-line @next/next/no-img-element */}
+  <img
     src="https://www.dalmiabharat.com/wp-content/uploads/2026/04/dbg-new-logo.png"
     alt="Dalmia Bharat Group"
-    width={190}
-    height={190}
     className="w-[190px] h-[190px] object-contain -mr-32 mt-10"
   />
 

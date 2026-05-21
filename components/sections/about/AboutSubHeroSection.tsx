@@ -18,7 +18,7 @@ export default function AboutImageSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full bg-[#f7f7f5] pb-24 overflow-hidden"
+      className="relative w-full bg-bg-light pb-24 overflow-hidden"
     >
 
       {/* FULL WIDTH IMAGE */}

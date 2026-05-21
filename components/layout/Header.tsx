@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { NAV_LINKS } from "@/data";
+import { NAV_LINKS } from "@/content";
 import Link from "next/link";
 
 export default function Header() {
@@ -35,7 +35,7 @@ export default function Header() {
       <nav
         className={`container-primary flex items-center transition-all duration-500 ${
           scrolled ? "py-4 md:py-5" : "py-6 md:py-8"
-        } ${!isHome || scrolled ? "text-[#4b4b4b]" : "text-white"}`}
+        } ${!isHome || scrolled ? "text-text-dark" : "text-white"}`}
       >
 
         {/* Logo */}
@@ -77,12 +77,12 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="group relative text-[20px] font-semibold transition-colors duration-300 hover:text-[#ed1c24]"
+              className="group relative text-[20px] font-semibold transition-colors duration-300 hover:text-primary"
             >
               {link.label}
 
               {/* Underline */}
-              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#ed1c24] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
 
@@ -91,7 +91,7 @@ export default function Header() {
         {/* CTA Button */}
         <Link
         href="/contact"
-          className="ml-auto hidden lg:flex items-center rounded-full bg-[#ed1c24] px-10 py-5 text-[18px] font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:bg-[#c9161d]">
+          className="ml-auto hidden lg:flex items-center rounded-full bg-primary px-10 py-5 text-[18px] font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:bg-primary-hover">
 
           <span>Build with Us</span>
 
@@ -112,7 +112,7 @@ export default function Header() {
         </Link>
 
         {/* Mobile Menu */}
-        <button className="ml-auto lg:hidden">
+        <button className="ml-auto lg:hidden" aria-label="Open mobile menu">
 
           <svg
             className="h-8 w-8"

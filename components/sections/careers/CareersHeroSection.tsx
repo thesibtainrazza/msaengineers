@@ -7,7 +7,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { CAREERS_HERO } from "@/data/careers";
+import { CAREERS_HERO } from "@/content/careers";
 
 export default function CareersHeroSection() {
 
@@ -40,7 +40,7 @@ export default function CareersHeroSection() {
           relative
           w-full
           overflow-hidden
-          bg-[#f7f7f5]
+          bg-bg-light
           pt-40
           pb-0
         "
@@ -70,7 +70,7 @@ export default function CareersHeroSection() {
                   font-semibold
                   uppercase
                   tracking-[0.28em]
-                  text-[#ed1c24]
+                  text-primary
                 "
             >
               {CAREERS_HERO.label}
@@ -84,7 +84,7 @@ export default function CareersHeroSection() {
                   font-[420]
                   tracking-[-0.07em]
                   leading-[0.9]
-                  text-[#4b4b4b]
+                  text-text-dark
                 "
             >
               {CAREERS_HERO.heading}
@@ -107,7 +107,7 @@ export default function CareersHeroSection() {
 
               {CAREERS_HERO.description}
 
-              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+              <span className="bg-primary px-2 py-[2px] text-white">
                 {CAREERS_HERO.highlightText}
               </span>
             </p>
@@ -129,13 +129,13 @@ export default function CareersHeroSection() {
                   font-light
                   tracking-[-0.05em]
                   leading-[1.06]
-                  text-[#4b4b4b]
+                  text-text-dark
                   mb-16
                 "
             >
               {CAREERS_HERO.secondaryTextPart1}
 
-              <span className="bg-[#ed1c24] px-3 py-[2px] text-white">
+              <span className="bg-primary px-3 py-[2px] text-white">
                 {CAREERS_HERO.secondaryHighlight}
               </span>
 
@@ -151,16 +151,16 @@ export default function CareersHeroSection() {
                   gap-3
                   rounded-full
                   border
-                  border-[#ed1c24]
+                  border-primary
                   px-10
                   py-5
                   text-[1.35rem]
                   font-light
                   tracking-[-0.03em]
-                  text-[#4b4b4b]
+                  text-text-dark
                   transition-all
                   duration-300
-                  hover:bg-[#ed1c24]
+                  hover:bg-primary
                   hover:text-white
                 "
               >

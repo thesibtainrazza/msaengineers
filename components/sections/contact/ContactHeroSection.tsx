@@ -11,7 +11,7 @@ export default function ContactHeroSection() {
         relative
         w-full
         overflow-hidden
-        bg-[#f7f7f5]
+        bg-bg-light
         pt-40
         pb-24
       "
@@ -41,7 +41,7 @@ export default function ContactHeroSection() {
                 font-semibold
                 uppercase
                 tracking-[0.28em]
-                text-[#ed1c24]
+                text-primary
               "
             >
               CONTACT MSA
@@ -55,12 +55,12 @@ export default function ContactHeroSection() {
                 font-[420]
                 tracking-[-0.07em]
                 leading-[0.9]
-                text-[#4b4b4b]
+                text-text-dark
               "
             >
               We’d{" "}
 
-              <span className="bg-[#ed1c24] px-4 py-1 text-white">
+              <span className="bg-primary px-4 py-1 text-white">
                 love
               </span>
 
@@ -87,7 +87,7 @@ export default function ContactHeroSection() {
 
               Let’s talk about{" "}
 
-              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+              <span className="bg-primary px-2 py-[2px] text-white">
                 your legacy.
               </span>
 

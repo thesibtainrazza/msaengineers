@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactMapSection() {
   return (
-    <section className="relative w-full bg-[#f7f7f5] pb-32 overflow-hidden">
+    <section className="relative w-full bg-bg-light pb-32 overflow-hidden">
 
       <div
         className="

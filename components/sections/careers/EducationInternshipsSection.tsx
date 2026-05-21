@@ -13,7 +13,7 @@ export default function EducationInternshipsSection() {
         relative
         w-full
         overflow-hidden
-        bg-[#f7f7f5]
+        bg-bg-light
         py-28
         md:py-36
       "
@@ -42,7 +42,7 @@ export default function EducationInternshipsSection() {
                 font-semibold
                 uppercase
                 tracking-[0.28em]
-                text-[#ed1c24]
+                text-primary
               "
             >
              TRAINING & INTERNSHIPS
@@ -56,7 +56,7 @@ export default function EducationInternshipsSection() {
                 font-[420]
                 tracking-[-0.06em]
                 leading-[0.92]
-                text-[#4b4b4b]
+                text-text-dark
                 mb-14
               "
             >
@@ -82,7 +82,7 @@ export default function EducationInternshipsSection() {
                 At MSA Engineers, we believe the next generation
                 of industrial professionals should learn through{" "}
 
-                <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+                <span className="bg-primary px-2 py-[2px] text-white">
                   real-world project exposure
                 </span>
 
@@ -131,7 +131,7 @@ export default function EducationInternshipsSection() {
                   md:text-[2rem]
                   font-light
                   tracking-[-0.04em]
-                  text-[#4b4b4b]
+                  text-text-dark
                 "
               >
 
@@ -140,12 +140,12 @@ export default function EducationInternshipsSection() {
                 <a
                   href="mailto:msaengineers@gmail.com"
                   className="
-                    text-[#ed1c24]
+                    text-primary
                     underline
                     underline-offset-4
                     transition-colors
                     duration-300
-                    hover:text-[#4b4b4b]
+                    hover:text-text-dark
                   "
                 >
                   Email us
@@ -179,7 +179,7 @@ export default function EducationInternshipsSection() {
                   left-[-180px]
                   h-[1.5px]
                   w-[240px]
-                  bg-[#ed1c24]
+                  bg-primary
                   z-20
                   hidden
                   lg:block

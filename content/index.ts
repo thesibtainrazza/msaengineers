@@ -1,41 +1,5 @@
-import { Project, NavLink, Sector, Service } from "@/types";
-export const FEATURED_PROJECTS: Project[] = [
-  {
-    title: "Limestone Linear Stockpile Shed",
-    location: "RAS, RJ",
-    category: "Shed Structures",
-    image: "/assets/1.jpg"
-  },
+import { NavLink, Sector, Service } from "@/types";
 
-  {
-    title: "DIA Limestone Stockpile Shed",
-    location: "Dala, RJ",
-    category: "Shed Structures",
-    image: "/assets/2.jpg",
-  },
-
-  {
-    title: "Heavy Industrial Fabrication Unit",
-    location: "RKL, OD",
-    category: "Fabrication Works",
-    image:
-      "https://images.unsplash.com/photo-1756705406506-50500a12463c?q=80&w=2054&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-
-  {
-    title: "Clinker Conveyor Support System",
-    location: "JSG, OD",
-    category: "Conveyor Systems",
-    image: "/assets/4.jpg",
-  },
-
-  {
-    title: "Kiln Section Structural Erection",
-    location: "Satna, MP",
-    category: "Industrial Erection",
-    image: "/assets/5.jpg",
-  }
-];
 export const WHY_CHOOSE_US: Service[] = [
   { title: "Industrial Expertise", isActive: false },
   { title: "Structural Precision", isActive: false },

@@ -28,7 +28,7 @@ export default function TestimonialSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] md:w-[850px] md:h-[850px] pointer-events-none flex items-center justify-center z-0">
 
         {/* Static Red Outline Circle */}
-        <div className="absolute inset-0 rounded-full border border-[#ed1c24]/10" />
+        <div className="absolute inset-0 rounded-full border border-primary/10" />
 
         {/* Expanding White Filled Circle */}
         <motion.div
@@ -61,7 +61,7 @@ export default function TestimonialSection() {
 
         {/* Right Column */}
         <div className="lg:col-span-8">
-          <h2 className="text-4xl md:text-[4rem] lg:text-[4.5rem] font-normal text-[#ed1c24] leading-[1.08] tracking-tight">
+          <h2 className="text-4xl md:text-[4rem] lg:text-[4.5rem] font-normal text-primary leading-[1.08] tracking-tight">
             &ldquo;MSA Engineers & Contractors demonstrated strong execution, professionalism, and reliability throughout the project. Their commitment to quality and timely delivery made them a trusted industrial partner..&rdquo;
           </h2>
         </div>

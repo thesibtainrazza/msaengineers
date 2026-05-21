@@ -10,7 +10,7 @@ export default function BuildingForBestSection() {
         <div className="flex flex-col items-start w-full">
           <h2 className="text-5xl md:text-6xl lg:text-[5rem] font-medium text-[#4a4a4a] leading-[1.1] mb-6 tracking-tight">
             Built on<br />
-            <span className="bg-[#ed1c24] text-white px-3 py-1 inline-block font-normal mt-2 leading-none">experience</span>
+            <span className="bg-primary text-white px-3 py-1 inline-block font-normal mt-2 leading-none">experience</span>
           </h2>
           <p className="text-xl md:text-2xl text-[#4a4a4a] mb-16 leading-relaxed max-w-lg font-light">
             Our strength lies in disciplined execution, experienced workforce, and a long-standing commitment to industrial quality and reliability.

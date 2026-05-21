@@ -52,7 +52,7 @@ export const SectorButton = ({
         py-6
         transition-all
         duration-300
-        hover:border-[#ed1c24]
+        hover:border-primary
         ${className}
       `}
     >
@@ -64,7 +64,7 @@ export const SectorButton = ({
           inset-0
           origin-left
           scale-x-0
-          bg-[#ed1c24]
+          bg-primary
           transition-transform
           duration-300
           ease-out
@@ -151,7 +151,7 @@ export const SectorButton = ({
           text-[2.8rem]
           font-[350]
           tracking-[-0.05em]
-          text-[#4b4b4b]
+          text-text-dark
           transition-colors
           duration-300
           group-hover:text-white
@@ -167,7 +167,7 @@ export const SectorButton = ({
           z-10
           h-11
           w-11
-          text-[#4b4b4b]
+          text-text-dark
           transition-all
           duration-300
           group-hover:translate-x-1

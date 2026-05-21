@@ -1,8 +1,17 @@
 export interface Project {
+  slug: string;
   title: string;
+  client?: string;
   location: string;
   category: string;
+  year?: string;
   image: string;
+  gallery?: string[];
+  featured?: boolean;
+  shortDescription?: string;
+  fullDescription?: string;
+  stats?: { label: string; value: string }[];
+  tags?: string[];
 }
 
 export interface NavLink {
