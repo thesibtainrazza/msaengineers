@@ -47,7 +47,7 @@ export default function TestimonialSection() {
         {/* Left Column */}
         <div className="lg:col-span-4 flex flex-col justify-end text-[#4a4a4a] pb-2">
           <p className="text-xl md:text-2xl font-normal leading-snug">
-            Kathy Hipp
+            Arjun Kumar
           </p>
 
           <p className="text-xl md:text-2xl font-normal leading-snug">

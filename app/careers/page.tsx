@@ -3,7 +3,7 @@ import React from 'react';
 import CareersHeroSection from '@/components/sections/careers/CareersHeroSection';
 import CommunityInvolvementSection from '@/components/sections/careers/CommunityInvolvementSection';
 import EducationInternshipsSection from '@/components/sections/careers/EducationInternshipsSection';
-import WhyJDavisSection from '@/components/sections/careers/WhyMSASection';
+import WhyMSASection from '@/components/sections/careers/WhyMSASection';
 import TestimonialSection from '@/components/sections/careers/TestimonialSection';
 import EmployeeBenefitsSection from '@/components/sections/careers/EmployeeBenefitsSection';
 
@@ -17,7 +17,7 @@ export default function CareersPage() {
       <CareersHeroSection />
       <CommunityInvolvementSection />
       <EducationInternshipsSection />
-      <WhyJDavisSection />
+      <WhyMSASection />
       <TestimonialSection />
       <EmployeeBenefitsSection />
     </>

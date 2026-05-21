@@ -1,70 +1,150 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function ServicesHeroSection() {
-  const [activeTab, setActiveTab] = useState('Preconstruction');
+
+  const [activeTab, setActiveTab] = useState("Shed Structures");
 
   const navItems = [
-    { label: 'Preconstruction', href: '#preconstruction' },
-    { label: 'Design-Build', href: '#design-build' },
-    { label: 'CMAR', href: '#cmar' },
-    { label: 'Traditional Contracting', href: '#traditional-contracting' },
+    { label: "Shed Structures", href: "#shed-structures" },
+    { label: "Fabrication Works", href: "#fabrication-works" },
+    { label: "Industrial Erection", href: "#industrial-erection" },
+    { label: "Conveyor Systems", href: "#conveyor-systems" },
+     { label: "Equipment Rentals", href: "#equipment-rentals" },
   ];
 
+  /* IMAGE ZOOM SCROLL EFFECT */
+  const imageRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: imageRef,
+    offset: ["start end", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1.15, 1]);
+
   return (
-    <section className="relative w-full bg-[#f7f7f5] pt-36 pb-20 md:pt-48 md:pb-28 overflow-hidden">
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20 mb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-                <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
-                    Services
-                </h4>
-                <h1 className="text-[4.2rem] font-[450] leading-[0.98] tracking-[-0.06em] text-[#4b4b4b] md:text-[5.4rem] lg:text-[5.8rem]">
-                    From blueprint to ribbon-cutting
-                </h1>
+    <section className="relative w-full overflow-hidden bg-[#f7f7f5] pt-40 pb-0">
 
-                {/* Sub Navigation */}
-                <div className="mt-16 flex flex-wrap gap-x-8 gap-y-4">
-                    {navItems.map((item) => (
-                        <a
-                            key={item.label}
-                            href={item.href}
-                            onClick={() => setActiveTab(item.label)}
-                            className={`text-[1.3rem] font-semibold uppercase tracking-widest transition-colors duration-300 relative inline-block pb-2 ${
-                            activeTab === item.label
-                                ? 'text-[#ed1c24]'
-                                : 'text-[#4b4b4b] hover:text-[#ed1c24]'
-                            }`}
-                        >
-                            {item.label}
-                            {activeTab === item.label && (
-                                <span className="absolute bottom-0 left-0 h-[2px] w-full bg-[#ed1c24]" />
-                            )}
-                        </a>
-                    ))}
-                </div>
+      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+
+        {/* TOP GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-x-32 items-start">
+
+          {/* LEFT */}
+          <div>
+
+            <h4 className="mb-8 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
+              SERVICES
+            </h4>
+
+            <h1 className="text-[5rem] md:text-[6rem] lg:text-[7rem] font-[420] tracking-[-0.07em] leading-[0.9] text-[#4b4b4b]">
+
+              From fabrication
+              <br />
+
+              to field execution
+
+            </h1>
+
+            {/* NAV LINKS */}
+            <div className="mt-16 flex flex-wrap gap-x-10 gap-y-4">
+
+              {navItems.map((item) => (
+
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setActiveTab(item.label)}
+                  className={`
+                    relative
+                    inline-block
+                    border-b
+                    pb-[2px]
+                    text-[1.55rem]
+                    font-light
+                    tracking-[-0.03em]
+                    transition-all
+                    duration-300
+                    ${
+                      activeTab === item.label
+                        ? "border-[#4b4b4b] text-[#4b4b4b]"
+                        : "border-[#4b4b4b] text-[#4b4b4b] hover:text-[#ed1c24]"
+                    }
+                  `}
+                >
+                  {item.label}
+                </a>
+
+              ))}
+
             </div>
 
-            <div className="lg:pt-20 lg:pl-16">
-                <p className="text-[1.8rem] md:text-[2.2rem] font-[450] leading-[1.4] text-[#4b4b4b]">
-                    When you bring our team to the table, we bring your vision to life with creativity, clarity, and accountability. J Davis prides itself on our ability to be a one-stop-shop, <span className="relative inline-block"><span className="relative z-10">guiding you</span><span className="absolute bottom-1 left-0 -z-10 h-3 w-full bg-[#ed1c24]/20"></span></span> from sketch to spreadsheets to stunning final result. If you already have blueprints in hand, we roll up our sleeves and execute on your dream with construction services that deliver efficient precision.
-                </p>
-            </div>
+          </div>
+
+          {/* RIGHT */}
+          <div className="pt-14 lg:pt-10 max-w-[620px]">
+
+            <p className="text-[1.55rem] font-light leading-[1.7] tracking-[-0.03em] text-[#4f4f4f]">
+
+              When industries partner with MSA, they work with a team focused on practical execution, structural precision, and dependable delivery. From industrial shed structures and heavy fabrication works to conveyor systems and on-site erection, we handle projects with {" "}
+
+              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+                disciplined coordination
+              </span>
+
+              {" "} and hands-on industry experience.
+
+Whether supporting plant expansions, shutdown activities, or new industrial developments, our approach stays rooted in safety, durability, and efficient execution — delivering solutions that perform reliably in real working environments.
+
+            </p>
+
+          </div>
+
         </div>
-      </div>
 
-      <div className="w-full h-px bg-gray-200 mb-16 max-w-[1450px] mx-auto px-8 md:px-12 lg:px-16 xl:px-20"></div>
+        {/* SECOND TEXT */}
+        <div className="mt-40 max-w-[1250px]">
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20 mb-20">
-          <p className="text-[2.2rem] md:text-[2.8rem] font-[450] leading-[1.3] text-[#4b4b4b] max-w-[80%]">
-              We solve problems others can&apos;t or won&apos;t with creativity. We build <span className="relative inline-block"><span className="relative z-10">lasting relationships</span><span className="absolute bottom-1 left-0 -z-10 h-3 w-full bg-[#ed1c24]/20"></span></span> with candor. And we specialize in details that reflect the DNA of a community.
+          <p className="text-[1.55rem] md:text-[1.8rem] lg:text-[2.2rem] font-light tracking-[-0.05em] leading-[1.06] text-[#4b4b4b]">
+
+            We build industrial systems that demand precision, durability, and real-world execution. We earn{" "}
+
+            <span className="bg-[#ed1c24] px-3 py-[2px] text-white">
+               long-term trust
+            </span>
+
+            {" "}through accountability on-site and consistency in delivery. And we specialize in structural solutions engineered for demanding industrial environments.
+
           </p>
+
+        </div>
+
       </div>
 
-      <div className="relative w-full aspect-[21/9] md:aspect-[3/1]">
-          <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1541888086225-ee8018e4726b?q=80&w=2000&auto=format&fit=crop')"}}></div>
+      {/* FULL IMAGE WITH ZOOM SCROLL EFFECT */}
+      <div
+        ref={imageRef}
+        className="relative mt-32 w-full overflow-hidden"
+      >
+
+        <motion.img
+          style={{ scale }}
+          src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2200&auto=format&fit=crop"
+          alt="Ribbon Cutting"
+          className="
+            h-[70vh]
+            md:h-[95vh]
+            w-full
+            object-cover
+            origin-center
+          "
+        />
+
       </div>
+
     </section>
   );
 }

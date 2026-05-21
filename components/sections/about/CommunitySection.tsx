@@ -108,6 +108,198 @@ export default function CommunitySection() {
 
           </div>
         </div>
+       {/* IMAGE GRID */}
+      <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-32">
+
+      {/* BLUEPRINT BG */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          bottom-0
+          left-0
+          h-[420px]
+          w-[420px]
+          opacity-[0.07]
+        "
+        style={{
+          backgroundImage:
+            "url('https://www.transparenttextures.com/patterns/graphy.png')",
+        }}
+      />
+
+      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+
+        {/* TOP IMAGE */}
+        <div className="relative mb-44">
+
+          <div className="overflow-hidden">
+
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2200&auto=format&fit=crop"
+              alt="Construction Recovery"
+              className="
+                h-[820px]
+                w-full
+                object-cover
+              "
+            />
+
+          </div>
+
+          {/* CAPTION */}
+          <div
+            className="
+              absolute
+              bottom-[-70px]
+              right-[120px]
+              flex
+              items-start
+              gap-8
+            "
+          >
+
+            <div className="h-[180px] w-[1px] bg-[#ed1c24]" />
+
+            <p
+              className="
+                max-w-[320px]
+                font-serif
+                text-[1rem]
+                font-bold
+                uppercase
+                leading-[1.3]
+                tracking-[0.08em]
+                text-[#1f1f1f]
+              "
+              style={{
+                fontFamily: "cursive",
+              }}
+            >
+              “Strong industrial projects are built through disciplined execution, practical engineering and the people who deliver under pressure.”
+            </p>
+
+          </div>
+
+        </div>
+
+        {/* BOTTOM GRID */}
+        <div className="relative grid grid-cols-12 gap-12">
+
+          {/* LEFT IMAGE */}
+          <div className="col-span-12 lg:col-span-7">
+
+            <div className="relative">
+
+              <img
+                src="/assets/lab1.jpg?q=80&w=1600&auto=format&fit=crop"
+                alt="Community Build"
+                className="
+                  h-[540px]
+                  w-full
+                  object-cover
+                "
+              />
+
+              {/* LEFT CAPTION */}
+              <div
+                className="
+                  absolute
+                  bottom-[-95px]
+                  left-[55%]
+                  flex
+                  items-start
+                  gap-8
+                "
+              >
+
+                <div className="h-[170px] w-[1px] bg-[#ed1c24]" />
+
+                <p
+                  className="
+                    max-w-[290px]
+                    font-serif
+                    text-[0.95rem]
+                    font-bold
+                    uppercase
+                    leading-[1.3]
+                    tracking-[0.08em]
+                    text-[#1f1f1f]
+                  "
+                  style={{
+                    fontFamily: "cursive",
+                  }}
+                >
+                 “Behind every successful structure is a workforce that understands responsibility, coordination and real on-site execution.”
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="col-span-12 flex items-end justify-end lg:col-span-5">
+
+            <div className="relative w-[70%]">
+
+              <img
+                src="/assets/lab2.jpg?auto=format&fit=crop"
+                alt="Construction Team"
+                className="
+                  h-[520px]
+                  w-full
+                  object-cover
+                "
+              />
+
+              {/* RIGHT CAPTION */}
+              <div
+                className="
+                  absolute
+                  bottom-[60px]
+                  left-[-220px]
+                  flex
+                  items-end
+                  gap-8
+                "
+              >
+
+                <p
+                  className="
+                    max-w-[230px]
+                    text-right
+                    font-serif
+                    text-[0.95rem]
+                    font-bold
+                    uppercase
+                    leading-[1.3]
+                    tracking-[0.08em]
+                    text-[#1f1f1f]
+                  "
+                  style={{
+                    fontFamily: "cursive",
+                  }}
+                >
+                  “Industrial progress is not created in meetings alone — it is built every day on fabrication floors, project sites and execution teams.”
+                </p>
+
+                <div className="h-[1px] w-[180px] bg-[#ed1c24]" />
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
       </div>
     </section>
   );

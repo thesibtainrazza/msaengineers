@@ -1,18 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
-import PortfolioHeroSection from '@/components/sections/portfolio/PortfolioHeroSection';
-import PortfolioGridSection from '@/components/sections/portfolio/PortfolioGridSection';
+import ProjectsHeroSection from '@/components/sections/projects/ProjectsHeroSection';
+import ProjectsGridSection from '@/components/sections/projects/ProjectsGridSection';
 
 export const metadata = {
-  title: 'Portfolio | MSA Engineer & Contractors',
+  title: 'Projects | MSA Engineer & Contractors',
 };
 
-export default function PortfolioPage() {
+export default function ProjectsPage() {
   return (
-    <>
-      <PortfolioHeroSection />
-      <PortfolioGridSection />
+    <>  
+      <ProjectsHeroSection />
+      <ProjectsGridSection />
     </>
   );
 }

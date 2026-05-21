@@ -1,15 +1,14 @@
 import React from 'react';
 
 export default function EmployeeBenefitsSection() {
-  const benefits = [
-    "Employee Sponsored Health Plan, Vision, and Dental",
-    "401k+ Company Match",
-    "Free In-house Life Coach for Staff and Family",
-    "Short - and Long - Term Disability",
-    "Paid Holidays and Progressive PTO",
-    "Loyalty Bonus, Clothing Allowance, and Fitness Reimbursement"
-  ];
-
+ const benefits = [
+  "Performance-Based Growth Opportunities",
+  "Hands-On Industrial Project Exposure",
+  "Supportive & Safety-First Work Culture",
+  "Practical Learning From Live Site Execution",
+  "Long-Term Career Stability",
+  "Recognition For Dedication, Discipline & Quality Work"
+];
   return (
     <section className="relative w-full bg-[#f8f8f8] py-24 md:py-32">
       <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
@@ -20,7 +19,7 @@ export default function EmployeeBenefitsSection() {
             Employee Benefits
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-col s-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-8 md:p-10 min-h-[160px] flex items-center border border-[#e5e5e5] rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-12 h-12 text-[#ed1c24] mr-6 shrink-0">

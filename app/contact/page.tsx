@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import ContactHeroSection from '@/components/sections/contact/ContactHeroSection';
-import ContactFormSection from '@/components/sections/contact/ContactFormSection';
 import ContactDetailsSection from '@/components/sections/contact/ContactDetailsSection';
 import ContactMapSection from '@/components/sections/contact/ContactMapSection';
 
@@ -13,7 +12,6 @@ export default function ContactPage() {
   return (
     <>
       <ContactHeroSection />
-      <ContactFormSection />
       <ContactDetailsSection />
       <ContactMapSection />
     </>

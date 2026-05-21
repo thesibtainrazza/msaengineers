@@ -1,39 +1,41 @@
 import { Project, NavLink, Sector, Service } from "@/types";
-
 export const FEATURED_PROJECTS: Project[] = [
   {
-    title: "Lake Toxaway Country Club",
-    location: "Toxaway, NC",
-    category: "Amenities",
+    title: "Limestone Linear Stockpile Shed",
+    location: "RAS, RJ",
+    category: "Shed Structures",
     image: "/assets/1.jpg"
   },
- {
-  title: "Newberry Nursing Building",
-  location: "Newberry, SC",
-  category: "Education",
-  image:
-    "/assets/2.jpg?auto=format&fit=crop&w=2070&q=80",
-},
+
   {
-    title: "Modern Industrial Facility",
-    location: "Greenville, SC",
-    category: "Industrial",
-    image: "https://images.unsplash.com/photo-1756705406506-50500a12463c?q=80&w=2054&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2070&auto=format&fit=crop"
+    title: "DIA Limestone Stockpile Shed",
+    location: "Dala, RJ",
+    category: "Shed Structures",
+    image: "/assets/2.jpg?auto=format&fit=crop&w=2070&q=80",
   },
+
   {
-    title: "Downtown Mixed-Use Complex",
-    location: "Asheville, NC",
-    category: "Mixed-Use + Retail",
-    image: "/assets/4.jpg?q=80&w=2070&auto=format&fit=crop"
+    title: "Heavy Industrial Fabrication Unit",
+    location: "RKL, OD",
+    category: "Fabrication Works",
+    image:
+      "https://images.unsplash.com/photo-1756705406506-50500a12463c?q=80&w=2054&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
+
   {
-    title: "Community Recreation Center",
-    location: "Spartanburg, SC",
-    category: "Municipality + Community",
-    image: "/assets/5.jpg?q=80&w=2065&auto=format&fit=crop"
+    title: "Clinker Conveyor Support System",
+    location: "JSG, OD",
+    category: "Conveyor Systems",
+    image: "/assets/4.jpg?q=80&w=2070&auto=format&fit=crop",
+  },
+
+  {
+    title: "Kiln Section Structural Erection",
+    location: "Satna, MP",
+    category: "Industrial Erection",
+    image: "/assets/5.jpg?q=80&w=2065&auto=format&fit=crop",
   }
 ];
-
 export const WHY_CHOOSE_US: Service[] = [
   { title: "Industrial Expertise", isActive: false },
   { title: "Structural Precision", isActive: false },
@@ -42,12 +44,12 @@ export const WHY_CHOOSE_US: Service[] = [
 ];
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Projects", href: "/" },
+  { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/" },
-  { label: "Blog", href: "/" },
-  { label: "Careers", href: "/" },
-  { label: "Contact", href: "/" }
+  { label: "Services", href: "/services" },
+  { label: "Blog", href: "/blog" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" }
 ];
 export const SERVICES_LIST: Sector[] = [
   // BUTTON 1

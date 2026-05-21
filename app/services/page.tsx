@@ -9,79 +9,150 @@ import ValueEngineeringSection from '@/components/sections/services/ValueEnginee
 export const metadata = {
   title: 'Services | MSA Engineer & Contractors',
 };
+export const services = [
+  {
+    id: "shed-structures",
+    title: "Shed Structures",
+    subtitle:
+      "Industrial shed solutions engineered for strength, scale, and long-term durability.",
 
-const servicesData = [
-  {
-    id: "preconstruction",
-    title: "Preconstruction",
-    subtitle: "We learned a long time ago that if you fail to plan, you plan to fail.",
-    description: "Preconstruction services are the foundation of every successful project, ensuring your vision is translated into a buildable, cost-effective plan. At J Davis, we have an entire department dedicated to assessing feasibility, evaluating budgets, and identifying risks to streamline your project from concept to construction.",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2000&auto=format&fit=crop",
-    listTitle: "Our Services Include",
+    description:
+      "MSA delivers industrial shed structures designed to perform in demanding environments. From fabrication planning to on-site erection, our team focuses on structural stability, execution efficiency, and reliable delivery timelines for industrial and manufacturing operations.",
+
+    image:
+      "https://images.unsplash.com/photo-1662120399978-738d233edbec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop",
+
+    listTitle: "OUR CAPABILITIES",
+
     listItems: [
-        "Detailed cost analysis and budgeting",
-        "Early schedule development to meet key milestones",
-        "Constructability reviews to avoid costly surprises and proactively address challenges",
-        "Coordination with local AHJ, architects, engineers, and stakeholders"
+      "Pre-engineered industrial shed structures",
+      "Factory and warehouse shed execution",
+      "Heavy structural steel installation",
+      "Industrial roofing and cladding systems",
+      "On-site erection and alignment works",
     ],
-    conclusion: "Start your project with confidence. Partner with us for a preconstruction process that eliminates guesswork and ensures smooth execution.",
-    reverse: false
+
+    conclusion:
+      "Every shed structure is executed with a focus on safety, durability, and practical industrial functionality — ensuring dependable performance for years ahead.",
   },
+
   {
-    id: "design-build",
-    title: "Design-Build",
-    subtitle: "A seamless, single-source solution for your construction needs.",
-    description: "The Design-Build approach simplifies the construction process by consolidating design and construction under one roof. J Davis takes full responsibility for both, providing you with a single point of contact from initial concept to final completion. This collaborative method fosters innovation, accelerates schedules, and ensures your vision is realized exactly as planned.",
-    image: "https://images.unsplash.com/photo-1541888086225-ee8018e4726b?q=80&w=2000&auto=format&fit=crop",
-    listTitle: "Benefits of Design-Build",
+    id: "fabrication-works",
+    title: "Fabrication Works",
+
+    subtitle:
+      "Precision fabrication built for industrial-scale operations and execution reliability.",
+
+    description:
+      "Our fabrication works combine technical accuracy with real-world industrial experience. MSA handles structural steel fabrication, custom assemblies, and heavy industrial components with disciplined quality control and execution-focused planning.",
+
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
+
+    listTitle: "FABRICATION SERVICES",
+
     listItems: [
-        "Single point of responsibility and communication",
-        "Faster delivery times due to overlapping design and construction phases",
-        "Enhanced collaboration between designers and builders",
-        "Reduced risk and improved cost control"
+      "Structural steel fabrication",
+      "Custom industrial assemblies",
+      "Heavy-duty support structures",
+      "Industrial platforms and frames",
+      "Workshop and site fabrication support",
     ],
-    conclusion: "Experience a streamlined construction journey with our integrated Design-Build services.",
-    reverse: true
+
+    conclusion:
+      "Our fabrication process prioritizes dimensional accuracy, structural integrity, and seamless coordination with site execution requirements.",
+
+    reverse: true,
   },
+
   {
-    id: "cmar",
-    title: "Construction Management at Risk (CMAR)",
-    subtitle: "Expert guidance and guaranteed maximum price.",
-    description: "As your Construction Manager at Risk, J Davis partners with you early in the design phase to provide critical input on constructability, scheduling, and cost. We commit to delivering your project within a Guaranteed Maximum Price (GMP), minimizing your financial risk while ensuring the highest quality standards. Our transparent approach gives you peace of mind throughout the entire process.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
-    listTitle: "Why Choose CMAR?",
+    id: "industrial-erection",
+    title: "Industrial Erection",
+
+    subtitle:
+      "Field execution backed by experienced manpower and disciplined coordination.",
+
+    description:
+      "MSA manages industrial erection projects with a strong focus on execution planning, safety compliance, and efficient on-site coordination. From structural installation to shutdown support, we ensure industrial works progress smoothly under demanding site conditions.",
+
+    image:
+      "https://images.unsplash.com/photo-1746003870946-c29679f31d3e?q=80&w=2831&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop",
+
+    listTitle: "ERECTION SERVICES",
+
     listItems: [
-        "Early involvement of the construction manager for better planning",
-        "Guaranteed Maximum Price (GMP) reduces owner risk",
-        "Open-book transparency on all project costs",
-        "Value engineering opportunities maximized during design"
+      "Heavy structural erection",
+      "Industrial shutdown assistance",
+      "Mechanical installation support",
+      "Equipment positioning and alignment",
+      "Skilled manpower coordination",
     ],
-    conclusion: "Secure your project's success with the reliable oversight of our CMAR approach.",
-    reverse: false
+
+    conclusion:
+      "Our site teams are trained to execute under strict industrial timelines while maintaining safety, precision, and accountability throughout every stage.",
   },
+
   {
-    id: "traditional-contracting",
-    title: "Traditional Contracting",
-    subtitle: "Delivering excellence through competitive bidding.",
-    description: "In the traditional Design-Bid-Build method, J Davis brings decades of expertise to execute your fully designed plans. We provide competitive, comprehensive bids and manage the construction phase with meticulous attention to detail, schedule, and safety. Our experienced team ensures that your project is built exactly to specifications, delivering uncompromising quality on time and on budget.",
-    image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2000&auto=format&fit=crop",
-    listTitle: "Our Commitment",
+    id: "conveyor-systems",
+    title: "Conveyor Systems",
+
+    subtitle:
+      "Efficient material handling systems designed for industrial productivity.",
+
+    description:
+      "We execute conveyor system projects that support efficient bulk material handling across industrial facilities. MSA provides fabrication, structural support, installation, and execution assistance for conveyor infrastructure and associated systems.",
+
+    image:
+      "https://images.unsplash.com/photo-1651672397008-01d088f4a9f6?q=80&w=2140&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop",
+
+    listTitle: "SYSTEM EXECUTION",
+
     listItems: [
-        "Competitive and accurate bidding process",
-        "Strict adherence to architectural plans and specifications",
-        "Rigorous quality control and safety standards",
-        "Efficient project management and timely completion"
+      "Belt conveyor structures",
+      "Conveyor gallery fabrication",
+      "Support structure installation",
+      "Material handling infrastructure",
+      "Industrial conveyor maintenance support",
     ],
-    conclusion: "Trust our proven track record to bring your fully designed project to life.",
-    reverse: true
-  }
+
+    conclusion:
+      "Our conveyor execution approach focuses on operational reliability, structural efficiency, and long-term industrial performance.",
+
+    reverse: true,
+  },
+
+  {
+    id: "equipment-rental",
+    title: "Equipment Rental",
+
+    subtitle:
+      "Reliable industrial equipment support for project execution and site operations.",
+
+    description:
+      "MSA provides equipment rental solutions that help industrial projects maintain productivity and execution continuity. Our support includes dependable machinery availability, operational assistance, and coordination for demanding site requirements.",
+
+    image:
+      "https://images.unsplash.com/photo-1566624490237-b0314cb4a73f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop",
+
+    listTitle: "RENTAL SUPPORT",
+
+    listItems: [
+      "Industrial equipment availability",
+      "Site execution support machinery",
+      "Material handling assistance",
+      "Short-term and project-based rentals",
+      "Operational coordination support",
+    ],
+
+    conclusion:
+      "We ensure equipment support remains dependable, timely, and aligned with the operational needs of industrial execution environments.",
+  },
 ];
-
 export default function ServicesPage() {
   return (
     <>
       <ServicesHeroSection />
-      {servicesData.map((service, index) => (
+      {services.map((service, index) => (
           <ServiceDetailSection key={service.id} service={service} index={index} />
       ))}
       <ValueEngineeringSection />

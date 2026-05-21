@@ -1,44 +1,271 @@
-import React from 'react';
+"use client";
+
+import React, { useRef } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 export default function CareersHeroSection() {
-  return (
-    <section className="relative w-full bg-[#f7f7f5] pt-36 pb-20 md:pt-48 overflow-hidden">
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20 mb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-                <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
-                    Life at MSA Engineers
-                </h4>
-                <h1 className="text-[4.2rem] font-[450] leading-[0.98] tracking-[-0.06em] text-[#4b4b4b] md:text-[5.4rem] lg:text-[5.8rem]">
-                    Careers
-                </h1>
-            </div>
 
-            <div className="lg:pt-20 lg:pl-16">
-                <p className="text-[1.8rem] md:text-[2.2rem] font-[450] leading-[1.4] text-[#4b4b4b]">
-                    When we say that our team members are like family to us, people believe it. After all, you see it in our priorities: <span className="relative inline-block"><span className="relative z-10 text-[#ed1c24]">Growth without traveling</span><span className="absolute bottom-1 left-0 -z-10 h-3 w-full bg-[#ed1c24]/20"></span></span>. Dedicated downtime. A rich culture that celebrates the individual and their family. Heads in their own beds. Low employee turnover.
-                </p>
-            </div>
-        </div>
-      </div>
+  const containerRef = useRef<HTMLElement>(null);
 
-      <div className="w-full h-px bg-[#e5e5e5] mb-16 max-w-[1450px] mx-auto px-8 md:px-12 lg:px-16 xl:px-20"></div>
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
 
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20 mb-20">
-          <p className="text-[2.2rem] md:text-[2.8rem] font-[450] leading-[1.3] text-[#4b4b4b] max-w-[80%] mb-12">
-              We are proud to have some of the <span className="relative inline-block"><span className="relative z-10 text-[#ed1c24]">best and brightest</span><span className="absolute bottom-1 left-0 -z-10 h-3 w-full bg-[#ed1c24]/20"></span></span> construction professionals on our team—people who chose us over others because we believe in applying our principles beyond our projects and into the lives of others.
-          </p>
-          <a href="https://recruitingbypaycor.com/career/CareerHome.action?clientId=8a7883c6929721830192bb774eb707d5" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 text-[1.2rem] font-medium text-[#4b4b4b] transition-all duration-300 border border-[#ed1c24] rounded-full hover:bg-[#ed1c24] hover:text-white">
-            <span className="mr-3">See open positions</span>
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4">
-              <path d="M0 8.25H12.127L6.43075 13.9463L7.5 15L15 7.5L7.5 0L6.43075 1.05375L12.127 6.75H0V8.25Z" fill="currentColor"></path>
-            </svg>
-          </a>
-      </div>
-
-      <div className="relative w-full aspect-[21/9] md:aspect-[3/1]">
-          <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1541888086225-ee8018e4726b?q=80&w=2000&auto=format&fit=crop')"}}></div>
-      </div>
-    </section>
+  // ARROW DRAW EFFECT
+  const arrowProgress = useTransform(
+    scrollYProgress,
+    [0, 0.55],
+    [1400, 0]
   );
+
+  // IMAGE ZOOM EFFECT
+  const imageScale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [1.18, 1]
+  );
+
+  return (
+
+    <section
+      ref={containerRef}
+      className="
+          relative
+          w-full
+          overflow-hidden
+          bg-[#f7f7f5]
+          pt-40
+          pb-0
+        "
+    >
+
+      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+
+        {/* TOP GRID */}
+        <div
+          className="
+              grid
+              grid-cols-1
+              lg:grid-cols-[1.1fr_0.9fr]
+              gap-x-32
+              gap-y-16
+              items-start
+            "
+        >
+
+          {/* LEFT */}
+          <div>
+
+            <h4
+              className="
+                  mb-8
+                  text-[13px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.28em]
+                  text-[#ed1c24]
+                "
+            >
+              LIFE AT MSA ENGINEERS
+            </h4>
+
+            <h1
+              className="
+                  text-[5rem]
+                  md:text-[6rem]
+                  lg:text-[7rem]
+                  font-[420]
+                  tracking-[-0.07em]
+                  leading-[0.9]
+                  text-[#4b4b4b]
+                "
+            >
+              Careers
+            </h1>
+
+          </div>
+
+          {/* RIGHT */}
+          <div className="pt-10 lg:pt-16 max-w-[640px]">
+
+            <p
+              className="
+                  text-[1.55rem]
+                  font-light
+                  leading-[1.7]
+                  tracking-[-0.03em]
+                  text-[#4f4f4f]
+                "
+            >
+
+              When we say that our team operates like a unified
+              industrial workforce, we mean it. Every project
+              depends on coordination, accountability, and trust
+              between engineers, supervisors, fabricators, and
+              site teams. At MSA, people grow through real
+              execution, practical responsibility, and{" "}
+
+              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+                field experience.
+              </span>
+            </p>
+
+          </div>
+
+        </div>
+
+        {/* SECOND SECTION */}
+        <div className="mt-40 relative">
+
+          <div className="max-w-[1220px]">
+
+            <p
+              className="
+                  text-[1.5rem]
+                  md:text-[2rem]
+                  lg:text-[3.15rem]
+                  font-light
+                  tracking-[-0.05em]
+                  leading-[1.06]
+                  text-[#4b4b4b]
+                  mb-16
+                "
+            >
+              We are proud to have some of the{" "}
+
+              <span className="bg-[#ed1c24] px-3 py-[2px] text-white">
+                most dedicated
+              </span>
+
+              {" "}industrial professionals on our team—people
+              who value discipline, ownership, precision, and
+              long-term commitment to quality execution.
+              </p>
+
+              {/* BUTTON */}
+              <a
+                href="#positions"
+                className="
+                  inline-flex
+                  items-center
+                  gap-3
+                  rounded-full
+                  border
+                  border-[#ed1c24]
+                  px-10
+                  py-5
+                  text-[1.35rem]
+                  font-light
+                  tracking-[-0.03em]
+                  text-[#4b4b4b]
+                  transition-all
+                  duration-300
+                  hover:bg-[#ed1c24]
+                  hover:text-white
+                "
+              >
+
+                See open positions
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.8}
+                  stroke="currentColor"
+                  className="h-5 w-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                  />
+                </svg>
+
+              </a>
+
+          </div>
+
+          {/* BIG OUTLINE ARROW */}
+          <div className="pointer-events-none absolute bottom-[-250px] right-[-120px] hidden lg:block">
+
+            <svg
+              width="281"
+              height="337"
+              viewBox="0 0 281 337"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-[340px]"
+            >
+
+              {/* WHITE INNER THICKNESS */}
+              <path
+                d="M178.9 279.361L305.124 153.137L325.64 173.652L163.638 335.655L1.63461 173.652L22.1506 153.137L148.375 279.361L149.228 280.214L149.228 279.007L149.363 0.912293L177.913 0.912296L178.047 279.007L178.047 280.214L178.9 279.361Z"
+                stroke="white"
+                strokeWidth="24"
+                fill="none"
+              />
+
+              {/* RED OUTLINE */}
+              <motion.path
+                d="M178.9 279.361L305.124 153.137L325.64 173.652L163.638 335.655L1.63461 173.652L22.1506 153.137L148.375 279.361L149.228 280.214L149.228 279.007L149.363 0.912293L177.913 0.912296L178.047 279.007L178.047 280.214L178.9 279.361Z"
+                stroke="#F00914"
+                strokeWidth="2"
+                fill="none"
+                style={{
+                  strokeDasharray: 1400,
+                  strokeDashoffset: arrowProgress,
+                }}
+              />
+
+            </svg>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* HERO IMAGE */}
+      <div className="relative mt-32 overflow-hidden">
+
+        <motion.div
+          style={{
+            scale: imageScale,
+          }}
+          className="
+              relative
+              h-[420px]
+              md:h-[620px]
+              lg:h-[850px]
+              w-full
+            "
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1668243304566-2e78ebd48960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="MSA Team"
+            className="
+                h-full
+                w-full
+                object-cover
+              "
+          />
+
+          {/* DARK OVERLAY */}
+          <div className="absolute inset-0 bg-black/10" />
+
+        </motion.div>
+
+      </div>
+
+    </section>
+
+  );
+
 }

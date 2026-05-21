@@ -1,25 +1,188 @@
-import React from 'react';
+import React from "react";
 
 export default function BlogHeroSection() {
+
   return (
-    <section className="relative w-full bg-[#f8f8f8] pt-36 pb-20 md:pt-48 md:pb-28 overflow-hidden">
+
+    <section
+      className="
+        relative
+        w-full
+        overflow-hidden
+        bg-[#f7f7f5]
+        pt-40
+        pb-0
+      "
+    >
+
       <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+        {/* TOP CONTENT */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            lg:grid-cols-[1.15fr_0.85fr]
+            gap-x-28
+            gap-y-16
+            items-start
+          "
+        >
+
+          {/* LEFT */}
           <div>
-            <h4 className="mb-6 text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24]">
-                The latest
+
+            <h4
+              className="
+                mb-8
+                text-[13px]
+                font-semibold
+                uppercase
+                tracking-[0.28em]
+                text-[#ed1c24]
+              "
+            >
+              INDUSTRY UPDATES
             </h4>
-            <h1 className="text-[4.2rem] md:text-[5.4rem] lg:text-[6rem] font-[450] leading-[1] tracking-[-0.04em] text-[#4b4b4b]">
-                News & Insights
+
+            <h1
+              className="
+                text-[5rem]
+                md:text-[6rem]
+                lg:text-[7rem]
+                font-[420]
+                tracking-[-0.07em]
+                leading-[0.9]
+                text-[#4b4b4b]
+              "
+            >
+              Insights &
+              <br />
+              Execution Stories
             </h1>
+
           </div>
-          <div className="lg:pt-20">
-            <p className="text-[1.5rem] md:text-[1.8rem] leading-[1.6] text-[#4b4b4b]">
-                There’s a good reason that J Davis is one of the region’s fastest-growing general contractors. Here, we’re proud to share the <span className="relative inline-block"><span className="relative z-10 text-[#ed1c24]">innovative thinking,</span><span className="absolute bottom-2 left-0 -z-10 h-3 w-full bg-[#ed1c24]/20"></span></span> industry insights, construction news and more that has propelled our team and our clients to success time and time again.
+
+          {/* RIGHT */}
+          <div className="pt-10 lg:pt-16 max-w-[640px]">
+
+            <p
+              className="
+                text-[1.55rem]
+                font-light
+                leading-[1.7]
+                tracking-[-0.03em]
+                text-[#4f4f4f]
+              "
+            >
+              Industrial execution is built on experience gained
+              directly from fabrication yards, active project
+              sites, shutdown operations, and real field
+              coordination. Here, we share the{" "}
+
+              <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+                engineering insights,
+              </span>
+
+              {" "}site experiences, operational challenges, and
+              practical lessons that shape the way MSA executes
+              industrial projects across demanding environments.
+
             </p>
+
           </div>
+
         </div>
+
       </div>
+
+      {/* FEATURED IMAGE */}
+      <div className="relative mt-28 w-full overflow-hidden">
+
+        <div
+          className="
+            relative
+            h-[420px]
+            md:h-[620px]
+            lg:h-[760px]
+            w-full
+          "
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+            alt="Industrial Insights"
+            className="
+              h-full
+              w-full
+              object-cover
+            "
+          />
+
+          {/* DARK OVERLAY */}
+          <div className="absolute inset-0 bg-black/20" />
+
+          {/* ARTICLE LABEL */}
+          <div
+            className="
+              absolute
+              bottom-10
+              left-8
+              md:left-14
+              flex
+              items-center
+              gap-3
+              text-white
+            "
+          >
+
+            <div
+              className="
+                flex
+                h-8
+                w-8
+                items-center
+                justify-center
+                rounded-sm
+                bg-[#ed1c24]
+              "
+            >
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-4 w-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 14.25v-8.25a2.25 2.25 0 00-2.25-2.25h-10.5A2.25 2.25 0 004.5 6v12a2.25 2.25 0 002.25 2.25h10.5A2.25 2.25 0 0019.5 18v-3.75m-9-7.5h6m-6 3h6m-6 3h3"
+                />
+              </svg>
+
+            </div>
+
+            <span
+              className="
+                text-[1.25rem]
+                font-light
+                tracking-[-0.03em]
+              "
+            >
+              Industrial Article
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
+
   );
+
 }

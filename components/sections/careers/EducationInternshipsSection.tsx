@@ -1,41 +1,213 @@
-import React from 'react';
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
 
 export default function EducationInternshipsSection() {
+
   return (
-    <section className="relative w-full bg-[#f7f7f5] py-20 md:py-32">
+
+    <section
+      className="
+        relative
+        w-full
+        overflow-hidden
+        bg-[#f7f7f5]
+        py-28
+        md:py-36
+      "
+    >
+
       <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div className="lg:pr-8">
-            <h4 className="text-[13px] font-semibold uppercase tracking-[0.28em] text-[#ed1c24] mb-6">
-                Education & Internships
+
+        <div
+          className="
+            grid
+            grid-cols-1
+            lg:grid-cols-[0.9fr_1.1fr]
+            gap-x-28
+            gap-y-24
+            items-start
+          "
+        >
+
+          {/* LEFT CONTENT */}
+          <div className="pt-6 lg:pt-10">
+
+            <h4
+              className="
+                mb-8
+                text-[13px]
+                font-semibold
+                uppercase
+                tracking-[0.28em]
+                text-[#ed1c24]
+              "
+            >
+             TRAINING & INTERNSHIPS
             </h4>
-            <h2 className="text-[3.2rem] md:text-[4rem] font-[450] leading-[1.1] text-[#4b4b4b] mb-8">
-                The Next Generation
+
+            <h2
+              className="
+                text-[4rem]
+                md:text-[5rem]
+                lg:text-[5.7rem]
+                font-[420]
+                tracking-[-0.06em]
+                leading-[0.92]
+                text-[#4b4b4b]
+                mb-14
+              "
+            >
+              The Next
+              <br />
+              Generation
             </h2>
-            <div className="space-y-6 text-[1.2rem] leading-[1.6] text-[#4b4b4b]">
-                <p>
-                    Here, a student’s time is just as valuable as our CEO’s. J Davis believes in empowering students and emerging construction industry professionals by offering them the <span className="relative inline-block"><span className="relative z-10 text-[#ed1c24]">highest-quality experience</span><span className="absolute bottom-1 left-0 -z-10 h-3 w-full bg-[#ed1c24]/20"></span></span> possible, whether it’s in a classroom, on the ground as one of our interns, or in a lecture hall at one of our partner schools like Clemson University.
-                </p>
-                <p>
-                    Currently, J Davis is seeking interns excited to experience what working in construction is like. We are currently linked up with Clemson University’s Construction Science Management program and heavily involved in the Citadel’s Career Fair.
-                </p>
-                <p className="font-semibold text-[1.3rem]">
-                    Interested in interning? <a href="mailto:recruiting@jdavisinc.com" rel="noopener noreferrer" className="text-[#ed1c24] hover:text-[#4b4b4b] underline transition-colors duration-300">Email us</a>
-                </p>
+
+            {/* FIRST TEXT */}
+            <div className="max-w-[700px]">
+
+              <p
+                className="
+                  text-[1.5rem]
+                  md:text-[1.6rem]
+                  font-light
+                  leading-[1.72]
+                  tracking-[-0.03em]
+                  text-[#4f4f4f]
+                "
+              >
+
+                At MSA Engineers, we believe the next generation
+                of industrial professionals should learn through{" "}
+
+                <span className="bg-[#ed1c24] px-2 py-[2px] text-white">
+                  real-world project exposure
+                </span>
+
+                {" "}and hands-on execution. From fabrication yards
+                and erection sites to conveyor installations and
+                structural projects, we provide opportunities for
+                aspiring engineers and technicians to experience
+                how industrial construction truly operates.
+
+              </p>
+
             </div>
+
+            {/* SECOND TEXT */}
+            <div className="mt-10 max-w-[700px]">
+
+              <p
+                className="
+                  text-[1.5rem]
+                  md:text-[1.6rem]
+                  font-light
+                  leading-[1.72]
+                  tracking-[-0.03em]
+                  text-[#4f4f4f]
+                "
+              >
+
+                Currently, MSA Engineers is seeking motivated
+                interns and trainees interested in mechanical
+                construction, fabrication works, erection projects
+                and industrial operations. We actively support
+                young professionals through mentorship,
+                site experience and practical learning in live
+                industrial environments.
+
+              </p>
+
+            </div>
+
+            {/* EMAIL */}
+            <div className="mt-14">
+
+              <p
+                className="
+                  text-[1.8rem]
+                  md:text-[2rem]
+                  font-light
+                  tracking-[-0.04em]
+                  text-[#4b4b4b]
+                "
+              >
+
+                Interested in interning?{" "}
+
+                <a
+                  href="mailto:msaengineers@gmail.com"
+                  className="
+                    text-[#ed1c24]
+                    underline
+                    underline-offset-4
+                    transition-colors
+                    duration-300
+                    hover:text-[#4b4b4b]
+                  "
+                >
+                  Email us
+                </a>
+
+              </p>
+
+            </div>
+
           </div>
-          
+
+          {/* RIGHT IMAGE */}
           <div className="relative">
-            <div className="absolute left-[-100px] top-10 w-[190px] h-[1px] bg-[#ed1c24] z-10 hidden lg:block"></div>
-            <img 
-                alt="Kids in front of a teacher" 
-                loading="lazy" 
-                className="w-full block max-w-[600px] shadow-lg rounded-sm" 
-                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200&auto=format&fit=crop" 
-            />
+
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9 }}
+              className="
+                relative
+                overflow-hidden
+              "
+            >
+
+              {/* RED LINE */}
+              <div
+                className="
+                  absolute
+                  top-[70px]
+                  left-[-180px]
+                  h-[1.5px]
+                  w-[240px]
+                  bg-[#ed1c24]
+                  z-20
+                  hidden
+                  lg:block
+                "
+              />
+
+              <img
+                src="https://images.unsplash.com/photo-1622612063021-116cc3407145?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Internship"
+                className="
+                  h-[980px]
+                  w-full
+                  object-cover
+                  transition-transform
+                  duration-700
+                  hover:scale-[1.03]
+                "
+              />
+
+            </motion.div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
   );
+
 }

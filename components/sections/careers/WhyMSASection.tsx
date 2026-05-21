@@ -1,99 +1,281 @@
-import React from 'react';
-import Link from 'next/link';
+"use client";
 
-export default function WhyMSASection() {
+import React, { useEffect, useState } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  animate,
+} from "framer-motion";
+
+function Counter({
+  from = 0,
+  to,
+  suffix = "",
+}: {
+  from?: number;
+  to: number;
+  suffix?: string;
+}) {
+  const [count, setCount] = useState(from);
+
+  useEffect(() => {
+    const controls = animate(from, to, {
+      duration: 2,
+      ease: "easeOut",
+      onUpdate(value) {
+        setCount(Math.round(value));
+      },
+    });
+
+    return () => controls.stop();
+  }, [from, to]);
+
   return (
-    <section className="relative w-full bg-white py-20 md:py-32">
-      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
-        <div className="w-full h-px bg-[#e5e5e5] mb-24 hidden md:block"></div>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-16 md:gap-24">
-          <div className="md:col-span-3">
-            <h2 className="text-[3.2rem] md:text-[4rem] font-[450] leading-[1.1] text-[#4b4b4b] mb-6">
-                Why MSA Engineers & Contractors?
-            </h2>
-            <p className="mb-16">
-                <Link href="/about" className="inline-flex items-center gap-2 text-[1.1rem] font-semibold text-[#4b4b4b] transition-all duration-300 hover:text-[#ed1c24] hover:translate-x-1 group">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#ed1c24]">
-                        <path d="M11.5 15.1443L15.1443 11.5L11.5 7.85575L10.4558 8.9L12.3057 10.75H7.75V12.25H12.3057L10.4558 14.1L11.5 15.1443ZM11.5017 21C10.1877 21 8.95267 20.7507 7.7965 20.252C6.64033 19.7533 5.63467 19.0766 4.7795 18.2218C3.92433 17.3669 3.24725 16.3617 2.74825 15.206C2.24942 14.0503 2 12.8156 2 11.5017C2 10.1877 2.24933 8.95267 2.748 7.7965C3.24667 6.64033 3.92342 5.63467 4.77825 4.7795C5.63308 3.92433 6.63833 3.24725 7.794 2.74825C8.94967 2.24942 10.1844 2 11.4983 2C12.8123 2 14.0473 2.24933 15.2035 2.748C16.3597 3.24667 17.3653 3.92342 18.2205 4.77825C19.0757 5.63308 19.7528 6.63833 20.2518 7.794C20.7506 8.94967 21 10.1844 21 11.4983C21 12.8123 20.7507 14.0473 20.252 15.2035C19.7533 16.3597 19.0766 17.3653 18.2218 18.2205C17.3669 19.0757 16.3617 19.7528 15.206 20.2518C14.0503 20.7506 12.8156 21 11.5017 21ZM11.5 19.5C13.7333 19.5 15.625 18.725 17.175 17.175C18.725 15.625 19.5 13.7333 19.5 11.5C19.5 9.26667 18.725 7.375 17.175 5.825C15.625 4.275 13.7333 3.5 11.5 3.5C9.26667 3.5 7.375 4.275 5.825 5.825C4.275 7.375 3.5 9.26667 3.5 11.5C3.5 13.7333 4.275 15.625 5.825 17.175C7.375 18.725 9.26667 19.5 11.5 19.5Z" fill="currentColor"></path>
-                    </svg>
-                    About Us
-                </Link>
-            </p>
+    <span>
+      {count}
+      {suffix}
+    </span>
+  );
+}
 
-            <p className="mb-4 text-[1.2rem] font-semibold text-[#4b4b4b]">Awards</p>
-            <div className="flex flex-wrap md:flex-nowrap items-center gap-6 mb-16">
-              <div className="w-full max-w-[180px] h-[80px] bg-gray-100 flex items-center justify-center text-sm font-semibold text-gray-500 rounded-sm border border-gray-200">Award 1</div>
-              <div className="w-full max-w-[180px] h-[80px] bg-gray-100 flex items-center justify-center text-sm font-semibold text-gray-500 rounded-sm border border-gray-200">Award 2</div>
-              <div className="w-full max-w-[180px] h-[80px] bg-gray-100 flex items-center justify-center text-sm font-semibold text-gray-500 rounded-sm border border-gray-200">Award 3</div>
-              <div className="w-full max-w-[180px] h-[80px] bg-gray-100 flex items-center justify-center text-sm font-semibold text-gray-500 rounded-sm border border-gray-200">Award 4</div>
-            </div>
+export default function WhyJDavisSection() {
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-              <div>
-                <p className="text-[1.3rem] font-semibold text-[#4b4b4b]">No Travel Required</p>
-                <ul className="list-disc pl-5 space-y-3 mt-4 text-[1.1rem] text-[#4b4b4b] marker:text-[#ed1c24]">
-                  <li>Focused on the local markets of SC, NC, and GA</li>
-                  <li>We hire labor locally so you can sleep in your bed at night</li>
-                  <li>New MSA Engineers locations will cover their own region rather than company growth sacrificing employee quality of life at home</li>
-                </ul>
-              </div>
-              <div>
-                <p className="text-[1.3rem] font-semibold text-[#4b4b4b]">Career Growth</p>
-                <ul className="list-disc pl-5 space-y-3 mt-4 text-[1.1rem] text-[#4b4b4b] marker:text-[#ed1c24]">
-                  <li>We offer above-average competitive pay</li>
-                  <li>The only <strong>Superintendent Sabbatical Program</strong> you’ll find!</li>
-                  <li>We invest in professional development and training for our team</li>
-                </ul>
-              </div>
-            </div>
+  const { scrollYProgress } = useScroll();
 
-            <div className="py-4 mt-8 md:mt-0">
-                <p className="text-[1.6rem] font-semibold text-[#4b4b4b] mb-8">Convenient Locations</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                  <div>
-                    <p className="text-[1.2rem] font-semibold text-[#4b4b4b]">Electric City</p>
-                    <ul className="list-disc pl-5 space-y-2 mt-4 text-[1.1rem] text-[#4b4b4b] marker:text-[#ed1c24]">
-                      <li>Off exit 14 on the I-85 Corridor</li>
-                      <li>2 hours to Charlotte and Atlanta</li>
-                      <li>30 minutes from Greenville, SC</li>
-                      <li>15 minutes from Clemson University</li>
-                      <li>Top 10 school district in South Carolina</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="text-[1.2rem] font-semibold text-[#4b4b4b]">Holy City</p>
-                    <ul className="list-disc pl-5 space-y-2 mt-4 text-[1.1rem] text-[#4b4b4b] marker:text-[#ed1c24]">
-                      <li>Conveniently located off I-526</li>
-                      <li>Minutes away from Downtown Charleston</li>
-                      <li>Less than 5 miles to Charleston International Airport</li>
-                      <li>A short drive to Charleston Beaches</li>
-                      <li>Top 10 school district in South Carolina</li>
-                    </ul>
-                  </div>
-                  <div className="md:col-span-2">
-                    <p className="text-[1.2rem] font-semibold text-[#4b4b4b]">Sparkle City Coming Soon</p>
-                  </div>
-                </div>
-            </div>
-          </div>
+  // RIGHT SIDE STATS FADE/SLIDE
+  const statsY = useTransform(scrollYProgress, [0, 0.3], [80, 0]);
+  const statsOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
 
-          <div className="md:col-span-2 md:pl-16 lg:pl-32 space-y-16 flex flex-col justify-center border-t md:border-t-0 md:border-l border-[#e5e5e5] pt-12 md:pt-0 mt-8 md:mt-0">
-            <div>
-              <span className="block text-[4.5rem] md:text-[6rem] font-[450] leading-[1] text-[#ed1c24] mb-2">90%</span>
-              <p className="text-[1.4rem] font-semibold text-[#4b4b4b] mb-3">Retention Rate</p>
-              <p className="text-[0.9rem] font-semibold uppercase tracking-[0.2em] text-[#888888] max-w-[200px]">More than 90% retention rate over the last five years</p>
-            </div>
-            <div>
-              <span className="block text-[4.5rem] md:text-[6rem] font-[450] leading-[1] text-[#ed1c24] mb-2">0</span>
-              <p className="text-[1.4rem] font-semibold text-[#4b4b4b]">Nights in Hotels</p>
-            </div>
-            <div>
-              <span className="block text-[4.5rem] md:text-[6rem] font-[450] leading-[1] text-[#ed1c24] mb-2">90</span>
-              <p className="text-[1.4rem] font-semibold text-[#4b4b4b]">Minute Work Radius</p>
-            </div>
-          </div>
-        </div>
+  return (
+    <section className="relative w-full overflow-hidden bg-[#f7f7f5] py-28 md:py-36">
+
+      {/* BLUEPRINT BACKGROUND */}
+      <div className="pointer-events-none absolute right-0 bottom-0 opacity-[0.08]">
+        <img
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop"
+          alt="Blueprint"
+          className="w-[420px] object-cover mix-blend-multiply"
+        />
       </div>
+
+      <div className="mx-auto max-w-[1450px] px-8 md:px-12 lg:px-16 xl:px-20">
+
+        {/* TOP */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-24">
+
+          {/* LEFT */}
+          <div>
+
+            <h2 className="text-[4.5rem] md:text-[5.5rem] font-[420] tracking-[-0.06em] leading-[0.95] text-[#4b4b4b]">
+              Why MSA?
+            </h2>
+
+            <div className="mt-10 flex items-center gap-4 text-[#4b4b4b]">
+
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border border-[#ed1c24]">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                >
+                  <path
+                    d="M1 7.5H13M13 7.5L7 1.5M13 7.5L7 13.5"
+                    stroke="#ed1c24"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <p className="text-[1.8rem] font-light tracking-[-0.04em]">
+                About Us
+              </p>
+
+            </div>
+
+            {/* AWARDS */}
+            <div className="mt-24">
+              <h4 className="text-[2rem] font-light text-[#4b4b4b] mb-14">
+                Industry Recognition & Certifications
+              </h4>
+
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                
+                <img
+                  src="/logos/make-in-india.png"
+                  alt="Make In India"
+                  className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+
+                <img
+                  src="/logos/bis.svg"
+                  alt="BIS"
+                  className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+
+                <img
+                  src="/logos/iso-9001.svg"
+                  alt="ISO 9001"
+                  className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+
+                <div className="flex h-[80px] w-full flex-col items-center justify-center rounded-md border-2 border-gray-200 bg-white grayscale transition-all duration-500 hover:grayscale-0 hover:border-[#ed1c24] cursor-default">
+                  <span className="text-[1.1rem] font-bold leading-tight text-[#4b4b4b]">ISO</span>
+                  <span className="text-[1.2rem] font-black leading-tight text-[#ed1c24]">45001</span>
+                  <span className="text-[0.6rem] font-bold tracking-widest text-[#4b4b4b]">SAFETY</span>
+                </div>
+
+                <img
+                  src="/logos/asme.svg"
+                  alt="ASME"
+                  className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+
+                <img
+                  src="/logos/ibr.png"
+                  alt="IBR"
+                  className="h-[80px] w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+
+              </div>
+            </div>
+            {/* CONTENT GRID */}
+            <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-20">
+
+              {/* COLUMN 1 */}
+              <div>
+
+                <h3 className="text-[2rem] font-light text-[#4b4b4b] mb-8">
+                  Industrial-Focused Work
+                </h3>
+
+                <ul className="space-y-5">
+
+                  {[
+                    "Focused on fabrication, erection and industrial infrastructure projects",
+                    "Work with structured execution and site coordination teams",
+                    "Balanced professional and personal life",
+                    "Exposure to real industrial environments and execution workflows",
+                  ].map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-4 text-[1.22rem] leading-[1.6] text-[#4b4b4b]"
+                    >
+                      <span className="mt-[11px] h-[6px] w-[6px] rounded-full bg-[#ed1c24]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+
+                </ul>
+
+              </div>
+
+              {/* COLUMN 2 */}
+              <div>
+
+                <h3 className="text-[2rem] font-light text-[#4b4b4b] mb-8">
+                  Career Growth
+                </h3>
+
+                <ul className="space-y-5">
+
+                  {[
+                    "Hands-on industrial project exposure",
+                    "Real fabrication and erection experience",
+                    "Skill development alongside experienced engineers",
+                    "Long-term growth through execution and project responsibility",
+                  ].map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-4 text-[1.22rem] leading-[1.6] text-[#4b4b4b]"
+                    >
+                      <span className="mt-[11px] h-[6px] w-[6px] rounded-full bg-[#ed1c24]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+
+          {/* RIGHT STATS */}
+          <motion.div
+            style={{
+              y: statsY,
+              opacity: statsOpacity,
+            }}
+            className="relative"
+          >
+
+            <div className="space-y-16 sticky top-32">
+
+              {/* ITEM */}
+              <div>
+
+                <div className="text-[7rem] leading-[0.9] tracking-[-0.08em] text-[#ed1c24] font-light">
+                  <Counter to={99} suffix="%" />
+                </div>
+
+                <h3 className="mt-3 text-[2.2rem] font-light tracking-[-0.04em] text-[#4b4b4b]">
+                  Long-Term Workforce Retention
+                </h3>
+
+                <p className="mt-5 text-[0.95rem] uppercase tracking-[0.16em] leading-[1.5] text-[#666] font-semibold">
+                  Built through trust, consistency and long-term industrial collaboration
+                </p>
+
+                <div className="mt-10 h-px w-full bg-[#9d9d9d]" />
+
+              </div>
+
+              {/* ITEM */}
+              <div>
+
+                <div className="text-[7rem] leading-[0.9] tracking-[-0.08em] text-[#ed1c24] font-light">
+                  <Counter to={100} />+
+                </div>
+
+                <h3 className="mt-3 text-[2.2rem] font-light tracking-[-0.04em] text-[#4b4b4b]">
+                  Skilled Workforce & Site Personnel
+                </h3>
+                <p className="mt-5 text-[0.95rem] uppercase tracking-[0.16em] leading-[1.5] text-[#666] font-semibold">
+                  Experienced teams delivering reliable fabrication and execution work
+
+                </p>
+
+                <div className="mt-10 h-px w-full bg-[#9d9d9d]" />
+
+              </div>
+
+              {/* ITEM */}
+              <div>
+
+                <div className="text-[7rem] leading-[0.9] tracking-[-0.08em] text-[#ed1c24] font-light">
+                  <Counter to={26} />+
+                </div>
+
+                <h3 className="mt-3 text-[2.2rem] font-light tracking-[-0.04em] text-[#4b4b4b]">
+                  Years Experience
+                </h3>
+                <p className="mt-5 text-[0.95rem] uppercase tracking-[0.16em] leading-[1.5] text-[#666] font-semibold">
+                  Decades of industrial construction and project execution expertise                </p>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+        </div>
+
+      </div>
+
     </section>
   );
 }
