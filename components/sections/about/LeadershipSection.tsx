@@ -17,19 +17,19 @@ const leaders = [
   {
     name: 'Nahid Akhtar',
     title: 'Chief Operations Officer',
-    bio: "Known for maintaining calm during demanding project conditions, Alley plays a key role in keeping operations organized across fabrication, erection, and industrial execution works. Whether it is coordinating teams, handling site challenges, or managing execution timelines, his focus remains on keeping work moving efficiently and safely. Years of industrial exposure have given him a strong understanding of how projects succeed on the ground — not just on paper. Team members value his practical mindset, problem-solving approach, and ability to keep coordination strong even in high-pressure environments. For him, consistency matters more than noise — delivering dependable execution project after project is what truly builds long-term trust.",
+    bio: "Known for maintaining calm during demanding project conditions, Nahid plays a key role in keeping operations organized across fabrication, erection, and industrial execution works. Whether it is coordinating teams, handling site challenges, or managing execution timelines, his focus remains on keeping work moving efficiently and safely. Years of industrial exposure have given him a strong understanding of how projects succeed on the ground — not just on paper. Team members value his practical mindset, problem-solving approach, and ability to keep coordination strong even in high-pressure environments. For him, consistency matters more than noise — delivering dependable execution project after project is what truly builds long-term trust.",
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop'
   },
   {
     name: 'Pradhan Kumar',
     title: 'Director Client Services',
-    bio: "On industrial sites, where timelines are tight and coordination between teams matters every hour, Ben is known for keeping execution disciplined and structured. From fabrication yard planning to final erection activities, he ensures that every stage moves with clarity and accountability. His strength lies in handling real on-ground challenges without slowing project momentum. Workers respect his hands-on approach, while clients value the confidence that comes from knowing execution is being monitored closely and responsibly. For him, the best projects are the ones completed safely, efficiently, and without unnecessary complications.",
+    bio: "On industrial sites, where timelines are tight and coordination between teams matters every hour, Pradhan is known for keeping execution disciplined and structured. From fabrication yard planning to final erection activities, he ensures that every stage moves with clarity and accountability. His strength lies in handling real on-ground challenges without slowing project momentum. Workers respect his hands-on approach, while clients value the confidence that comes from knowing execution is being monitored closely and responsibly. For him, the best projects are the ones completed safely, efficiently, and without unnecessary complications.",
     image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop'
   },
   {
     name: 'Faisal Raza',
     title: 'Head of Fabrication',
-    bio: "Precision in fabrication is not achieved by chance — it comes from experience, supervision, and attention to detail. Rohit oversees fabrication activities with a strong focus on workmanship, structural accuracy, and production efficiency. Having spent years around industrial fabrication works, he understands the importance of maintaining quality before materials even reach the site. From raw steel handling to final assembly preparation, his approach ensures every component leaving the workshop reflects reliability and engineering discipline.",
+    bio: "Precision in fabrication is not achieved by chance — it comes from experience, supervision, and attention to detail. Faisal oversees fabrication activities with a strong focus on workmanship, structural accuracy, and production efficiency. Having spent years around industrial fabrication works, he understands the importance of maintaining quality before materials even reach the site. From raw steel handling to final assembly preparation, his approach ensures every component leaving the workshop reflects reliability and engineering discipline.",
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop'
   },
   {
