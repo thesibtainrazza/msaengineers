@@ -12,7 +12,7 @@ import CareersSection from '@/components/sections/about/CareersSection';
 import AboutSubHeroSection from '@/components/sections/about/AboutSubHeroSection';
 
 export const metadata = {
-  title: 'MSA Engineer & Contractors',
+  title: 'About',
 };
 
 export default function AboutPage() {

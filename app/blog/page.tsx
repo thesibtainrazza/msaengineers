@@ -6,7 +6,7 @@ import FeaturedPostSection from '@/components/sections/blog/FeaturedPostSection'
 import BlogGridSection from '@/components/sections/blog/BlogGridSection';
 
 export const metadata = {
-  title: 'Blog | MSA Engineer & Contractors',
+  title: 'Blog',
 };
 
 export default function BlogPage() {

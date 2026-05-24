@@ -8,7 +8,7 @@ import TestimonialSection from '@/components/sections/careers/TestimonialSection
 import EmployeeBenefitsSection from '@/components/sections/careers/EmployeeBenefitsSection';
 
 export const metadata = {
-  title: 'Careers | MSA Engineer & Contractors',
+  title: 'Careers | MSA Engineers & Contractors',
 };
 
 export default function CareersPage() {

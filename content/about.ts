@@ -15,7 +15,7 @@ export const LEADERS = [
     name: 'Nahid Akhtar',
     title: 'Chief Operations Officer',
     bio: "Known for maintaining calm during demanding project conditions, Nahid plays a key role in keeping operations organized across fabrication, erection, and industrial execution works. Whether it is coordinating teams, handling site challenges, or managing execution timelines, his focus remains on keeping work moving efficiently and safely. Years of industrial exposure have given him a strong understanding of how projects succeed on the ground — not just on paper. Team members value his practical mindset, problem-solving approach, and ability to keep coordination strong even in high-pressure environments. For him, consistency matters more than noise — delivering dependable execution project after project is what truly builds long-term trust.",
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop'
+    image: '/assets/nahid-akhtar.jpg'
   },
   {
     name: 'Pradhan Kumar',
