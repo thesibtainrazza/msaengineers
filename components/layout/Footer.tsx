@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { siteConfig } from "@/config/siteConfig";
 
 export default function Footer() {
@@ -33,29 +34,47 @@ export default function Footer() {
 
           {/* Links Column 1 */}
           <div className="flex flex-col space-y-4 pt-2 text-[1.15rem] font-normal tracking-[-0.02em] text-[#4a4a4a] lg:col-span-3 lg:pt-10">
-            {['Projects', 'Shed Structures', 'Fabrication Works', 'Industrial Erection', 'Conveyor Systems', 'Equipment Rental'].map((link) => (
-              <a key={link} href="#" className="group relative w-fit transition-colors duration-200 hover:text-primary">
-                {link}
+            {[
+              { label: 'Projects', href: '/projects' },
+              { label: 'Shed Structures', href: '/services#shed-structures' },
+              { label: 'Fabrication Works', href: '/services#fabrication-works' },
+              { label: 'Industrial Erection', href: '/services#industrial-erection' },
+              { label: 'Conveyor Systems', href: '/services#conveyor-systems' },
+              { label: 'Equipment Rental', href: '/services#equipment-rental' }
+            ].map((link) => (
+              <Link key={link.label} href={link.href} className="group relative w-fit transition-colors duration-200 hover:text-primary">
+                {link.label}
                 <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-200 group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Links Column 2 */}
           <div className="flex flex-col space-y-4 pt-2 text-[1.15rem] font-normal tracking-[-0.02em] text-[#4a4a4a] lg:col-span-2 lg:pt-10">
-             {['About', 'Services', 'Blog', 'Careers', 'Contact'].map((link) => (
-              <a key={link} href="#" className="group relative w-fit transition-colors duration-200 hover:text-primary">
-                {link}
+             {[
+              { label: 'About', href: '/about' },
+              { label: 'Services', href: '/services' },
+              { label: 'Blog', href: '/blog' },
+              { label: 'Careers', href: '/careers' },
+              { label: 'Contact', href: '/contact' }
+            ].map((link) => (
+              <Link key={link.label} href={link.href} className="group relative w-fit transition-colors duration-200 hover:text-primary">
+                {link.label}
                 <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-200 group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Socials */}
           <div className="flex flex-col space-y-4 pt-2 text-[1.15rem] font-normal tracking-[-0.02em] text-[#4a4a4a] lg:col-span-3 lg:pt-10">
-             {['Facebook', 'LinkedIn', 'Instagram'].map((link) => (
-              <a key={link} href="#" className="group relative w-fit transition-colors duration-200 hover:text-primary">
-                {link}
+             {[
+              { label: 'Facebook', href: siteConfig.socials.facebook },
+              { label: 'LinkedIn', href: siteConfig.socials.linkedin },
+              { label: 'Instagram', href: siteConfig.socials.instagram },
+              { label: 'YouTube', href: siteConfig.socials.youtube }
+            ].map((link) => (
+              <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="group relative w-fit transition-colors duration-200 hover:text-primary">
+                {link.label}
                 <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-200 group-hover:w-full"></span>
               </a>
             ))}
@@ -80,10 +99,10 @@ export default function Footer() {
         <div className="mt-14 flex flex-col items-start justify-between gap-y-4 border-t border-border-light pt-6 text-[0.9rem] tracking-[-0.01em] text-[#7a7a7a] md:flex-row md:items-center">
           <div className="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-8">
             <p>{siteConfig.copyright}</p>
-            <a href="#" className="group relative w-fit transition-colors duration-200 hover:text-[#4a4a4a]">
+            <Link href="/privacy-policy" className="group relative w-fit transition-colors duration-200 hover:text-[#4a4a4a]">
               Privacy Policy
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-200 group-hover:w-full"></span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

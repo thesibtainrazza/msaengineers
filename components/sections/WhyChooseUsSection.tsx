@@ -31,7 +31,7 @@ export default function WhyChooseUsSection() {
             <span className="bg-primary text-white px-3 py-1 inline-block font-normal my-2">execution.</span>
           </h2>
 
-          <a href="#" className="flex items-center justify-center border-[1.5px] border-primary rounded-full px-8 py-3 text-[#4a4a4a] hover:bg-primary hover:text-white transition-colors shrink-0 group">
+          <a href="/contact" className="flex items-center justify-center border-[1.5px] border-primary rounded-full px-8 py-3 text-[#4a4a4a] hover:bg-primary hover:text-white transition-colors shrink-0 group">
             <span>Get In Touch</span>
             <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 12h14M12 5l7 7-7 7" /></svg>
           </a>

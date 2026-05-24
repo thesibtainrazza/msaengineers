@@ -60,7 +60,7 @@ export default function CTASection() {
           <p className="text-xl md:text-2xl text-white/90 mb-12 font-light drop-shadow-xl">
             Connect with MSA Engineers & Contractors for reliable industrial engineering and execution solutions across India.
           </p>
-          <a href="#" className="inline-flex items-center justify-center bg-white rounded-full px-8 md:px-10 py-4 text-primary hover:bg-gray-100 transition-colors shadow-[0_10px_30px_rgba(237,28,36,0.3)] group cursor-pointer">
+          <a href="/contact" className="inline-flex items-center justify-center bg-white rounded-full px-8 md:px-10 py-4 text-primary hover:bg-gray-100 transition-colors shadow-[0_10px_30px_rgba(237,28,36,0.3)] group cursor-pointer">
             <span className="font-medium text-lg">Contact Us</span>
             <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" /></svg>
           </a>

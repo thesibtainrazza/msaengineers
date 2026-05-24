@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Marquee from "@/components/ui/Marquee";
 import { WHO_WE_ARE_SECTION } from "@/content/home";
+import Link from "next/link";
 
 export default function WhoWeAreSection() {
   const [highlightWidth, setHighlightWidth] = useState(0);
@@ -89,7 +90,7 @@ export default function WhoWeAreSection() {
           </p>
 
           {/* Button */}
-          <button className="group mt-14 flex items-center rounded-full border-2 border-primary bg-transparent px-10 py-5 text-[1.2rem] font-medium text-text-dark transition-all duration-300 hover:bg-primary hover:text-white">
+          <Link href={WHO_WE_ARE_SECTION.ctaLink} className="group mt-14 flex items-center rounded-full border-2 border-primary bg-transparent px-10 py-5 text-[1.2rem] font-medium text-text-dark transition-all duration-300 hover:bg-primary hover:text-white">
 
             <span>{WHO_WE_ARE_SECTION.ctaText}</span>
 
@@ -107,7 +108,7 @@ export default function WhoWeAreSection() {
               />
             </svg>
 
-          </button>
+          </Link>
         </div>
 
         {/* Right Media */}

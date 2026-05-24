@@ -8,8 +8,13 @@ import Link from "next/link";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +31,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-[200] transition-all duration-500 ${
-        scrolled
+        scrolled || isMobileMenuOpen
           ? "bg-white shadow-sm"
           : "bg-transparent"
       }`}
@@ -35,7 +40,7 @@ export default function Header() {
       <nav
         className={`container-primary flex items-center transition-all duration-500 ${
           scrolled ? "py-4 md:py-5" : "py-6 md:py-8"
-        } ${!isHome || scrolled ? "text-text-dark" : "text-white"}`}
+        } ${!isHome || scrolled || isMobileMenuOpen ? "text-text-dark" : "text-white"}`}
       >
 
         {/* Logo */}
@@ -74,7 +79,7 @@ export default function Header() {
 
           {/* Links */}
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               className="group relative text-[20px] font-semibold transition-colors duration-300 hover:text-primary"
@@ -83,7 +88,7 @@ export default function Header() {
 
               {/* Underline */}
               <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </Link>
           ))}
 
         </div>
@@ -111,26 +116,51 @@ export default function Header() {
 
         </Link>
 
-        {/* Mobile Menu */}
-        <button className="ml-auto lg:hidden" aria-label="Open mobile menu">
-
-          <svg
-            className="h-8 w-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-
+        {/* Mobile Menu Button */}
+        <button 
+          className="ml-auto lg:hidden text-current relative z-[201]" 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? (
+            <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
 
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`fixed inset-0 bg-white z-[199] flex flex-col px-6 pt-[100px] pb-8 transition-transform duration-400 ease-in-out lg:hidden ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col space-y-6 text-[24px] font-semibold text-text-dark mt-4 h-full overflow-y-auto">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="border-b border-gray-100 pb-4 transition-colors hover:text-primary"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            className="mt-6 inline-block w-full rounded-full bg-primary py-4 text-center text-[18px] font-medium text-white"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Build with Us
+          </Link>
+        </div>
+      </div>
     </header>
   );
 }

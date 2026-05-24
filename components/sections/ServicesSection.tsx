@@ -17,6 +17,7 @@ export default function ServicesSection() {
   key={idx}
   text={service.label!}
   image={service.image!}
+  href={`/services#${service.label!.toLowerCase().replace(/\s+/g, '-')}`}
 />
            ))}
         </div>

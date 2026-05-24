@@ -30,9 +30,10 @@ export const siteConfig = {
     },
   },
   socials: {
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    instagram: "https://instagram.com",
+    facebook: "https://www.facebook.com/msaengineers/",
+    linkedin: "https://www.linkedin.com/company/msaengineers",
+    instagram: "https://www.instagram.com/msaengineers/",
+    youtube: "https://www.youtube.com/@msaengineers/",
   },
   copyright: "Copyright © 2026 MSA Engineer & Contractors. All rights reserved.",
 };

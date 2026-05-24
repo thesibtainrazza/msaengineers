@@ -2,14 +2,17 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export const SectorButton = ({
   text,
   image,
+  href = "#",
   className = "",
 }: {
   text: string;
   image: string;
+  href?: string;
   className?: string;
 }) => {
 
@@ -33,8 +36,8 @@ export const SectorButton = ({
 
   return (
 
-    <a
-      href="#"
+    <Link
+      href={href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onMouseMove={handleMouseMove}
@@ -48,8 +51,8 @@ export const SectorButton = ({
         rounded-full
         border-[1.7px]
         border-[#4a4a4a]
-        px-12
-        py-6
+        px-6 md:px-12
+        py-3 md:py-6
         transition-all
         duration-300
         hover:border-primary
@@ -147,8 +150,8 @@ export const SectorButton = ({
         className="
           relative
           z-10
-          mr-10
-          text-[2.8rem]
+          mr-4 md:mr-10
+          text-[1.3rem] md:text-[2.8rem]
           font-[350]
           tracking-[-0.05em]
           text-text-dark
@@ -165,8 +168,8 @@ export const SectorButton = ({
         className="
           relative
           z-10
-          h-11
-          w-11
+          h-6 md:h-11
+          w-6 md:w-11
           text-text-dark
           transition-all
           duration-300
@@ -187,7 +190,7 @@ export const SectorButton = ({
 
       </svg>
 
-    </a>
+    </Link>
 
   );
 

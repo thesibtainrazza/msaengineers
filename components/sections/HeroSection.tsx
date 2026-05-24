@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { HERO_SECTION } from "@/content/home";
 import FadeIn from "@/components/ui/FadeIn";
 
@@ -60,7 +61,7 @@ export default function HeroSection() {
           <div className="max-w-[980px]">
             <FadeIn delay={0.2}>
               {/* Heading */}
-              <h1 className="text-[4.6rem] whitespace-nowrap font-[520] leading-[0.9] tracking-[-0.07em] text-white md:text-[7rem] lg:text-[6.5rem]">
+              <h1 className="text-[4.6rem] whitespace-nowrap font-[520] leading-[0.9] tracking-[-0.07em] text-white md:text-[3.6rem] lg:text-[5rem]">
 
                 <span className="block">
                   {HERO_SECTION.headingPart1}
@@ -89,7 +90,7 @@ export default function HeroSection() {
               {/* CTA */}
               <div className="mt-14">
 
-                <button className="group flex items-center rounded-full border-2 border-transparent bg-white px-10 py-5 text-[1.2rem] font-semibold text-primary transition-all duration-300 hover:border-white hover:bg-primary hover:text-white">
+                <Link href={HERO_SECTION.ctaLink} className="group inline-flex w-fit items-center rounded-full border-2 border-transparent bg-white px-10 py-5 text-[1.2rem] font-semibold text-primary transition-all duration-300 hover:border-white hover:bg-primary hover:text-white">
 
                   <span>{HERO_SECTION.ctaText}</span>
 
@@ -107,7 +108,7 @@ export default function HeroSection() {
                     />
                   </svg>
 
-                </button>
+                </Link>
 
               </div>
             </FadeIn>
